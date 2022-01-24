@@ -129,4 +129,8 @@
             </div>
         </div>
     </body>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" ></script>
+    @include('sweet::alert')
 </html>
