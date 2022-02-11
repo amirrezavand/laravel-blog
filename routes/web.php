@@ -18,10 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    alert()->success('this is text','this is title');
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-Route::get('/auth/google',[\App\Http\Controllers\Auth\GoogleAuthController::class,'redirect'])->name('auth.google');
-Route::get('/auth/google/callback',[\App\Http\Controllers\Auth\GoogleAuthController::class,'callback']);
