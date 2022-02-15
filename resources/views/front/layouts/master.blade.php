@@ -48,7 +48,7 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icofont-close"></i></span></button>
 
-                    <h2 class="modal-title" id="myModalLabel2"><a href="index.html"><img src="assets/img/logo.png" alt="logo"></a></h2>
+                    <h2 class="modal-title" id="myModalLabel2"><a href="index.html"><img src="/assets/img/logo.png" alt="logo"></a></h2>
                 </div>
 
                 <div class="modal-body">
@@ -187,6 +187,9 @@
 <script src="/assets/js/contact-form-script.js"></script>
 <!-- Main JS -->
 <script src="/assets/js/main.js"></script>
+
+
+@yield('script')
 </body>
 
 <!-- Mirrored from envytheme.com/tf-demo/crake/blog-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2019 22:49:59 GMT -->
