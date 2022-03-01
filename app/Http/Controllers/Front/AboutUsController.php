@@ -14,7 +14,6 @@ class AboutUsController extends Controller
 
     public function ourTeam()
     {
-        dd('our_team');
-        return view();
+        return view('front.about-us.our-team');
     }
 }
