@@ -55,7 +55,7 @@
 
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-6 col-md-12">
-                    <img src="assets/img/marketing.png" alt="image">
+                    <img src="/front/assets/img/marketing.png" alt="image">
                 </div>
 
                 <div class="col-lg-6 col-md-12">
@@ -114,5 +114,5 @@
     <!-- Map API JS FILES -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApghCIIx9MpQhA768sKXxvR_Okg0SF2k4&amp;callback=initMap"></script>
     <!-- Crake JS FILE -->
-    <script src="assets/js/crake-map.js"></script>
+    <script src="/front/assets/js/crake-map.js"></script>
 @endsection

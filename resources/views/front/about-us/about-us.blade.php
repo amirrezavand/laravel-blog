@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="col-lg-6 col-md-12">
-                    <img src="assets/img/marketing.png" alt="image">
+                    <img src="/front/assets/img/marketing.png" alt="image">
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
                 <div class="team-slides">
                     <div class="col-lg-12">
                         <div class="single-team-member">
-                            <img src="assets/img/team-img1.jpg" alt="team">
+                            <img src="/front/assets/img/team-img1.jpg" alt="team">
 
                             <div class="team-content">
                                 <h3>John Doe</h3>
@@ -93,7 +93,7 @@
 
                     <div class="col-lg-12">
                         <div class="single-team-member">
-                            <img src="assets/img/team-img2.jpg" alt="team">
+                            <img src="/front/assets/img/team-img2.jpg" alt="team">
 
                             <div class="team-content">
                                 <h3>Steven Smith</h3>
@@ -111,7 +111,7 @@
 
                     <div class="col-lg-12">
                         <div class="single-team-member">
-                            <img src="assets/img/team-img3.jpg" alt="team">
+                            <img src="/front/assets/img/team-img3.jpg" alt="team">
 
                             <div class="team-content">
                                 <h3>David Luiz</h3>
@@ -129,7 +129,7 @@
 
                     <div class="col-lg-12">
                         <div class="single-team-member">
-                            <img src="assets/img/team-img4.jpg" alt="team">
+                            <img src="/front/assets/img/team-img4.jpg" alt="team">
 
                             <div class="team-content">
                                 <h3>Park Tim</h3>
@@ -147,7 +147,7 @@
 
                     <div class="col-lg-12">
                         <div class="single-team-member">
-                            <img src="assets/img/team-img5.jpg" alt="team">
+                            <img src="/front/assets/img/team-img5.jpg" alt="team">
 
                             <div class="team-content">
                                 <h3>Doglas Costa</h3>
@@ -198,7 +198,7 @@
                     <div class="col-lg-12">
                         <div class="single-feedback">
                             <div class="client-info">
-                                <img src="assets/img/client1.jpg" alt="client">
+                                <img src="/front/assets/img/client1.jpg" alt="client">
                                 <h3>Alit John</h3>
                                 <span>Web Developer</span>
                             </div>
@@ -209,7 +209,7 @@
                     <div class="col-lg-12">
                         <div class="single-feedback">
                             <div class="client-info">
-                                <img src="assets/img/client2.jpg" alt="client">
+                                <img src="/front/assets/img/client2.jpg" alt="client">
                                 <h3>Alit John</h3>
                                 <span>Jhon Smith</span>
                             </div>
@@ -220,7 +220,7 @@
                     <div class="col-lg-12">
                         <div class="single-feedback">
                             <div class="client-info">
-                                <img src="assets/img/client3.jpg" alt="client">
+                                <img src="/front/assets/img/client3.jpg" alt="client">
                                 <h3>Steven John</h3>
                                 <span>Web Developer</span>
                             </div>
@@ -231,7 +231,7 @@
                     <div class="col-lg-12">
                         <div class="single-feedback">
                             <div class="client-info">
-                                <img src="assets/img/client1.jpg" alt="client">
+                                <img src="/front/assets/img/client1.jpg" alt="client">
                                 <h3>David Warner</h3>
                                 <span>Web Developer</span>
                             </div>
@@ -255,43 +255,43 @@
                 <div class="partner-slides">
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-1.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-1.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-2.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-2.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-3.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-3.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-4.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-4.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-5.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-5.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-6.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-6.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-7.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-7.png" alt="partner"></a>
                         </div>
                     </div>
                 </div>
@@ -310,7 +310,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <a href="#" class="box">
-                        <img src="assets/img/mailchimp.png" alt="mailchimp">
+                        <img src="/front/assets/img/mailchimp.png" alt="mailchimp">
 
                         <h3>Mail Chimp</h3>
                         <span>Send Mail</span>
@@ -321,7 +321,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <a href="#" class="box">
-                        <img src="assets/img/slack.png" alt="mailchimp">
+                        <img src="/front/assets/img/slack.png" alt="mailchimp">
 
                         <h3>Slack</h3>
                         <span>Messaging</span>
@@ -332,7 +332,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <a href="#" class="box">
-                        <img src="assets/img/twitter.png" alt="mailchimp">
+                        <img src="/front/assets/img/twitter.png" alt="mailchimp">
 
                         <h3>Twitter</h3>
                         <span>Twitter Feed</span>
@@ -343,7 +343,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <a href="#" class="box">
-                        <img src="assets/img/instagram.png" alt="mailchimp">
+                        <img src="/front/assets/img/instagram.png" alt="mailchimp">
 
                         <h3>Instagram</h3>
                         <span>News Feed</span>

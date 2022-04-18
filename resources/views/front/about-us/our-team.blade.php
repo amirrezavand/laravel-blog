@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="single-team-member">
-                        <img src="assets/img/team-img1.jpg" alt="team">
+                        <img src="/front/assets/img/team-img1.jpg" alt="team">
 
                         <div class="team-content">
                             <h3>John Doe</h3>
@@ -25,7 +25,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="single-team-member">
-                        <img src="assets/img/team-img2.jpg" alt="team">
+                        <img src="/front/assets/img/team-img2.jpg" alt="team">
 
                         <div class="team-content">
                             <h3>Steven Smith</h3>
@@ -43,7 +43,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="single-team-member">
-                        <img src="assets/img/team-img3.jpg" alt="team">
+                        <img src="/front/assets/img/team-img3.jpg" alt="team">
 
                         <div class="team-content">
                             <h3>David Luiz</h3>
@@ -61,7 +61,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="single-team-member">
-                        <img src="assets/img/team-img4.jpg" alt="team">
+                        <img src="/front/assets/img/team-img4.jpg" alt="team">
 
                         <div class="team-content">
                             <h3>Park Tim</h3>
@@ -79,7 +79,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="single-team-member">
-                        <img src="assets/img/team-img5.jpg" alt="team">
+                        <img src="/front/assets/img/team-img5.jpg" alt="team">
 
                         <div class="team-content">
                             <h3>Doglas Costa</h3>
@@ -97,7 +97,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="single-team-member">
-                        <img src="assets/img/team-img6.jpg" alt="team">
+                        <img src="/front/assets/img/team-img6.jpg" alt="team">
 
                         <div class="team-content">
                             <h3>Steven Smith</h3>
@@ -115,7 +115,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="single-team-member">
-                        <img src="assets/img/team-img7.jpg" alt="team">
+                        <img src="/front/assets/img/team-img7.jpg" alt="team">
 
                         <div class="team-content">
                             <h3>David Luiz</h3>
@@ -133,7 +133,7 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="single-team-member">
-                        <img src="assets/img/team-img8.jpg" alt="team">
+                        <img src="/front/assets/img/team-img8.jpg" alt="team">
 
                         <div class="team-content">
                             <h3>Park Tim</h3>

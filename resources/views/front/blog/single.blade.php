@@ -8,7 +8,7 @@
             <div class="col-lg-8">
                 <div class="blog-details">
                     <div class="article-img">
-                        <img src="/assets/img/blog-details.jpg" alt="blog-details">
+                        <img src="/front/assets/img/blog-details.jpg" alt="blog-details">
                         <div class="date">20 <br> Jan</div>
                     </div>
 
@@ -61,7 +61,7 @@
                     <h3>Comments</h3>
                     <div class="single-comment">
                         <div class="comment-img">
-                            <img src="/assets/img/client1.jpg" alt="client">
+                            <img src="/front/assets/img/client1.jpg" alt="client">
                         </div>
                         <div class="comment-content">
                             <h4>John Smith</h4>
@@ -73,7 +73,7 @@
 
                     <div class="single-comment left-m">
                         <div class="comment-img">
-                            <img src="/assets/img/client2.jpg" alt="client">
+                            <img src="/front/assets/img/client2.jpg" alt="client">
                         </div>
                         <div class="comment-content">
                             <h4>Doe John</h4>
@@ -85,7 +85,7 @@
 
                     <div class="single-comment">
                         <div class="comment-img">
-                            <img src="/assets/img/client3.jpg" alt="client">
+                            <img src="/front/assets/img/client3.jpg" alt="client">
                         </div>
                         <div class="comment-content">
                             <h4>Steven Doe</h4>
@@ -97,7 +97,7 @@
 
                     <div class="single-comment">
                         <div class="comment-img">
-                            <img src="/assets/img/client4.jpg" alt="client">
+                            <img src="/front/assets/img/client4.jpg" alt="client">
                         </div>
                         <div class="comment-content">
                             <h4>John Cina</h4>
@@ -168,7 +168,7 @@
                             <li>
                                 <div class="recent-post-thumb">
                                     <a href="#">
-                                        <img src="/assets/img/blog-img1.jpg" alt="blog-image">
+                                        <img src="/front/assets/img/blog-img1.jpg" alt="blog-image">
                                     </a>
                                 </div>
 
@@ -181,7 +181,7 @@
                             <li>
                                 <div class="recent-post-thumb">
                                     <a href="#">
-                                        <img src="/assets/img/blog-img2.jpg" alt="blog-image">
+                                        <img src="/front/assets/img/blog-img2.jpg" alt="blog-image">
                                     </a>
                                 </div>
 
@@ -194,7 +194,7 @@
                             <li>
                                 <div class="recent-post-thumb">
                                     <a href="#">
-                                        <img src="/assets/img/blog-img3.jpg" alt="blog-image">
+                                        <img src="/front/assets/img/blog-img3.jpg" alt="blog-image">
                                     </a>
                                 </div>
 
@@ -207,7 +207,7 @@
                             <li>
                                 <div class="recent-post-thumb">
                                     <a href="#">
-                                        <img src="/assets/img/blog-img4.jpg" alt="blog-image">
+                                        <img src="/front/assets/img/blog-img4.jpg" alt="blog-image">
                                     </a>
                                 </div>
 
@@ -241,37 +241,37 @@
                         <ul>
                             <li>
                                 <a href="#">
-                                    <img src="/assets/img/work-img1.jpg" alt="image">
+                                    <img src="/front/assets/img/work-img1.jpg" alt="image">
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    <img src="/assets/img/work-img2.jpg" alt="image">
+                                    <img src="/front/assets/img/work-img2.jpg" alt="image">
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    <img src="/assets/img/work-img3.jpg" alt="image">
+                                    <img src="/front/assets/img/work-img3.jpg" alt="image">
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    <img src="/assets/img/work-img4.jpg" alt="image">
+                                    <img src="/front/assets/img/work-img4.jpg" alt="image">
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    <img src="/assets/img/work-img5.jpg" alt="image">
+                                    <img src="/front/assets/img/work-img5.jpg" alt="image">
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    <img src="/assets/img/work-img6.jpg" alt="image">
+                                    <img src="/front/assets/img/work-img6.jpg" alt="image">
                                 </a>
                             </li>
                         </ul>

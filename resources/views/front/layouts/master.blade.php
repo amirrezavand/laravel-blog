@@ -8,27 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap Min CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/front/assets/css/bootstrap.min.css">
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/front//assets/css/animate.css">
     <!-- IcoFont Min CSS -->
-    <link rel="stylesheet" href="/assets/css/icofont.min.css">
+    <link rel="stylesheet" href="/front//assets/css/icofont.min.css">
     <!-- Meanmenu Min CSS -->
-    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/front//assets/css/meanmenu.css">
     <!-- Magnific Popup Min CSS -->
-    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/front//assets/css/magnific-popup.min.css">
     <!-- Owl Carousel Min CSS -->
-    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/front/assets/css/owl.carousel.min.css">
     <!-- NiceSelect Min CSS -->
-    <link rel="stylesheet" href="/assets/css/nice-select.css">
+    <link rel="stylesheet" href="/front//assets/css/nice-select.css">
     <!-- Style CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/front//assets/css/style.css">
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/front//assets/css/responsive.css">
 
     <title>Crake - A Creative Multi-Concept Template</title>
 
-    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="/front/assets/img/favicon.png">
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icofont-close"></i></span></button>
 
-                    <h2 class="modal-title" id="myModalLabel2"><a href="index.html"><img src="/assets/img/logo.png" alt="logo"></a></h2>
+                    <h2 class="modal-title" id="myModalLabel2"><a href="index.html"><img src="/front/assets/img/logo.png" alt="logo"></a></h2>
                 </div>
 
                 <div class="modal-body">
@@ -123,12 +123,12 @@
             </div>
         </div>
 
-        <div class="shape1"><img src="/assets/img/shape1.png" alt="img"></div>
-        <div class="shape2"><img src="/assets/img/shape2.png" alt="img"></div>
-        <div class="shape3"><img src="/assets/img/shape3.png" alt="img"></div>
-        <div class="shape6"><img src="/assets/img/shape6.png" alt="img"></div>
-        <div class="shape8 rotateme"><img src="/assets/img/shape8.svg" alt="shape"></div>
-        <div class="shape9"><img src="/assets/img/shape9.svg" alt="shape"></div>
+        <div class="shape1"><img src="/front/assets/img/shape1.png" alt="img"></div>
+        <div class="shape2"><img src="/front/assets/img/shape2.png" alt="img"></div>
+        <div class="shape3"><img src="/front/assets/img/shape3.png" alt="img"></div>
+        <div class="shape6"><img src="/front/assets/img/shape6.png" alt="img"></div>
+        <div class="shape8 rotateme"><img src="/front/assets/img/shape8.svg" alt="shape"></div>
+        <div class="shape9"><img src="/front/assets/img/shape9.svg" alt="shape"></div>
 
         <!-- Bubble Animte -->
         <div class="bubble-animate">
@@ -160,35 +160,35 @@
 <!-- End Back Top top -->
 
 <!-- Jquery Min JS -->
-<script src="/assets/js/jquery.min.js"></script>
+<script src="/front/assets/js/jquery.min.js"></script>
 <!-- Popper Min JS -->
-<script src="/assets/js/popper.min.js"></script>
+<script src="/front/assets/js/popper.min.js"></script>
 <!-- Bootstrap Min JS -->
-<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/front/assets/js/bootstrap.min.js"></script>
 <!-- Meanmenu Min JS -->
-<script src="/assets/js/jquery.meanmenu.min.js"></script>
+<script src="/front/assets/js/jquery.meanmenu.min.js"></script>
 <!-- WOW Min JS -->
-<script src="/assets/js/wow.min.js"></script>
+<script src="/front/assets/js/wow.min.js"></script>
 <!-- Tilt Min JS -->
-<script src="/assets/js/tilt.jquery.min.js"></script>
+<script src="/front/assets/js/tilt.jquery.min.js"></script>
 <!-- Magnific Popup Min JS -->
-<script src="/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/front/assets/js/jquery.magnific-popup.min.js"></script>
 <!-- Owl Carousel Min JS -->
-<script src="/assets/js/owl.carousel.min.js"></script>
+<script src="/front/assets/js/owl.carousel.min.js"></script>
 <!-- Waypoints Min Js -->
-<script src="/assets/js/waypoints.min.js"></script>
+<script src="/front/assets/js/waypoints.min.js"></script>
 <!-- Jquery CounterUp Min JS -->
-<script src="/assets/js/jquery.counterup.min.js"></script>
+<script src="/front/assets/js/jquery.counterup.min.js"></script>
 <!-- NiceSelect Min Js -->
-<script src="/assets/js/jquery.nice-select.min.js"></script>
+<script src="/front/assets/js/jquery.nice-select.min.js"></script>
 <!-- ajaxChimp Min JS -->
-<script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="/front/assets/js/jquery.ajaxchimp.min.js"></script>
 <!-- Form Validator Min JS -->
-<script src="/assets/js/form-validator.min.js"></script>
+<script src="/front/assets/js/form-validator.min.js"></script>
 <!-- Contact Form Min JS -->
-<script src="/assets/js/contact-form-script.js"></script>
+<script src="/front/assets/js/contact-form-script.js"></script>
 <!-- Main JS -->
-<script src="/assets/js/main.js"></script>
+<script src="/front/assets/js/main.js"></script>
 
 
 @yield('script')

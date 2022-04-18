@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="assets/img/blog-img1.jpg" alt="blog-image"></a>
+                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img1.jpg" alt="blog-image"></a>
 
                         <div class="blog-post-content">
                             <ul>
@@ -23,7 +23,7 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="assets/img/blog-img2.jpg" alt="blog-image"></a>
+                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img2.jpg" alt="blog-image"></a>
 
                         <div class="blog-post-content">
                             <ul>
@@ -39,7 +39,7 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="assets/img/blog-img3.jpg" alt="blog-image"></a>
+                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img3.jpg" alt="blog-image"></a>
 
                         <div class="blog-post-content">
                             <ul>
@@ -55,7 +55,7 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="assets/img/blog-img4.jpg" alt="blog-image"></a>
+                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img4.jpg" alt="blog-image"></a>
 
                         <div class="blog-post-content">
                             <ul>
@@ -71,7 +71,7 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="assets/img/blog-img5.jpg" alt="blog-image"></a>
+                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img5.jpg" alt="blog-image"></a>
 
                         <div class="blog-post-content">
                             <ul>
@@ -87,7 +87,7 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="assets/img/blog-img3.jpg" alt="blog-image"></a>
+                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img3.jpg" alt="blog-image"></a>
 
                         <div class="blog-post-content">
                             <ul>

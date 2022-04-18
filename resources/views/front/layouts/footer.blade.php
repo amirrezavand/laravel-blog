@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6">
                 <div class="single-footer-widget">
-                    <a href="#" class="logo"><img src="/assets/img/logo2.png" alt="logo2"></a>
+                    <a href="#" class="logo"><img src="/front/assets/img/logo2.png" alt="logo2"></a>
                     <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project individual.</p>
 
                     <ul class="social-list">

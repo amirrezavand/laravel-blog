@@ -2,21 +2,17 @@
 <header id="header">
     <div class="crake-mobile-nav">
         <div class="logo">
-            <img src="/assets/img/logo.png" alt="">
+            <img src="/front/assets/img/logo.png" alt="">
         </div>
     </div>
-{{--    @foreach(getHeader() as $item)--}}
-{{--    {{isNavItemActive($item['route_name'],array_column($item['child'], 'route_name'))}}--}}
-{{--        {{var_dump(array_column($item['child'], 'route_name'))}}--}}
-{{--    @endforeach--}}
-{{--    {{dd('')}}--}}
+
     <div class="crake-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="index.html"><img src="/assets/img/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="/front/assets/img/logo.png" alt="logo"></a>
 
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                    <ul class="navbar-nav nav ml-auto">
+                    <ul class="navbar-nav nav">
                         @foreach(getHeader() as $item)
                             <li class="nav-item">
                                 <a href="{{$item['route_name']?route($item['route_name']):''}}" class="nav-link {{isNavItemActive($item['route_name'],array_column($item['child'], 'route_name'),'active')}}">{{$item['title']}}</a>

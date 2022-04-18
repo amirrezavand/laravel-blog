@@ -9,20 +9,20 @@
                     <div class="row h-100 justify-content-center align-items-center">
                         <div class="col-lg-6 col-md-12">
                             <div class="saas-image">
-                                <img src="assets/img/saas-shape/arrow.png" class="wow fadeInDown" data-wow-delay="0.6s" alt="arrow">
-                                <img src="assets/img/saas-shape/box1.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="box1">
-                                <img src="assets/img/saas-shape/boy1.png" class="wow fadeInLeft" data-wow-delay="0.6s" alt="boy1">
-                                <img src="assets/img/saas-shape/boy2.png" class="wow zoomIn" data-wow-delay="0.6s" alt="boy2">
-                                <img src="assets/img/saas-shape/boy3.png" class="wow bounceIn" data-wow-delay="0.6s" alt="boy3">
-                                <img src="assets/img/saas-shape/digital-screen.png" class="wow fadeInDown" data-wow-delay="0.6s" alt="digital-screen">
-                                <img src="assets/img/saas-shape/filter1.png" class="wow zoomIn" data-wow-delay="0.6s" alt="filter1">
-                                <img src="assets/img/saas-shape/filter2.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="filter2">
-                                <img src="assets/img/saas-shape/filter3.png" class="wow rotateIn" data-wow-delay="0.6s" alt="filter3">
-                                <img src="assets/img/saas-shape/girl1.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="girl1">
-                                <img src="assets/img/saas-shape/girl2.png" class="wow zoomIn" data-wow-delay="0.6s" alt="girl2">
-                                <img src="assets/img/saas-shape/monitor.png" class="wow zoomIn" data-wow-delay="0.6s" alt="monitor">
+                                <img src="/front/assets/img/saas-shape/arrow.png" class="wow fadeInDown" data-wow-delay="0.6s" alt="arrow">
+                                <img src="/front/assets/img/saas-shape/box1.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="box1">
+                                <img src="/front/assets/img/saas-shape/boy1.png" class="wow fadeInLeft" data-wow-delay="0.6s" alt="boy1">
+                                <img src="/front/assets/img/saas-shape/boy2.png" class="wow zoomIn" data-wow-delay="0.6s" alt="boy2">
+                                <img src="/front/assets/img/saas-shape/boy3.png" class="wow bounceIn" data-wow-delay="0.6s" alt="boy3">
+                                <img src="/front/assets/img/saas-shape/digital-screen.png" class="wow fadeInDown" data-wow-delay="0.6s" alt="digital-screen">
+                                <img src="/front/assets/img/saas-shape/filter1.png" class="wow zoomIn" data-wow-delay="0.6s" alt="filter1">
+                                <img src="/front/assets/img/saas-shape/filter2.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="filter2">
+                                <img src="/front/assets/img/saas-shape/filter3.png" class="wow rotateIn" data-wow-delay="0.6s" alt="filter3">
+                                <img src="/front/assets/img/saas-shape/girl1.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="girl1">
+                                <img src="/front/assets/img/saas-shape/girl2.png" class="wow zoomIn" data-wow-delay="0.6s" alt="girl2">
+                                <img src="/front/assets/img/saas-shape/monitor.png" class="wow zoomIn" data-wow-delay="0.6s" alt="monitor">
 
-                                <img src="assets/img/saas-shape/main-image.png" class="wow zoomIn" data-wow-delay="0.6s" alt="main-image.png">
+                                <img src="/front/assets/img/saas-shape/main-image.png" class="wow zoomIn" data-wow-delay="0.6s" alt="main-image.png">
                             </div>
                         </div>
 
@@ -40,10 +40,10 @@
         </div>
 
         <div class="bg-gray shape-1"></div>
-        <div class="shape1"><img src="assets/img/shape1.png" alt="img"></div>
-        <div class="shape2"><img src="assets/img/shape2.png" alt="img"></div>
-        <div class="shape3"><img src="assets/img/shape3.png" alt="img"></div>
-        <div class="shape4 rotateme"><img src="assets/img/shape4.png" alt="img"></div>
+        <div class="shape1"><img src="/front/assets/img/shape1.png" alt="img"></div>
+        <div class="shape2"><img src="/front/assets/img/shape2.png" alt="img"></div>
+        <div class="shape3"><img src="/front/assets/img/shape3.png" alt="img"></div>
+        <div class="shape4 rotateme"><img src="/front/assets/img/shape4.png" alt="img"></div>
     </div>
     <!-- End SaaS Main Banner -->
 
@@ -124,7 +124,7 @@
                 <div class="row h-100 justify-content-center align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <div class="features-image">
-                            <img src="assets/img/features-img1.png" alt="image">
+                            <img src="/front/assets/img/features-img1.png" alt="image">
                         </div>
                     </div>
 
@@ -159,14 +159,14 @@
             </div>
         </div>
 
-        <div class="shape7"><img src="assets/img/shape7.png" alt="shape"></div>
-        <div class="shape3"><img src="assets/img/shape3.png" alt="img"></div>
+        <div class="shape7"><img src="/front/assets/img/shape7.png" alt="shape"></div>
+        <div class="shape3"><img src="/front/assets/img/shape3.png" alt="img"></div>
         <div class="bg-gray shape-1"></div>
-        <div class="shape6"><img src="assets/img/shape6.png" alt="img"></div>
-        <div class="shape8 rotateme"><img src="assets/img/shape8.svg" alt="shape"></div>
-        <div class="shape9"><img src="assets/img/shape9.svg" alt="shape"></div>
-        <div class="shape10"><img src="assets/img/shape10.svg" alt="shape"></div>
-        <div class="shape11 rotateme"><img src="assets/img/shape11.svg" alt="shape"></div>
+        <div class="shape6"><img src="/front/assets/img/shape6.png" alt="img"></div>
+        <div class="shape8 rotateme"><img src="/front/assets/img/shape8.svg" alt="shape"></div>
+        <div class="shape9"><img src="/front/assets/img/shape9.svg" alt="shape"></div>
+        <div class="shape10"><img src="/front/assets/img/shape10.svg" alt="shape"></div>
+        <div class="shape11 rotateme"><img src="/front/assets/img/shape11.svg" alt="shape"></div>
     </section>
     <!-- End Features Area -->
 
@@ -182,7 +182,7 @@
             <div class="overview-box">
                 <div class="row h-100 justify-content-center align-items-center">
                     <div class="col-lg-6 col-md-6 overview-img">
-                        <img src="assets/img/overview-1.png" alt="image">
+                        <img src="/front/assets/img/overview-1.png" alt="image">
                     </div>
 
                     <div class="col-lg-6 col-md-6 overview-content">
@@ -246,7 +246,7 @@
             <div class="overview-box">
                 <div class="row h-100 justify-content-center align-items-center">
                     <div class="col-lg-6 col-md-6 overview-img">
-                        <img src="assets/img/overview-3.png" alt="image">
+                        <img src="/front/assets/img/overview-3.png" alt="image">
                     </div>
 
                     <div class="col-lg-6 col-md-6 overview-content">
@@ -284,20 +284,20 @@
                     </div>
 
                     <div class="col-lg-6 col-md-6 overview-img">
-                        <img src="assets/img/overview-4.png" alt="image">
+                        <img src="/front/assets/img/overview-4.png" alt="image">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="shape7"><img src="assets/img/shape7.png" alt="shape"></div>
-        <div class="shape3"><img src="assets/img/shape3.png" alt="img"></div>
+        <div class="shape7"><img src="/front/assets/img/shape7.png" alt="shape"></div>
+        <div class="shape3"><img src="/front/assets/img/shape3.png" alt="img"></div>
         <div class="bg-gray shape-1"></div>
-        <div class="shape6"><img src="assets/img/shape6.png" alt="img"></div>
-        <div class="shape8 rotateme"><img src="assets/img/shape8.svg" alt="shape"></div>
-        <div class="shape9"><img src="assets/img/shape9.svg" alt="shape"></div>
-        <div class="shape10"><img src="assets/img/shape10.svg" alt="shape"></div>
-        <div class="shape11 rotateme"><img src="assets/img/shape11.svg" alt="shape"></div>
+        <div class="shape6"><img src="/front/assets/img/shape6.png" alt="img"></div>
+        <div class="shape8 rotateme"><img src="/front/assets/img/shape8.svg" alt="shape"></div>
+        <div class="shape9"><img src="/front/assets/img/shape9.svg" alt="shape"></div>
+        <div class="shape10"><img src="/front/assets/img/shape10.svg" alt="shape"></div>
+        <div class="shape11 rotateme"><img src="/front/assets/img/shape11.svg" alt="shape"></div>
     </section>
     <!-- End Overview Area -->
 
@@ -307,7 +307,7 @@
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <div class="join-img">
-                        <img src="assets/img/3.png" alt="img">
+                        <img src="/front/assets/img/3.png" alt="img">
                     </div>
                 </div>
 
@@ -402,7 +402,7 @@
 
                                     <div class="col-lg-6 col-md-6">
                                         <div class="tabs_item_img">
-                                            <img src="assets/img/features-img1.png" alt="img">
+                                            <img src="/front/assets/img/features-img1.png" alt="img">
                                         </div>
                                     </div>
                                 </div>
@@ -412,7 +412,7 @@
                                 <div class="row h-100 justify-content-center align-items-center">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="tabs_item_img">
-                                            <img src="assets/img/features-img1.png" alt="img">
+                                            <img src="/front/assets/img/features-img1.png" alt="img">
                                         </div>
                                     </div>
 
@@ -448,7 +448,7 @@
 
                                     <div class="col-lg-6 col-md-6">
                                         <div class="tabs_item_img">
-                                            <img src="assets/img/features-img1.png" alt="img">
+                                            <img src="/front/assets/img/features-img1.png" alt="img">
                                         </div>
                                     </div>
                                 </div>
@@ -458,7 +458,7 @@
                                 <div class="row h-100 justify-content-center align-items-center">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="tabs_item_img">
-                                            <img src="assets/img/features-img1.png" alt="img">
+                                            <img src="/front/assets/img/features-img1.png" alt="img">
                                         </div>
                                     </div>
 
@@ -494,7 +494,7 @@
 
                                     <div class="col-lg-6 col-md-6">
                                         <div class="tabs_item_img">
-                                            <img src="assets/img/features-img1.png" alt="img">
+                                            <img src="/front/assets/img/features-img1.png" alt="img">
                                         </div>
                                     </div>
                                 </div>
@@ -505,11 +505,11 @@
             </div>
         </div>
 
-        <div class="shape1"><img src="assets/img/shape1.png" alt="img"></div>
-        <div class="shape2"><img src="assets/img/shape2.png" alt="img"></div>
-        <div class="shape3"><img src="assets/img/shape3.png" alt="img"></div>
-        <div class="shape6"><img src="assets/img/shape6.png" alt="img"></div>
-        <div class="shape8 rotateme"><img src="assets/img/shape8.svg" alt="shape"></div>
+        <div class="shape1"><img src="/front/assets/img/shape1.png" alt="img"></div>
+        <div class="shape2"><img src="/front/assets/img/shape2.png" alt="img"></div>
+        <div class="shape3"><img src="/front/assets/img/shape3.png" alt="img"></div>
+        <div class="shape6"><img src="/front/assets/img/shape6.png" alt="img"></div>
+        <div class="shape8 rotateme"><img src="/front/assets/img/shape8.svg" alt="shape"></div>
 
         <!-- Bubble Animte -->
         <div class="bubble-animate">
@@ -582,7 +582,7 @@
                 <div class="row h-100 justify-content-center align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <div class="fun-facts-image">
-                            <img src="assets/img/features-img2.png" alt="image">
+                            <img src="/front/assets/img/features-img2.png" alt="image">
                         </div>
                     </div>
 
@@ -804,7 +804,7 @@
                     <div class="col-lg-12">
                         <div class="single-feedback">
                             <div class="client-info">
-                                <img src="assets/img/client1.jpg" alt="client">
+                                <img src="/front/assets/img/client1.jpg" alt="client">
                                 <h3>Alit John</h3>
                                 <span>Web Developer</span>
                             </div>
@@ -815,7 +815,7 @@
                     <div class="col-lg-12">
                         <div class="single-feedback">
                             <div class="client-info">
-                                <img src="assets/img/client2.jpg" alt="client">
+                                <img src="/front/assets/img/client2.jpg" alt="client">
                                 <h3>Alit John</h3>
                                 <span>SEO Expert</span>
                             </div>
@@ -826,7 +826,7 @@
                     <div class="col-lg-12">
                         <div class="single-feedback">
                             <div class="client-info">
-                                <img src="assets/img/client3.jpg" alt="client">
+                                <img src="/front/assets/img/client3.jpg" alt="client">
                                 <h3>Steven John</h3>
                                 <span>Web Developer</span>
                             </div>
@@ -837,7 +837,7 @@
                     <div class="col-lg-12">
                         <div class="single-feedback">
                             <div class="client-info">
-                                <img src="assets/img/client4.jpg" alt="client">
+                                <img src="/front/assets/img/client4.jpg" alt="client">
                                 <h3>David Warner</h3>
                                 <span>Web Developer</span>
                             </div>
@@ -861,43 +861,43 @@
                 <div class="partner-slides">
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-1.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-1.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-2.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-2.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-3.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-3.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-4.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-4.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-5.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-5.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-6.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-6.png" alt="partner"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <div class="item">
-                            <a href="#"><img src="assets/img/partner-7.png" alt="partner"></a>
+                            <a href="#"><img src="/front/assets/img/partner-7.png" alt="partner"></a>
                         </div>
                     </div>
                 </div>
