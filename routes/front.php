@@ -13,3 +13,11 @@ Route::get('contact_us',[ContactUsController::class,'index'])->name('contact_us'
 Route::get('about_us',[AboutUsController::class,'aboutUs'])->name('about_us');
 Route::get('our_team',[AboutUsController::class,'ourTeam'])->name('our_team');
 
+Route::get('login',function (){
+    return view('front.auth.login');
+})->name('login');
+
+Route::get('signup',function (){
+    return view('front.auth.signup');
+})->name('signup');
+

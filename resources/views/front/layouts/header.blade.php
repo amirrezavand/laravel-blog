@@ -13,30 +13,22 @@
 
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav nav ml-auto">
-                        <li class="nav-item">
-                            <a href="{{route('home')}}" class="nav-link">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{route('blog')}}" class="nav-link">Blog</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{route('contact_us')}}" class="nav-link">contact us</a>
-                            <ul class="dropdown_menu">
-                                <li><a href="{{route('our_team')}}">our team</a></li>
-                                <li><a href="{{route('about_us')}}">about us</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="" class="nav-link active">login</a>
-                        </li>
+                        @foreach(getHeader() as $item)
+                            <li class="nav-item">
+                                <a href="{{$item['route_name']?route($item['route_name']):''}}" class="nav-link">{{$item['title']}}</a>
+                                @if($item['child'])
+                                    <ul class="dropdown_menu">
+                                        @foreach($item['child'] as $itemChild)
+                                            <li><a href="{{$itemChild['route_name']?route($itemChild['route_name']):''}}">{{$itemChild['title']}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="mr-auto others-option">
                     <ul class="navbar-nav">
-
                         <li class="header-search-box">
                             <a href="#header-search" title="Search">
                                 <i class="icofont-search-2"></i>

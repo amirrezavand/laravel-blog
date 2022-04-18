@@ -33,9 +33,9 @@
 
 <body>
 <!-- Start Preloader Area -->
-<div class="preloader-area">
-    <div class="lds-hourglass"></div>
-</div>
+{{--<div class="preloader-area">--}}
+{{--    <div class="lds-hourglass"></div>--}}
+{{--</div>--}}
 <!-- End Preloader Area -->
 
 @include('front.layouts.header')
