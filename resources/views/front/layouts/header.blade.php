@@ -5,7 +5,11 @@
             <img src="/assets/img/logo.png" alt="">
         </div>
     </div>
-
+{{--    @foreach(getHeader() as $item)--}}
+{{--    {{isNavItemActive($item['route_name'],array_column($item['child'], 'route_name'))}}--}}
+{{--        {{var_dump(array_column($item['child'], 'route_name'))}}--}}
+{{--    @endforeach--}}
+{{--    {{dd('')}}--}}
     <div class="crake-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
@@ -15,11 +19,11 @@
                     <ul class="navbar-nav nav ml-auto">
                         @foreach(getHeader() as $item)
                             <li class="nav-item">
-                                <a href="{{$item['route_name']?route($item['route_name']):''}}" class="nav-link">{{$item['title']}}</a>
+                                <a href="{{$item['route_name']?route($item['route_name']):''}}" class="nav-link {{isNavItemActive($item['route_name'],array_column($item['child'], 'route_name'),'active')}}">{{$item['title']}}</a>
                                 @if($item['child'])
                                     <ul class="dropdown_menu">
                                         @foreach($item['child'] as $itemChild)
-                                            <li><a href="{{$itemChild['route_name']?route($itemChild['route_name']):''}}">{{$itemChild['title']}}</a></li>
+                                            <li><a href="{{$itemChild['route_name']?route($itemChild['route_name']):''}}" class="{{isNavItemActive($itemChild['route_name'],array_column($itemChild['child'], 'route_name'),'active')}}">{{$itemChild['title']}}</a></li>
                                         @endforeach
                                     </ul>
                                 @endif
