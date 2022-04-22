@@ -1,5 +1,6 @@
 @extends('admin.layouts.master')
 
+@section('title','Blog')
 
 @section('content')
     <div class="page-title">
