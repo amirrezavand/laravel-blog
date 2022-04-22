@@ -1,19 +1,19 @@
 @extends('admin.layouts.master')
 
-@section('title','Blog')
+@section('title','User')
 
 @section('content')
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Blogs</h3>
-                <p class="text-subtitle text-muted">For management blogs</p>
+                <h3>Users</h3>
+                <p class="text-subtitle text-muted">For management users</p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/admin/">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                        <li class="breadcrumb-item active" aria-current="page">User</li>
                     </ol>
                 </nav>
             </div>
@@ -25,12 +25,12 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
-                        <h4 class="card-title">Blog items ( total : {{$blogs->total()}} )</h4>
-                        <a class="btn btn-success btn-sm" href="{{route('admin.blog.create')}}">Create <i class="bi bi-plus position-relative" style="top: 3px;"></i></a>
+                        <h4 class="card-title">User items ( total : {{$users->total()}} )</h4>
+                        <a class="btn btn-success btn-sm" href="{{route('admin.user.create')}}">Create <i class="bi bi-plus position-relative" style="top: 3px;"></i></a>
                     </div>
                     <div class="row px-4">
                         <div class="col-12 col-md-6">
-                            <form action="{{route('admin.blog.index')}}" method="get">
+                            <form action="{{route('admin.user.index')}}" method="get">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
                                     <input type="text" class="form-control" name="keywords" placeholder="Key words" value="{{Request()->input('keywords')}}">
@@ -46,21 +46,21 @@
                                 <thead>
                                 <tr>
                                     <th class="px-4">#</th>
-                                    <th>TITLE</th>
-                                    <th>AUTHOR</th>
+                                    <th>NAME</th>
+                                    <th>EMAIL</th>
                                     <th>OPERATE</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($blogs as $blog)
+                                @foreach($users as $user)
                                     <tr>
                                         <td class="px-4">{{$user->id}}</td>
-                                        <td>{{$user->title}}</td>
-                                        <td>{{$user->user->name}}</td>
+                                        <td>{{$user->name}}</td>
+                                        <td>{{$user->email}}</td>
                                         <td>
-                                            <a class="btn btn-warning btn-sm" href="{{route('admin.blog.edit',['blog'=>$blog->id])}}">edit</a>
+                                            <a class="btn btn-warning btn-sm" href="{{route('admin.user.edit',['user'=>$user->id])}}">edit</a>
                                             <a class="btn btn-danger btn-sm" href="#" onclick="event.preventDefault(); document.getElementById('delete-{{$loop->index}}').submit();">delete</a>
-                                            <form action="{{route('admin.blog.destroy',['blog'=>$blog->id])}}" method="post" class="d-none" id="delete-{{$loop->index}}">
+                                            <form action="{{route('admin.user.destroy',['user'=>$user->id])}}" method="post" class="d-none" id="delete-{{$loop->index}}">
                                                 @csrf
                                                 @method('delete')
                                             </form>
@@ -71,7 +71,7 @@
                             </table>
                         </div>
                         <div class="d-flex justify-content-center mt-2">
-                            {{$blogs->links()}}
+                            {{$users->links()}}
                         </div>
                     </div>
                 </div>
