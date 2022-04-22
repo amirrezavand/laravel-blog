@@ -58,6 +58,23 @@
                                     </div>
                                     @enderror
                                 </div>
+                                <div class="col-sm-6">
+                                    <label for="luContentStatus">Content Status</label>
+                                    <fieldset class="form-group">
+                                        <select class="form-select @error('lu_content_status') is-invalid @enderror" id="luContentStatus" name="lu_content_status" >
+                                            <option value=""></option>
+                                            @foreach($contentStatuses as $item)
+                                                <option value="{{$item->key}}" @if($item->key==old('lu_content_status',$blog->lu_content_status)) selected @endif>{{$item->value}}</option>
+                                            @endforeach
+                                        </select>
+                                        @error('lu_content_status')
+                                            <div class="invalid-feedback">
+                                                <i class="bx bx-radio-circle"></i>
+                                                {{$message}}
+                                            </div>
+                                        @enderror
+                                    </fieldset>
+                                </div>
 
                                 <div>
                                     <label for="body">Body</label>

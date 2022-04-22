@@ -16,6 +16,7 @@ class BlogFactory extends Factory
     {
         return [
             'title' => $this->faker->unique()->text(100),
+            'lu_content_status'=>'publish',
             'slug' => $this->faker->unique()->slug(8),
             'body' => $this->faker->paragraph(rand(3,5)),
             'short_description' => $this->faker->paragraph(1),

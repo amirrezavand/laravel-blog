@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BlogRequest;
 use App\Models\Blog;
+use App\Models\Lookup;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -41,7 +42,9 @@ class BlogController extends Controller
     public function create()
     {
         $blog=new Blog();
-        return view('admin.blog.create-edit',compact('blog'));
+        $contentStatuses=Lookup::where('group_key','content_status')->get();
+
+        return view('admin.blog.create-edit',compact('blog','contentStatuses'));
     }
 
     /**
@@ -77,7 +80,9 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        return view('admin.blog.create-edit',compact('blog'));
+        $contentStatuses=Lookup::where('group_key','content_status')->get();
+
+        return view('admin.blog.create-edit',compact('blog','contentStatuses'));
     }
 
     /**

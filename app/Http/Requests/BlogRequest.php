@@ -25,6 +25,7 @@ class BlogRequest extends FormRequest
     {
         return [
             'title' => 'required' ,
+            'lu_content_status' => 'required',
             'slug' => 'nullable|max:100' ,
             'body' => 'nullable' ,
             'short_description'=> 'nullable' ,

@@ -18,6 +18,7 @@ class CreateBlogsTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');//author
             $table->string('title')->unique();
+            $table->string('lu_content_status',50)->nullable();
             $table->string('slug',100)->unique()->nullable();
             $table->text('body')->nullable();
             $table->string('short_description')->nullable();
