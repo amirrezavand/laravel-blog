@@ -54,9 +54,9 @@
                                 <tbody>
                                 @foreach($blogs as $blog)
                                     <tr>
-                                        <td class="px-4">{{$user->id}}</td>
-                                        <td>{{$user->title}}</td>
-                                        <td>{{$user->user->name}}</td>
+                                        <td class="px-4">{{$blog->id}}</td>
+                                        <td>{{$blog->title}}</td>
+                                        <td>{{$blog->user->name}}</td>
                                         <td>
                                             <a class="btn btn-warning btn-sm" href="{{route('admin.blog.edit',['blog'=>$blog->id])}}">edit</a>
                                             <a class="btn btn-danger btn-sm" href="#" onclick="event.preventDefault(); document.getElementById('delete-{{$loop->index}}').submit();">delete</a>

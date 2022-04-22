@@ -58,6 +58,7 @@
                                     </div>
                                     @enderror
                                 </div>
+
                                 <div class="col-sm-6">
                                     <label for="luContentStatus">Content Status</label>
                                     <fieldset class="form-group">
@@ -148,6 +149,7 @@
                                     </div>
                                     @enderror
                                 </div>
+
                                 <div class="mt-2">
                                     <button class="btn btn-success btn-sm" type="submit">@if(getRouteAction()=='create') save @else edit @endif</button>
                                 </div>

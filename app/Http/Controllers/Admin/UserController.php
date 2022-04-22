@@ -36,7 +36,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $user=new User();
+        return view('admin.user.create-edit',compact('user'));
     }
 
     /**
@@ -47,7 +48,19 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+//        $data = $request->validate([
+//            'name' => ['required', 'string', 'max:255'],
+//            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+//            'password' => ['required', 'string', 'min:8', 'confirmed'],
+//        ]);
+//
+//        $user = User::create($data);
+//
+//        if($request->has('verify')) {
+//            $user->markEmailAsVerified();
+//        }
+//
+//        return redirect(route('admin.users.index'));
     }
 
     /**
