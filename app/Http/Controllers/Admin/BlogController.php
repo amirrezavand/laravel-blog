@@ -17,9 +17,19 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $blogs=Blog::with('user')->orderBy('id','desc')->paginate(10);
+        $blogs=Blog::query()->with('user')->orderBy('id','desc');
+
+        $keywords=$request->input('keywords');
+        if($keywords) {
+            $blogs=$blogs->whereHas('user', function ($query) use ($keywords){
+                    $query->where('name', 'like', '%'.$keywords.'%');
+                })->orWhere('title','LIKE','%'.$keywords.'%')->paginate(10)->withQueryString();
+        }
+        else
+            $blogs=$blogs->paginate(10)->withQueryString();
+
         return view('admin.blog.index',compact('blogs'));
     }
 
