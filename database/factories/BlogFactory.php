@@ -16,7 +16,7 @@ class BlogFactory extends Factory
     {
         return [
             'title' => $this->faker->unique()->text(100),
-            'slug' => $this->faker->unique()->slug(10),
+            'slug' => $this->faker->unique()->slug(8),
             'body' => $this->faker->paragraph(rand(3,5)),
             'short_description' => $this->faker->paragraph(1),
             'img' => $this->faker->imageUrl(),

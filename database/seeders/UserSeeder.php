@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
 
         User::factory()
             ->has(Blog::factory()->count(3))
-            ->count(3)
+            ->count(25)
             ->create();
 
     }
