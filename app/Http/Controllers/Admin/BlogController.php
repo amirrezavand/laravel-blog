@@ -42,16 +42,19 @@ class BlogController extends Controller
      */
     public function store(BlogRequest $request)
     {
-        auth()->loginUsingId(14);
         $validateData=(object) $request->all();
+
+        //upload image
         $img=$request->file('img');
         if(is_null($img)) {
             unset($validateData->img);
         } else {
             $name = 'blog/' . time() . Str::random(5) . '.' . $img->getClientOriginalExtension();
             Storage::disk("upload")->put($name,file_get_contents($img));
-            $validateData->img=$name;
+            $validateData->img=Storage::disk('upload')->url($name);
         }
+        //end upload image
+
         auth()->user()->blogs()->create((array) $validateData);
         return redirect(route('admin.blog.index'));
     }
@@ -64,7 +67,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('admin.blog.create-edit',compact('blog'));
     }
 
     /**
@@ -74,9 +77,23 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(BlogRequest $request, Blog $blog)
     {
-        //
+        $validateData=(object) $request->all();
+
+        //upload image
+        $img=$request->file('img');
+        if(is_null($img)) {
+            unset($validateData->img);
+        } else {
+            $name = '/blog/' . time() . Str::random(5) . '.' . $img->getClientOriginalExtension();
+            Storage::disk("upload")->put($name,file_get_contents($img));
+            $validateData->img=Storage::disk('upload')->url($name);
+        }
+        //end upload image
+
+        $blog->update((array) $validateData);
+        return redirect(route('admin.blog.index'));
     }
 
     /**
@@ -88,6 +105,13 @@ class BlogController extends Controller
     public function destroy(Blog $blog)
     {
         $blog->delete();
+        return back();
+    }
+
+    public function deleteImg(Blog $blog){
+        $blog->update([
+            'img'=>null
+        ]);
         return back();
     }
 }

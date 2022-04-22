@@ -37,7 +37,8 @@ return [
 
         'upload' => [
             'driver' => 'local',
-            'root' => 'upload'
+            'root' => 'upload',
+            'url' => '/upload'
         ],
 
         'public' => [

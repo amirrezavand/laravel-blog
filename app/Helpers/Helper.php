@@ -16,6 +16,14 @@ if(!function_exists('getRouteName')){
     }
 }
 
+if(!function_exists('getRouteAction')){
+    function getRouteAction()
+    {
+        $route=explode('.',Request::route()->getName());
+        return $route[count($route)-1];
+    }
+}
+
 if(!function_exists('getHeader')){
     function getHeader(): array
     {

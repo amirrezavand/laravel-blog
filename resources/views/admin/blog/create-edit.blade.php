@@ -29,25 +29,26 @@
                     </div>
 
                     <div class="card-body">
-                        <form method="post" action="{{route('admin.blog.store')}}" enctype="multipart/form-data">
+                        <form method="post" action="@if(getRouteAction()=='create') {{route('admin.blog.store')}} @else {{ route('admin.blog.update',['blog'=>$blog->id])}} @endif" enctype="multipart/form-data">
                             @csrf()
+                            @if(getRouteAction()=='edit') @method('put') @endif
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="title">Title</label>
                                     <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                                           placeholder="Title" value="{{$blog->title}}" name="title">
+                                           placeholder="Title" value="{{old('title',$blog->title)}}" name="title">
                                     @error('title')
-                                    <div class="invalid-feedback">
-                                        <i class="bx bx-radio-circle"></i>
-                                        {{$message}}
-                                    </div>
+                                        <div class="invalid-feedback">
+                                            <i class="bx bx-radio-circle"></i>
+                                            {{$message}}
+                                        </div>
                                     @enderror
                                 </div>
 
                                 <div class="col-sm-6">
                                     <label for="slug">Slug</label>
                                     <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug"
-                                           placeholder="Slug" value="{{$blog->slug}}" name="slug">
+                                           placeholder="Slug" value="{{old('slug',$blog->slug)}}" name="slug">
                                     @error('slug')
                                     <div class="invalid-feedback">
                                         <i class="bx bx-radio-circle"></i>
@@ -58,7 +59,7 @@
 
                                 <div>
                                     <label for="body">Body</label>
-                                    <textarea class="form-control @error('body') is-invalid @enderror" id="body" placeholder="body" rows="3" name="body">{{$blog->body}}</textarea>
+                                    <textarea class="form-control @error('body') is-invalid @enderror" id="body" placeholder="body" rows="3" name="body">{{old('body',$blog->body)}}</textarea>
                                     @error('body')
                                     <div class="invalid-feedback">
                                         <i class="bx bx-radio-circle"></i>
@@ -70,7 +71,7 @@
                                 <div>
                                     <label for="shortDescription">Short Description</label>
                                     <input type="text" class="form-control @error('short_description') is-invalid @enderror" id="slug"
-                                           placeholder="Short Description" value="{{$blog->short_description}}" name="short_description">
+                                           placeholder="Short Description" value="{{old('short_description',$blog->short_description)}}" name="short_description">
                                     @error('short_description')
                                         <div class="invalid-feedback">
                                             <i class="bx bx-radio-circle"></i>
@@ -88,12 +89,15 @@
                                             {{$message}}
                                         </div>
                                     @enderror
+                                    @if(! is_null($blog->img))
+                                        <div class="mt-1 position-relative"><img src="{{$blog->img}}" style="max-height: 100px;"> <a href="{{route('admin.blog.delete_img',['blog'=>$blog->id])}}" class="position-absolute text-danger" style="top: 0;left: 5px;cursor: pointer;">&times;</a></div>
+                                    @endif
                                 </div>
 
                                 <div class="col-sm-6">
                                     <label for="studyTime">Study Time</label>
                                     <input type="number" class="form-control form-control-sm @error('study_time') is-invalid @enderror" id="studyTime"
-                                           placeholder="Study Time" value="{{$blog->study_time}}" name="study_time">
+                                           placeholder="Study Time" value="{{old('study_time',$blog->study_time)}}" name="study_time">
                                     @error('study_time')
                                     <div class="invalid-feedback">
                                         <i class="bx bx-radio-circle"></i>
@@ -105,7 +109,7 @@
                                 <div class="col-sm-6">
                                     <label for="seoKeywords">Seo Keywords</label>
                                     <input type="text" class="form-control form-control-sm @error('seo_keywords') is-invalid @enderror" id="seoKeywords"
-                                           placeholder="Seo Keywords" value="{{$blog->seo_keywords}}" name="seo_keywords">
+                                           placeholder="Seo Keywords" value="{{old('seo_keywords',$blog->seo_keywords)}}" name="seo_keywords">
                                     @error('seo_keywords')
                                     <div class="invalid-feedback">
                                         <i class="bx bx-radio-circle"></i>
@@ -117,7 +121,7 @@
                                 <div class="col-sm-6">
                                     <label for="seoDescription">Seo Description</label>
                                     <input type="text" class="form-control form-control-sm @error('seo_description') is-invalid @enderror" id="seoDescription"
-                                           placeholder="Seo Keywords" value="{{$blog->seo_description}}" name="seo_description">
+                                           placeholder="Seo Keywords" value="{{old('seo_description',$blog->seo_description)}}" name="seo_description">
                                     @error('seo_description')
                                     <div class="invalid-feedback">
                                         <i class="bx bx-radio-circle"></i>
@@ -126,7 +130,7 @@
                                     @enderror
                                 </div>
                                 <div class="mt-2">
-                                    <button class="btn btn-success btn-sm" type="submit">submit</button>
+                                    <button class="btn btn-success btn-sm" type="submit">@if(getRouteAction()=='create') save @else edit @endif</button>
                                 </div>
                             </div>
                         </form>
