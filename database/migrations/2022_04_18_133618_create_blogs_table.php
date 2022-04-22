@@ -20,7 +20,7 @@ class CreateBlogsTable extends Migration
             $table->string('title')->unique();
             $table->string('slug',100)->unique()->nullable();
             $table->text('body')->nullable();
-            $table->string('short_description');
+            $table->string('short_description')->nullable();
             $table->string('img',100)->nullable();
             $table->tinyInteger('study_time')->default(0);
             $table->string('seo_keywords')->nullable();

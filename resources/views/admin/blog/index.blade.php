@@ -25,7 +25,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h4 class="card-title">Blog items ( total : {{$blogs->total()}} )</h4>
-                        <a class="btn btn-success btn-sm">Create <i class="bi bi-plus position-relative" style="top: 3px;"></i></a>
+                        <a class="btn btn-success btn-sm" href="{{route('admin.blog.create')}}">Create <i class="bi bi-plus position-relative" style="top: 3px;"></i></a>
                     </div>
                     <div class="card-content">
                         <!-- table striped -->
@@ -35,7 +35,7 @@
                                 <tr>
                                     <th class="px-4">#</th>
                                     <th>TITLE</th>
-                                    <th>Author</th>
+                                    <th>AUTHOR</th>
                                     <th>OPERATE</th>
                                 </tr>
                                 </thead>

@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\BlogRequest;
 use App\Models\Blog;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -26,7 +30,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        $blog=new Blog();
+        return view('admin.blog.create-edit',compact('blog'));
     }
 
     /**
@@ -35,20 +40,20 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BlogRequest $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        auth()->loginUsingId(14);
+        $validateData=(object) $request->all();
+        $img=$request->file('img');
+        if(is_null($img)) {
+            unset($validateData->img);
+        } else {
+            $name = 'blog/' . time() . Str::random(5) . '.' . $img->getClientOriginalExtension();
+            Storage::disk("upload")->put($name,file_get_contents($img));
+            $validateData->img=$name;
+        }
+        auth()->user()->blogs()->create((array) $validateData);
+        return redirect(route('admin.blog.index'));
     }
 
     /**
@@ -57,7 +62,7 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Blog $blog)
     {
         //
     }
@@ -69,7 +74,7 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Blog $blog)
     {
         //
     }
@@ -80,8 +85,9 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Blog $blog)
     {
-        //
+        $blog->delete();
+        return back();
     }
 }
