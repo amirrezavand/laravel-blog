@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'is_admin',
+        'is_staff'
     ];
 
     /**
@@ -41,6 +43,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function markAsAdmin(){
+        $this->update(['is_admin'=>1]);
+    }
 
     public function blogs(){
         return $this->hasMany(Blog::class);

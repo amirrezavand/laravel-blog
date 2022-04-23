@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
@@ -46,32 +49,20 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
-//        $data = $request->validate([
-//            'name' => ['required', 'string', 'max:255'],
-//            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-//            'password' => ['required', 'string', 'min:8', 'confirmed'],
-//        ]);
-//
-//        $user = User::create($data);
-//
-//        if($request->has('verify')) {
-//            $user->markEmailAsVerified();
-//        }
-//
-//        return redirect(route('admin.users.index'));
-    }
+        $validateData=(object) $request->all();
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        $validateData->password=Hash::make($validateData->password);
+
+        $user = User::create((array) $validateData);
+
+
+        if($request->has('is_verify_email'))
+            $user->markEmailAsVerified();
+
+
+        return redirect(route('admin.user.index'));
     }
 
     /**
@@ -80,9 +71,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('admin.user.create-edit',compact('user'));
     }
 
     /**
@@ -92,9 +83,24 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserRequest $request, User $user)
     {
-        //
+        $validateData=(object) $request->all();
+        if(!$request->has('is_staff')) $validateData->is_staff='0';
+        if(!$request->has('is_admin')) $validateData->is_admin='0';
+
+        if(is_null($validateData->password))
+            unset($validateData->password);
+        else
+            $validateData->password=Hash::make($validateData->password);
+
+        $user->update((array) $validateData);
+
+        if($request->has('is_verify_email')) {
+            $user->markEmailAsVerified();
+        }
+
+        return redirect(route('admin.user.index'));
     }
 
     /**
@@ -103,8 +109,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect(route('admin.user.index'));
     }
 }

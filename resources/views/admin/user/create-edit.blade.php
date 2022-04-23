@@ -73,7 +73,7 @@
 
                                 <div class="col-sm-6">
                                     <label for="passwordConfirmation">Password Confirmation</label>
-                                    <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" id="Password Confirmation"
+                                    <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" id="PasswordConfirmation"
                                            placeholder="Password Confirmation" name="password_confirmation">
                                     @error('password_confirmation')
                                         <div class="invalid-feedback">
@@ -87,8 +87,8 @@
                                     <li class="d-inline-block me-2 mb-1">
                                         <div class="form-check">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="form-check-input form-check-info form-check-glow" checked="" name="is_admin" id="isAdmin">
-                                                <label class="form-check-label" for="isAdmin">Is Admin</label>
+                                                <input type="checkbox" class="form-check-input form-check-info form-check-glow" @if($user->is_staff==1) checked @endif name="is_staff" id="isStaff" value="1">
+                                                <label class="form-check-label" for="isStaff">Is Staff</label>
                                             </div>
                                         </div>
                                     </li>
@@ -96,12 +96,22 @@
                                     <li class="d-inline-block me-2 mb-1">
                                         <div class="form-check">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="form-check-input form-check-info form-check-glow" checked="" name="is_verified_email" id="isVerifiedEmail">
-                                                <label class="form-check-label" for="isAdmin">Is Verified Email</label>
+                                                <input type="checkbox" class="form-check-input form-check-info form-check-glow" @if($user->is_admin==1) checked @endif name="is_admin" id="isAdmin" value="1">
+                                                <label class="form-check-label" for="isAdmin">Is Admin</label>
                                             </div>
                                         </div>
                                     </li>
 
+                                    @if(is_null($user->email_verified_at))
+                                        <li class="d-inline-block me-2 mb-1">
+                                            <div class="form-check">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="form-check-input form-check-info form-check-glow" name="is_verify_email" id="isVerifyEmail">
+                                                    <label class="form-check-label" for="isVerifyEmail">Is Verify Email</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    @endif
                                 </ul>
 
                                 <div class="mt-2">
