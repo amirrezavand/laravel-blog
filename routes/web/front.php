@@ -6,7 +6,7 @@ use App\Http\Controllers\Front\ContactUsController;
 use App\Http\Controllers\Front\AboutUsController;
 use App\Http\Controllers\Front\HomeController;
 
-Route::get('home',[HomeController::class,'index'])->name('home');
+//Route::get('home',[HomeController::class,'index'])->name('home');
 Route::get('blogs',[BlogController::class,'index'])->name('blog');
 Route::get('blogs/{blog}',[BlogController::class,'single']);
 Route::get('contact_us',[ContactUsController::class,'index'])->name('contact_us');
