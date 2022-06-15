@@ -15,23 +15,30 @@
                     <div class="login-form">
                         <h3>Welcome Back!</h3>
                         <p>Please login to your account.</p>
-                        <form>
+                        <form method="POST" action="{{ route('login') }}" autocomplete="off" >
+                            @csrf
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
+                                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{old('email')}}">
+                                        <div class="invalid-feedback">
+                                            {{ $errors->first('email') }}
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password">
+                                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password">
+                                        <div class="invalid-feedback">
+                                            {{ $errors->first('password') }}
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="checkme">
+                                        <input type="checkbox" class="form-check-input" id="checkme" name="remember">
                                         <label class="form-check-label" for="checkme">Keep me Login</label>
                                     </div>
                                 </div>
