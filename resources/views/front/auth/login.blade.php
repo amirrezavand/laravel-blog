@@ -1,5 +1,7 @@
 @extends('front.layouts.master')
 
+@section('page_title','Login')
+
 @section('content')
     <!-- Start Login Area -->
     <section class="login-area ptb-100">
@@ -15,7 +17,7 @@
                     <div class="login-form">
                         <h3>Welcome Back!</h3>
                         <p>Please login to your account.</p>
-                        <form method="POST" action="{{ route('login') }}" autocomplete="off" >
+                        <form method="POST" action="{{ route('login') }}" autocomplete="off" novalidate>
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12">

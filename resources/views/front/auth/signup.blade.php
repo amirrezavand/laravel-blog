@@ -1,5 +1,7 @@
 @extends('front.layouts.master')
 
+@section('page_title','Register')
+
 @section('content')
     <!-- Start Signup Area -->
     <section class="signup-area ptb-100">
@@ -14,7 +16,7 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="signup-form">
                         <h3>Create your Account</h3>
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="{{ route('register') }}" autocomplete="off" novalidate>
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12">
