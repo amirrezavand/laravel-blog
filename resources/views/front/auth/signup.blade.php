@@ -19,34 +19,39 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="Name">
+                                        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Name">
+                                        <div class="invalid-feedback">
+                                            {{ $errors->first('name') }}
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" placeholder="Email">
+                                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email">
+                                        <div class="invalid-feedback">
+                                            {{ $errors->first('email') }}
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="password" placeholder="Password">
+                                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password">
+                                        <div class="invalid-feedback">
+                                            {{ $errors->first('password') }}
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="password_confirmation" placeholder="Password Confirmation">
+                                        <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Password Confirmation">
+                                        <div class="invalid-feedback">
+                                            {{ $errors->first('password_confirmation') }}
+                                        </div>
                                     </div>
                                 </div>
-
-{{--                                <div class="col-lg-12">--}}
-{{--                                    <div class="form-check">--}}
-{{--                                        <input type="checkbox" class="form-check-input" id="checkme">--}}
-{{--                                        <label class="form-check-label" for="checkme">Keep me Login</label>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
 
                                 <div class="col-lg-12">
                                     <button type="submit" class="btn btn-primary">Signup Now!</button>
