@@ -4603,7 +4603,7 @@ Blog CSS
 
 .single-blog-post {
   background: #ffffff;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
           box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
 }

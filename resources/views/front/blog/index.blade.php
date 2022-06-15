@@ -1,105 +1,30 @@
 @extends('front.layouts.master')
 
+@section('page_title','Blogs')
+
 @section('content')
     <!-- Start Blog Area -->
     <section class="blog-area blog-section ptb-100">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img1.jpg" alt="blog-image"></a>
+                @foreach($results as $result)
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="single-blog-post" style="height: 100%;position:relative;">
+                            <a href="{{route('blog.single',['blog'=>$result->id])}}" class="post-image"><img src="{{$result->img}}" alt="{{$result->title}}"></a>
 
-                        <div class="blog-post-content">
-                            <ul>
-                                <li><i class="icofont-user-male"></i> <a href="#">Admin</a></li>
-                                <li><i class="icofont-wall-clock"></i> January 23, 2019</li>
-                            </ul>
-                            <h3><a href="#">The Most Popular New Business Apps</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi turpis massa, dapibus nec libero vitae.</p>
-                            <a href="#" class="read-more-btn">Read More <i class="icofont-rounded-double-right"></i></a>
+                            <div class="blog-post-content pb-5">
+                                <ul>
+                                    <li><i class="icofont-user-male"></i> <a href="#">Admin</a></li>
+                                    <li><i class="icofont-wall-clock"></i> January 23, 2019</li>
+                                </ul>
+                                <h3><a href="{{route('blog.single',['blog'=>$result->id])}}">{{$result->title}}</a></h3>
+                                <p>{{$result->short_description}}</p>
+                                <a href="{{route('blog.single',['blog'=>$result->id])}}" class="read-more-btn" style="position: absolute; bottom: 20px;">Read More <i class="icofont-rounded-double-right"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img2.jpg" alt="blog-image"></a>
-
-                        <div class="blog-post-content">
-                            <ul>
-                                <li><i class="icofont-user-male"></i> <a href="#">Admin</a></li>
-                                <li><i class="icofont-wall-clock"></i> January 16, 2019</li>
-                            </ul>
-                            <h3><a href="#">The Best Marketing Management Tools</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi turpis massa, dapibus nec libero vitae.</p>
-                            <a href="#" class="read-more-btn">Read More <i class="icofont-rounded-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img3.jpg" alt="blog-image"></a>
-
-                        <div class="blog-post-content">
-                            <ul>
-                                <li><i class="icofont-user-male"></i> <a href="#">Admin</a></li>
-                                <li><i class="icofont-wall-clock"></i> January 14, 2019</li>
-                            </ul>
-                            <h3><a href="#">3 WooCommerce Plugins to Boost Sales</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi turpis massa, dapibus nec libero vitae.</p>
-                            <a href="#" class="read-more-btn">Read More <i class="icofont-rounded-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img4.jpg" alt="blog-image"></a>
-
-                        <div class="blog-post-content">
-                            <ul>
-                                <li><i class="icofont-user-male"></i> <a href="#">Admin</a></li>
-                                <li><i class="icofont-wall-clock"></i> January 06, 2019</li>
-                            </ul>
-                            <h3><a href="#">CakeMail Review – Design Custom Emails</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi turpis massa, dapibus nec libero vitae.</p>
-                            <a href="#" class="read-more-btn">Read More <i class="icofont-rounded-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img5.jpg" alt="blog-image"></a>
-
-                        <div class="blog-post-content">
-                            <ul>
-                                <li><i class="icofont-user-male"></i> <a href="#">Admin</a></li>
-                                <li><i class="icofont-wall-clock"></i> January 04, 2019</li>
-                            </ul>
-                            <h3><a href="#">The Most Popular New Apps in 2019</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi turpis massa, dapibus nec libero vitae.</p>
-                            <a href="#" class="read-more-btn">Read More <i class="icofont-rounded-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post">
-                        <a href="#" class="post-image"><img src="/front/assets/img/blog-img3.jpg" alt="blog-image"></a>
-
-                        <div class="blog-post-content">
-                            <ul>
-                                <li><i class="icofont-user-male"></i> <a href="#">Admin</a></li>
-                                <li><i class="icofont-wall-clock"></i> January 26, 2019</li>
-                            </ul>
-                            <h3><a href="#">The Fastest Growing Apps in 2019</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi turpis massa, dapibus nec libero vitae.</p>
-                            <a href="#" class="read-more-btn">Read More <i class="icofont-rounded-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="col-lg-12 col-md-12">
                     <div class="pagination-area">
