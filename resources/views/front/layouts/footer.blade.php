@@ -5,7 +5,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="single-footer-widget">
                     <a href="#" class="logo"><img src="/front/assets/img/logo2.png" alt="logo2"></a>
-                    <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project individual.</p>
+                    <p>Your business is your top priority. Building a good website for your business will not take much time and money.</p>
 
                     <ul class="social-list">
                         <li><a href="#"><i class="icofont-facebook"></i></a></li>
@@ -63,17 +63,17 @@
 
     <div class="copyright-area">
         <div class="container">
-            <div class="row h-100 justify-content-center align-items-center">
+            <div class="row h-100 justify-content-start align-items-center">
                 <div class="col-lg-6 col-md-6">
-                    <p>Copyright @ 2019 Crake. All rights reserved</p>
+                    <p>Copyright @ 2022 . All rights reserved</p>
                 </div>
 
-                <div class="col-lg-6 col-md-6">
-                    <ul>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
+{{--                <div class="col-lg-6 col-md-6">--}}
+{{--                    <ul>--}}
+{{--                        <li><a href="#">Terms & Conditions</a></li>--}}
+{{--                        <li><a href="#">Privacy Policy</a></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
