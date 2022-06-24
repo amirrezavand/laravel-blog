@@ -14,16 +14,20 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav nav">
                         @foreach(getHeader() as $item)
-                            <li class="nav-item">
-                                <a href="{{$item['route_name']?route($item['route_name']):''}}" class="nav-link {{isNavItemActive($item['route_name'],array_column($item['child'], 'route_name'),'active')}}">{{$item['title']}}</a>
-                                @if($item['child'])
-                                    <ul class="dropdown_menu">
-                                        @foreach($item['child'] as $itemChild)
-                                            <li><a href="{{$itemChild['route_name']?route($itemChild['route_name']):''}}" class="{{isNavItemActive($itemChild['route_name'],array_column($itemChild['child'], 'route_name'),'active')}}">{{$itemChild['title']}}</a></li>
-                                        @endforeach
-                                    </ul>
-                                @endif
-                            </li>
+                            @if($item['view']=='all' || (auth()->check()==true?$item['view']=='auth':$item['view']=='guest'))
+                                <li class="nav-item">
+                                    <a href="{{$item['route_name']?route($item['route_name']):''}}" class="nav-link {{isNavItemActive($item['route_name'],array_column($item['child'], 'route_name'),'active')}}">{{$item['title']}}</a>
+                                    @if($item['child'])
+                                        <ul class="dropdown_menu">
+                                            @foreach($item['child'] as $itemChild)
+                                                @if($itemChild['view']=='all' || (auth()->check()==true?$itemChild['view']=='auth':$itemChild['view']=='guest'))
+                                                    <li><a href="{{$itemChild['route_name']?route($itemChild['route_name']):''}}" class="{{isNavItemActive($itemChild['route_name'],array_column($itemChild['child'], 'route_name'),'active')}}">{{$itemChild['title']}}</a></li>
+                                                @endif
+                                            @endforeach
+                                        </ul>
+                                    @endif
+                                </li>
+                            @endif
                         @endforeach
                     </ul>
                 </div>
