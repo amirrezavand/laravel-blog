@@ -48,5 +48,5 @@ Route::get('signup',function (){
 })->name('signup');
 
 Route::get('/dashboard',function (){
-    return 'hi';
+    return view('dashboard.home.index');
 })->name('dashboard');

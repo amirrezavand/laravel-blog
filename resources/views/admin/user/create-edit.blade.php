@@ -31,55 +31,64 @@
                     </div>
 
                     <div class="card-body">
-                        <form method="post" action="@if(getRouteAction()=='create') {{route('admin.user.store')}} @else {{ route('admin.user.update',['user'=>$user->id])}} @endif" enctype="multipart/form-data">
+                        <form method="post"
+                              action="@if(getRouteAction()=='create') {{route('admin.user.store')}} @else {{ route('admin.user.update',['user'=>$user->id])}} @endif"
+                              enctype="multipart/form-data">
                             @csrf()
-                            @if(getRouteAction()=='edit') @method('put') @endif
+                            @if(getRouteAction()=='edit')
+                                @method('put')
+                            @endif
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="name">Name</label>
-                                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
+                                    <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                           id="name"
                                            placeholder="Name" value="{{old('name',$user->name)}}" name="name">
                                     @error('name')
-                                        <div class="invalid-feedback">
-                                            <i class="bx bx-radio-circle"></i>
-                                            {{$message}}
-                                        </div>
+                                    <div class="invalid-feedback">
+                                        <i class="bx bx-radio-circle"></i>
+                                        {{$message}}
+                                    </div>
                                     @enderror
                                 </div>
 
                                 <div class="col-sm-6">
                                     <label for="email">Email</label>
-                                    <input type="text" class="form-control @error('email') is-invalid @enderror" id="email"
+                                    <input type="text" class="form-control @error('email') is-invalid @enderror"
+                                           id="email"
                                            placeholder="Email" value="{{old('email',$user->email)}}" name="email">
                                     @error('email')
-                                        <div class="invalid-feedback">
-                                            <i class="bx bx-radio-circle"></i>
-                                            {{$message}}
-                                        </div>
+                                    <div class="invalid-feedback">
+                                        <i class="bx bx-radio-circle"></i>
+                                        {{$message}}
+                                    </div>
                                     @enderror
                                 </div>
 
                                 <div class="col-sm-6">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
+                                    <input type="password" class="form-control @error('password') is-invalid @enderror"
+                                           id="password"
                                            placeholder="Password" name="password">
                                     @error('password')
-                                        <div class="invalid-feedback">
-                                            <i class="bx bx-radio-circle"></i>
-                                            {{$message}}
-                                        </div>
+                                    <div class="invalid-feedback">
+                                        <i class="bx bx-radio-circle"></i>
+                                        {{$message}}
+                                    </div>
                                     @enderror
                                 </div>
 
                                 <div class="col-sm-6">
                                     <label for="passwordConfirmation">Password Confirmation</label>
-                                    <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" id="PasswordConfirmation"
+                                    <input type="password"
+                                           class="form-control @error('password_confirmation') is-invalid @enderror"
+                                           id="PasswordConfirmation"
                                            placeholder="Password Confirmation" name="password_confirmation">
                                     @error('password_confirmation')
-                                        <div class="invalid-feedback">
-                                            <i class="bx bx-radio-circle"></i>
-                                            {{$message}}
-                                        </div>
+                                    <div class="invalid-feedback">
+                                        <i class="bx bx-radio-circle"></i>
+                                        {{$message}}
+                                    </div>
                                     @enderror
                                 </div>
 
@@ -87,7 +96,10 @@
                                     <li class="d-inline-block me-2 mb-1">
                                         <div class="form-check">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="form-check-input form-check-info form-check-glow" @if($user->is_staff==1) checked @endif name="is_staff" id="isStaff" value="1">
+                                                <input type="checkbox"
+                                                       class="form-check-input form-check-info form-check-glow"
+                                                       @if($user->is_staff==1) checked @endif name="is_staff"
+                                                       id="isStaff" value="1">
                                                 <label class="form-check-label" for="isStaff">Is Staff</label>
                                             </div>
                                         </div>
@@ -96,7 +108,10 @@
                                     <li class="d-inline-block me-2 mb-1">
                                         <div class="form-check">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="form-check-input form-check-info form-check-glow" @if($user->is_admin==1) checked @endif name="is_admin" id="isAdmin" value="1">
+                                                <input type="checkbox"
+                                                       class="form-check-input form-check-info form-check-glow"
+                                                       @if($user->is_admin==1) checked @endif name="is_admin"
+                                                       id="isAdmin" value="1">
                                                 <label class="form-check-label" for="isAdmin">Is Admin</label>
                                             </div>
                                         </div>
@@ -106,8 +121,11 @@
                                         <li class="d-inline-block me-2 mb-1">
                                             <div class="form-check">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="form-check-input form-check-info form-check-glow" name="is_verify_email" id="isVerifyEmail">
-                                                    <label class="form-check-label" for="isVerifyEmail">Is Verify Email</label>
+                                                    <input type="checkbox"
+                                                           class="form-check-input form-check-info form-check-glow"
+                                                           name="is_verify_email" id="isVerifyEmail">
+                                                    <label class="form-check-label" for="isVerifyEmail">Is Verify
+                                                        Email</label>
                                                 </div>
                                             </div>
                                         </li>
@@ -115,7 +133,11 @@
                                 </ul>
 
                                 <div class="mt-2">
-                                    <button class="btn btn-success btn-sm" type="submit">@if(getRouteAction()=='create') save @else edit @endif</button>
+                                    <button class="btn btn-success btn-sm" type="submit">@if(getRouteAction()=='create')
+                                            save
+                                        @else
+                                            edit
+                                        @endif</button>
                                 </div>
                             </div>
                         </form>

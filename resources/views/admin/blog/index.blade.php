@@ -26,14 +26,16 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h4 class="card-title">Blog items ( total : {{$blogs->total()}} )</h4>
-                        <a class="btn btn-success btn-sm" href="{{route('admin.blog.create')}}">Create <i class="bi bi-plus position-relative" style="top: 3px;"></i></a>
+                        <a class="btn btn-success btn-sm" href="{{route('admin.blog.create')}}">Create <i
+                                class="bi bi-plus position-relative" style="top: 3px;"></i></a>
                     </div>
                     <div class="row px-4">
                         <div class="col-12 col-md-6">
                             <form action="{{route('admin.blog.index')}}" method="get">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-                                    <input type="text" class="form-control" name="keywords" placeholder="Key words" value="{{Request()->input('keywords')}}">
+                                    <input type="text" class="form-control" name="keywords" placeholder="Key words"
+                                           value="{{Request()->input('keywords')}}">
                                     <button class="btn btn-outline-secondary" type="submit">Search</button>
                                 </div>
                             </form>
@@ -58,9 +60,13 @@
                                         <td>{{$blog->title}}</td>
                                         <td>{{$blog->user->name}}</td>
                                         <td>
-                                            <a class="btn btn-warning btn-sm" href="{{route('admin.blog.edit',['blog'=>$blog->id])}}">edit</a>
-                                            <a class="btn btn-danger btn-sm" href="#" onclick="event.preventDefault(); document.getElementById('delete-{{$loop->index}}').submit();">delete</a>
-                                            <form action="{{route('admin.blog.destroy',['blog'=>$blog->id])}}" method="post" class="d-none" id="delete-{{$loop->index}}">
+                                            <a class="btn btn-warning btn-sm"
+                                               href="{{route('admin.blog.edit',['blog'=>$blog->id])}}">edit</a>
+                                            <a class="btn btn-danger btn-sm" href="#"
+                                               onclick="event.preventDefault(); document.getElementById('delete-{{$loop->index}}').submit();">delete</a>
+                                            <form
+                                                action="{{route('admin.blog.destroy',['blog'=>$blog->id])}}"
+                                                method="post" class="d-none" id="delete-{{$loop->index}}">
                                                 @csrf
                                                 @method('delete')
                                             </form>
