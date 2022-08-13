@@ -13,11 +13,17 @@ Route::get('/test',function (){
 });
 
 Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/products',function (){
+    return 'Great Things Coming Soon!';
+})->name('product');
+
 Route::get('/blogs',[BlogController::class,'index'])->name('blog');
 Route::get('/blogs/{blog}',[BlogController::class,'single'])->name('blog.single');
 Route::get('/contact_us',[ContactUsController::class,'index'])->name('contact_us');
 Route::get('/about_us',[AboutUsController::class,'aboutUs'])->name('about_us');
 Route::get('/our_team',[AboutUsController::class,'ourTeam'])->name('our_team');
+
+
 
 
 Route::get('/register', [RegisteredUserController::class, 'create'])

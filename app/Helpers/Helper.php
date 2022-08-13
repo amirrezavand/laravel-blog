@@ -35,6 +35,12 @@ if(!function_exists('getHeader')){
               'child'=>[]
             ],
             [
+                'title'=>'Products',
+                'route_name'=>'product',
+                'view'=>'all',
+                'child'=>[]
+            ],
+            [
                 'title'=>'Blog',
                 'route_name'=>'blog',
                 'view'=>'all',
