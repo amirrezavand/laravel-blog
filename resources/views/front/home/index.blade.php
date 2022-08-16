@@ -1,176 +1,176 @@
 @extends('front.layouts.master')
 
-@section('content')
-    <!-- Start SaaS Main Banner -->
-    <div class="main-banner saas-home">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="container">
-                    <div class="row h-100 justify-content-center align-items-center">
-                        <div class="col-lg-6 col-md-12">
-                            <div class="saas-image">
-                                <img src="/front/assets/img/saas-shape/arrow.png" class="wow fadeInDown" data-wow-delay="0.6s" alt="arrow">
-                                <img src="/front/assets/img/saas-shape/box1.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="box1">
-                                <img src="/front/assets/img/saas-shape/boy1.png" class="wow fadeInLeft" data-wow-delay="0.6s" alt="boy1">
-                                <img src="/front/assets/img/saas-shape/boy2.png" class="wow zoomIn" data-wow-delay="0.6s" alt="boy2">
-                                <img src="/front/assets/img/saas-shape/boy3.png" class="wow bounceIn" data-wow-delay="0.6s" alt="boy3">
-                                <img src="/front/assets/img/saas-shape/digital-screen.png" class="wow fadeInDown" data-wow-delay="0.6s" alt="digital-screen">
-                                <img src="/front/assets/img/saas-shape/filter1.png" class="wow zoomIn" data-wow-delay="0.6s" alt="filter1">
-                                <img src="/front/assets/img/saas-shape/filter2.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="filter2">
-                                <img src="/front/assets/img/saas-shape/filter3.png" class="wow rotateIn" data-wow-delay="0.6s" alt="filter3">
-                                <img src="/front/assets/img/saas-shape/girl1.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="girl1">
-                                <img src="/front/assets/img/saas-shape/girl2.png" class="wow zoomIn" data-wow-delay="0.6s" alt="girl2">
-                                <img src="/front/assets/img/saas-shape/monitor.png" class="wow zoomIn" data-wow-delay="0.6s" alt="monitor">
+{{--@section('content')--}}
+{{--    <!-- Start SaaS Main Banner -->--}}
+{{--    <div class="main-banner saas-home">--}}
+{{--        <div class="d-table">--}}
+{{--            <div class="d-table-cell">--}}
+{{--                <div class="container">--}}
+{{--                    <div class="row h-100 justify-content-center align-items-center">--}}
+{{--                        <div class="col-lg-6 col-md-12">--}}
+{{--                            <div class="saas-image">--}}
+{{--                                <img src="/front/assets/img/saas-shape/arrow.png" class="wow fadeInDown" data-wow-delay="0.6s" alt="arrow">--}}
+{{--                                <img src="/front/assets/img/saas-shape/box1.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="box1">--}}
+{{--                                <img src="/front/assets/img/saas-shape/boy1.png" class="wow fadeInLeft" data-wow-delay="0.6s" alt="boy1">--}}
+{{--                                <img src="/front/assets/img/saas-shape/boy2.png" class="wow zoomIn" data-wow-delay="0.6s" alt="boy2">--}}
+{{--                                <img src="/front/assets/img/saas-shape/boy3.png" class="wow bounceIn" data-wow-delay="0.6s" alt="boy3">--}}
+{{--                                <img src="/front/assets/img/saas-shape/digital-screen.png" class="wow fadeInDown" data-wow-delay="0.6s" alt="digital-screen">--}}
+{{--                                <img src="/front/assets/img/saas-shape/filter1.png" class="wow zoomIn" data-wow-delay="0.6s" alt="filter1">--}}
+{{--                                <img src="/front/assets/img/saas-shape/filter2.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="filter2">--}}
+{{--                                <img src="/front/assets/img/saas-shape/filter3.png" class="wow rotateIn" data-wow-delay="0.6s" alt="filter3">--}}
+{{--                                <img src="/front/assets/img/saas-shape/girl1.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="girl1">--}}
+{{--                                <img src="/front/assets/img/saas-shape/girl2.png" class="wow zoomIn" data-wow-delay="0.6s" alt="girl2">--}}
+{{--                                <img src="/front/assets/img/saas-shape/monitor.png" class="wow zoomIn" data-wow-delay="0.6s" alt="monitor">--}}
 
-                                <img src="/front/assets/img/saas-shape/main-image.png" class="wow zoomIn" data-wow-delay="0.6s" alt="main-image.png">
-                            </div>
-                        </div>
+{{--                                <img src="/front/assets/img/saas-shape/main-image.png" class="wow zoomIn" data-wow-delay="0.6s" alt="main-image.png">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="col-lg-6 col-md-12">
-                            <div class="hero-content pl-4">
-                                <h1>Build and manage your online business</h1>
-                                <p>Your business is your top priority. Building a good website for your business will not take much time and money.</p>
-                                <a href="#" class="btn btn-primary">Get Started</a>
+{{--                        <div class="col-lg-6 col-md-12">--}}
+{{--                            <div class="hero-content pl-4">--}}
+{{--                                <h1>Build and manage your online business</h1>--}}
+{{--                                <p>Your business is your top priority. Building a good website for your business will not take much time and money.</p>--}}
+{{--                                <a href="#" class="btn btn-primary">Get Started</a>--}}
 {{--                                <a href="https://www.youtube.com/watch?v=bk7McNUjWgw" class="video-btn popup-youtube"> Watch Video <i class="icofont-play-alt-3"></i></a>--}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
-        <div class="bg-gray shape-1"></div>
-        <div class="shape1"><img src="/front/assets/img/shape1.png" alt="img"></div>
-        <div class="shape2"><img src="/front/assets/img/shape2.png" alt="img"></div>
-        <div class="shape3"><img src="/front/assets/img/shape3.png" alt="img"></div>
-        <div class="shape4 rotateme"><img src="/front/assets/img/shape4.png" alt="img"></div>
-    </div>
-    <!-- End SaaS Main Banner -->
+{{--        <div class="bg-gray shape-1"></div>--}}
+{{--        <div class="shape1"><img src="/front/assets/img/shape1.png" alt="img"></div>--}}
+{{--        <div class="shape2"><img src="/front/assets/img/shape2.png" alt="img"></div>--}}
+{{--        <div class="shape3"><img src="/front/assets/img/shape3.png" alt="img"></div>--}}
+{{--        <div class="shape4 rotateme"><img src="/front/assets/img/shape4.png" alt="img"></div>--}}
+{{--    </div>--}}
+{{--    <!-- End SaaS Main Banner -->--}}
 
-    <!-- Start Features Area -->
-    <section class="features-area saas-features ptb-100">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Amazing Features</h2>
-                <div class="bar"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
+{{--    <!-- Start Features Area -->--}}
+{{--    <section class="features-area saas-features ptb-100">--}}
+{{--        <div class="container">--}}
+{{--            <div class="section-title">--}}
+{{--                <h2>Our Amazing Features</h2>--}}
+{{--                <div class="bar"></div>--}}
+{{--                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>--}}
+{{--            </div>--}}
 
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-features">
-                        <div class="icon">
-                            <i class="icofont-lock"></i>
-                        </div>
-                        <h3>Quick Access</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-4 col-md-6">--}}
+{{--                    <div class="single-features">--}}
+{{--                        <div class="icon">--}}
+{{--                            <i class="icofont-lock"></i>--}}
+{{--                        </div>--}}
+{{--                        <h3>Quick Access</h3>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-features">
-                        <div class="icon">
-                            <i class="icofont-heart-eyes"></i>
-                        </div>
-                        <h3>Easily Manage</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
+{{--                <div class="col-lg-4 col-md-6">--}}
+{{--                    <div class="single-features">--}}
+{{--                        <div class="icon">--}}
+{{--                            <i class="icofont-heart-eyes"></i>--}}
+{{--                        </div>--}}
+{{--                        <h3>Easily Manage</h3>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-features">
-                        <div class="icon">
-                            <i class="icofont-lock"></i>
-                        </div>
-                        <h3>Safty</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
+{{--                <div class="col-lg-4 col-md-6">--}}
+{{--                    <div class="single-features">--}}
+{{--                        <div class="icon">--}}
+{{--                            <i class="icofont-lock"></i>--}}
+{{--                        </div>--}}
+{{--                        <h3>Safty</h3>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-features">
-                        <div class="icon">
-                            <i class="icofont-camera"></i>
-                        </div>
-                        <h3>Camera Filter</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
+{{--                <div class="col-lg-4 col-md-6">--}}
+{{--                    <div class="single-features">--}}
+{{--                        <div class="icon">--}}
+{{--                            <i class="icofont-camera"></i>--}}
+{{--                        </div>--}}
+{{--                        <h3>Camera Filter</h3>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-features">
-                        <div class="icon">
-                            <i class="icofont-responsive"></i>
-                        </div>
-                        <h3>Fast and optimized</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
+{{--                <div class="col-lg-4 col-md-6">--}}
+{{--                    <div class="single-features">--}}
+{{--                        <div class="icon">--}}
+{{--                            <i class="icofont-responsive"></i>--}}
+{{--                        </div>--}}
+{{--                        <h3>Fast and optimized</h3>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-features">
-                        <div class="icon">
-                            <i class="icofont-hand-drag1"></i>
-                        </div>
-                        <h3>Drag and Drop</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+{{--                <div class="col-lg-4 col-md-6">--}}
+{{--                    <div class="single-features">--}}
+{{--                        <div class="icon">--}}
+{{--                            <i class="icofont-hand-drag1"></i>--}}
+{{--                        </div>--}}
+{{--                        <h3>Drag and Drop</h3>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
-        <div class="features-inner-area">
-            <div class="container-fluid">
-                <div class="row h-100 justify-content-center align-items-center">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="features-image">
-                            <img src="/front/assets/img/features-img1.png" alt="image">
-                        </div>
-                    </div>
+{{--        <div class="features-inner-area">--}}
+{{--            <div class="container-fluid">--}}
+{{--                <div class="row h-100 justify-content-center align-items-center">--}}
+{{--                    <div class="col-lg-6 col-md-12">--}}
+{{--                        <div class="features-image">--}}
+{{--                            <img src="/front/assets/img/features-img1.png" alt="image">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
-                    <div class="col-lg-6 col-md-12">
-                        <div class="features-inner-content">
-                            <div class="features-item">
-                                <div class="icon">
-                                    <i class="icofont-ui-call"></i>
-                                </div>
-                                <h3>Free Caliing Service</h3>
-                                <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</p>
-                            </div>
+{{--                    <div class="col-lg-6 col-md-12">--}}
+{{--                        <div class="features-inner-content">--}}
+{{--                            <div class="features-item">--}}
+{{--                                <div class="icon">--}}
+{{--                                    <i class="icofont-ui-call"></i>--}}
+{{--                                </div>--}}
+{{--                                <h3>Free Caliing Service</h3>--}}
+{{--                                <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</p>--}}
+{{--                            </div>--}}
 
-                            <div class="features-item">
-                                <div class="icon">
-                                    <i class="icofont-gift"></i>
-                                </div>
-                                <h3>Daily Free Gift</h3>
-                                <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</p>
-                            </div>
+{{--                            <div class="features-item">--}}
+{{--                                <div class="icon">--}}
+{{--                                    <i class="icofont-gift"></i>--}}
+{{--                                </div>--}}
+{{--                                <h3>Daily Free Gift</h3>--}}
+{{--                                <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</p>--}}
+{{--                            </div>--}}
 
-                            <div class="features-item">
-                                <div class="icon">
-                                    <i class="icofont-qr-code"></i>
-                                </div>
-                                <h3>QR Code Scaner</h3>
-                                <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+{{--                            <div class="features-item">--}}
+{{--                                <div class="icon">--}}
+{{--                                    <i class="icofont-qr-code"></i>--}}
+{{--                                </div>--}}
+{{--                                <h3>QR Code Scaner</h3>--}}
+{{--                                <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
-        <div class="shape7"><img src="/front/assets/img/shape7.png" alt="shape"></div>
-        <div class="shape3"><img src="/front/assets/img/shape3.png" alt="img"></div>
-        <div class="bg-gray shape-1"></div>
-        <div class="shape6"><img src="/front/assets/img/shape6.png" alt="img"></div>
-        <div class="shape8 rotateme"><img src="/front/assets/img/shape8.svg" alt="shape"></div>
-        <div class="shape9"><img src="/front/assets/img/shape9.svg" alt="shape"></div>
-        <div class="shape10"><img src="/front/assets/img/shape10.svg" alt="shape"></div>
-        <div class="shape11 rotateme"><img src="/front/assets/img/shape11.svg" alt="shape"></div>
-    </section>
-    <!-- End Features Area -->
+{{--        <div class="shape7"><img src="/front/assets/img/shape7.png" alt="shape"></div>--}}
+{{--        <div class="shape3"><img src="/front/assets/img/shape3.png" alt="img"></div>--}}
+{{--        <div class="bg-gray shape-1"></div>--}}
+{{--        <div class="shape6"><img src="/front/assets/img/shape6.png" alt="img"></div>--}}
+{{--        <div class="shape8 rotateme"><img src="/front/assets/img/shape8.svg" alt="shape"></div>--}}
+{{--        <div class="shape9"><img src="/front/assets/img/shape9.svg" alt="shape"></div>--}}
+{{--        <div class="shape10"><img src="/front/assets/img/shape10.svg" alt="shape"></div>--}}
+{{--        <div class="shape11 rotateme"><img src="/front/assets/img/shape11.svg" alt="shape"></div>--}}
+{{--    </section>--}}
+{{--    <!-- End Features Area -->--}}
 
-    <!-- Start Overview Area -->
+{{--    <!-- Start Overview Area -->--}}
 {{--    <section class="overview-section ptb-100 bg-gray">--}}
 {{--        <div class="container">--}}
 {{--            <div class="section-title">--}}
@@ -299,9 +299,9 @@
 {{--        <div class="shape10"><img src="/front/assets/img/shape10.svg" alt="shape"></div>--}}
 {{--        <div class="shape11 rotateme"><img src="/front/assets/img/shape11.svg" alt="shape"></div>--}}
 {{--    </section>--}}
-    <!-- End Overview Area -->
+{{--    <!-- End Overview Area -->--}}
 
-    <!-- Start Join Area -->
+{{--    <!-- Start Join Area -->--}}
 {{--    <section class="join-area ptb-100">--}}
 {{--        <div class="container">--}}
 {{--            <div class="row h-100 justify-content-center align-items-center">--}}
@@ -322,9 +322,9 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
-    <!-- End Join Area -->
+{{--    <!-- End Join Area -->--}}
 
-    <!-- Start CTA Area -->
+{{--    <!-- Start CTA Area -->--}}
 {{--    <div class="cta-area">--}}
 {{--        <div class="container">--}}
 {{--            <div class="row h-100 justify-content-center align-items-center">--}}
@@ -338,9 +338,9 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </div>--}}
-    <!-- End CTA Area -->
+{{--    <!-- End CTA Area -->--}}
 
-    <!-- Start SAAS Tools Area -->
+{{--    <!-- Start SAAS Tools Area -->--}}
 {{--    <section class="saas-tools ptb-100 bg-gray">--}}
 {{--        <div class="container">--}}
 {{--            <div class="section-title">--}}
@@ -529,9 +529,9 @@
 {{--            <div class="circle large square4"></div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
-    <!-- End SAAS Tools Area -->
+{{--    <!-- End SAAS Tools Area -->--}}
 
-    <!-- Start Fun Facts Area -->
+{{--    <!-- Start Fun Facts Area -->--}}
 {{--    <section class="fun-facts-area ptb-100">--}}
 {{--        <div class="container">--}}
 {{--            <div class="row">--}}
@@ -603,9 +603,9 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
-    <!-- End Fun Facts Area -->
+{{--    <!-- End Fun Facts Area -->--}}
 
-    <!-- Start Work Process Area -->
+{{--    <!-- Start Work Process Area -->--}}
 {{--    <section class="saas-work-process ptb-100">--}}
 {{--        <div class="container">--}}
 {{--            <div class="section-title">--}}
@@ -657,9 +657,9 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
-    <!-- End Work Process Area -->
+{{--    <!-- End Work Process Area -->--}}
 
-    <!-- Start Pricing Area -->
+{{--    <!-- Start Pricing Area -->--}}
 {{--    <section class="pricing-area ptb-100 bg-gray">--}}
 {{--        <div class="container">--}}
 {{--            <div class="section-title">--}}
@@ -758,9 +758,9 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
-    <!-- End Pricing Area -->
+{{--    <!-- End Pricing Area -->--}}
 
-    <!-- Start Get Started Area -->
+{{--    <!-- Start Get Started Area -->--}}
 {{--    <section class="get-started ptb-100">--}}
 {{--        <div class="container">--}}
 {{--            <div class="section-title">--}}
@@ -788,9 +788,9 @@
 
 {{--        <canvas id="canvas"></canvas>--}}
 {{--    </section>--}}
-    <!-- End Get Started Area -->
+{{--    <!-- End Get Started Area -->--}}
 
-    <!-- Start Feedback Area -->
+{{--    <!-- Start Feedback Area -->--}}
 {{--    <section class="feedback-area ptb-100 bg-gray">--}}
 {{--        <div class="container">--}}
 {{--            <div class="section-title">--}}
@@ -852,9 +852,9 @@
 {{--            <path d="M0,70 C30,130 70,50 100,70 L100,100 0,100 Z" fill="#ffffff"/>--}}
 {{--        </svg>--}}
 {{--    </section>--}}
-    <!-- End Feedback Area -->
+{{--    <!-- End Feedback Area -->--}}
 
-    <!-- Start Partner Area -->
+{{--    <!-- Start Partner Area -->--}}
 {{--    <div class="partner-area">--}}
 {{--        <div class="container">--}}
 {{--            <div class="row">--}}
@@ -904,5 +904,5 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </div>--}}
-    <!-- End Partner Area -->
-@endsection
+{{--    <!-- End Partner Area -->--}}
+{{--@endsection--}}
