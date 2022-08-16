@@ -3,49 +3,173 @@
 @section('page_title','Blogs')
 
 @section('content')
-    <!-- Start Blog Area -->
-    <section class="blog-area blog-section ptb-100">
+    <!-- ============================ Page Title Start================================== -->
+    <section class="page-title">
         <div class="container">
             <div class="row">
-                @foreach($results as $result)
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="single-blog-post" style="height: 100%;position:relative;">
-                            <a href="{{route('blog.single',['blog'=>$result->id])}}" class="post-image"><img src="{{$result->img}}" alt="{{$result->title}}"></a>
+                <div class="col-lg-12 col-md-12">
 
-                            <div class="blog-post-content pb-5">
-                                <ul>
-                                    <li><i class="icofont-user-male"></i> <a href="#">Admin</a></li>
-                                    <li><i class="icofont-wall-clock"></i> January 23, 2019</li>
-                                </ul>
-                                <h3><a href="{{route('blog.single',['blog'=>$result->id])}}">{{$result->title}}</a></h3>
-                                <p>{{$result->short_description}}</p>
-                                <a href="{{route('blog.single',['blog'=>$result->id])}}" class="read-more-btn" style="position: absolute; bottom: 20px;">Read More <i class="icofont-rounded-double-right"></i></a>
+                    <div class="breadcrumbs-wrap">
+                        <h1 class="breadcrumb-title">لیست وبلاگ</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">خانه</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">لیست وبلاگ</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================ Page Title End ================================== -->
+
+    <!-- ========================== Articles Section =============================== -->
+    <section class="pt-0">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Single Article -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="articles_grid_style">
+                        <div class="articles_grid_thumb">
+                            <a href="blog-detail.html"><img src="/front/img/b-1.jpg" class="img-fluid" alt="" /></a>
+                        </div>
+
+                        <div class="articles_grid_caption">
+                            <h4>چطور زبان انگلیسی را سریع یاد بگیریم؟</h4>
+                            <div class="articles_grid_author">
+                                <div class="articles_grid_author_img"><img src="/front/img/user-1.jpg" class="img-fluid" alt="" /></div>
+                                <h4>آدام ویلسون</h4>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                </div>
 
+                <!-- Single Article -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="articles_grid_style">
+                        <div class="articles_grid_thumb">
+                            <a href="blog-detail.html"><img src="/front/img/b-2.jpg" class="img-fluid" alt="" /></a>
+                        </div>
 
-                <div class="col-lg-12 col-md-12">
-                    <div class="pagination-area">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-center">
+                        <div class="articles_grid_caption">
+                            <h4>لزوم یادگیری زبان در دنیای امروزی!</h4>
+                            <div class="articles_grid_author">
+                                <div class="articles_grid_author_img"><img src="/front/img/user-2.jpg" class="img-fluid" alt="" /></div>
+                                <h4>جان اسمیت</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <li class="page-item"><a class="page-link" href="#"><i class="icofont-double-left"></i></a></li>
+                <!-- Single Article -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="articles_grid_style">
+                        <div class="articles_grid_thumb">
+                            <a href="blog-detail.html"><img src="/front/img/b-3.jpg" class="img-fluid" alt="" /></a>
+                        </div>
 
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <div class="articles_grid_caption">
+                            <h4>چطور امتحان حضوری موفقی داشته باشیم؟</h4>
+                            <div class="articles_grid_author">
+                                <div class="articles_grid_author_img"><img src="/front/img/user-3.jpg" class="img-fluid" alt="" /></div>
+                                <h4>دانیال ویکیونز</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <!-- Single Article -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="articles_grid_style">
+                        <div class="articles_grid_thumb">
+                            <a href="blog-detail.html"><img src="/front/img/b-3.jpg" class="img-fluid" alt="" /></a>
+                        </div>
 
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <div class="articles_grid_caption">
+                            <h4>کلید سوالات کنکور برای رشته های مختلف</h4>
+                            <div class="articles_grid_author">
+                                <div class="articles_grid_author_img"><img src="/front/img/user-3.jpg" class="img-fluid" alt="" /></div>
+                                <h4>دانیال ویکیونز</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <li class="page-item"><a class="page-link" href="#"><i class="icofont-double-right"></i></a></li>
-                            </ul>
-                        </nav>
+                <!-- Single Article -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="articles_grid_style">
+                        <div class="articles_grid_thumb">
+                            <a href="blog-detail.html"><img src="/front/img/b-3.jpg" class="img-fluid" alt="" /></a>
+                        </div>
+
+                        <div class="articles_grid_caption">
+                            <h4>فعالیت های سرگرم کننده در کلاس آنلاین</h4>
+                            <div class="articles_grid_author">
+                                <div class="articles_grid_author_img"><img src="/front/img/user-3.jpg" class="img-fluid" alt="" /></div>
+                                <h4>دانیال ویکیونز</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Article -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="articles_grid_style">
+                        <div class="articles_grid_thumb">
+                            <a href="blog-detail.html"><img src="/front/img/b-3.jpg" class="img-fluid" alt="" /></a>
+                        </div>
+
+                        <div class="articles_grid_caption">
+                            <h4>روش تدریس و انواع شیوه های نوین یادگیری</h4>
+                            <div class="articles_grid_author">
+                                <div class="articles_grid_author_img"><img src="/front/img/user-3.jpg" class="img-fluid" alt="" /></div>
+                                <h4>دانیال ویکیونز</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Row -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+
+                    <!-- Pagination -->
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                            <button type="button" class="btn btn-loader"><i class="ti-reload ml-3"></i>فهرست کامل</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /Row -->
+
+        </div>
+    </section>
+    <!-- ========================== Articles Section =============================== -->
+
+    <!-- ============================== Start Newsletter ================================== -->
+    <section class="newsletter theme-bg inverse-theme">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8 col-sm-12">
+                    <div class="text-center">
+                        <h2>به جامعه هزاران دانشجو بپیوندید!</h2>
+                        <p>به جامعه میلیونی دانشجویان ما بپیوندید و به هزاران ساعت آموزش در حوزه‌های گوناگون دسترسی داشته باشید.</p>
+                        <form class="sup-form">
+                            <input type="email" class="form-control sigmup-me" placeholder="ایمیل خود را وارد کنید..." required="required">
+                            <input type="submit" class="btn btn-theme" value="عضویت">
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Blog Area -->
+    <!-- ================================= End Newsletter =============================== -->
 @endsection

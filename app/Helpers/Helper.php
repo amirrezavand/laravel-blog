@@ -29,71 +29,40 @@ if(!function_exists('getHeader')){
     {
         return [
             [
-              'title'=>'Home',
+              'title'=>'خانه',
               'route_name'=>'home',
               'view'=>'all',
               'child'=>[]
             ],
             [
-                'title'=>'Products',
+                'title'=>'دوره ها',
                 'route_name'=>'product',
                 'view'=>'all',
                 'child'=>[]
             ],
             [
-                'title'=>'Blog',
+                'title'=>'بلاگ',
                 'route_name'=>'blog',
                 'view'=>'all',
                 'child'=>[]
             ],
             [
-                'title'=>'Contact Us',
+                'title'=>'تماس با ما',
                 'route_name'=>'contact_us',
                 'view'=>'all',
                 'child'=>[
                     [
-                        'title'=>'Our Team',
+                        'title'=>'تیم ما',
                         'route_name'=>'our_team',
                         'view'=>'all',
                         'child'=>[]
                     ],
                     [
-                        'title'=>'About Us',
+                        'title'=>'درباره ما',
                         'route_name'=>'about_us',
                         'view'=>'all',
                         'child'=>[]
                     ]
-                ]
-            ],
-            [
-                'title'=>'Panel',
-                'route_name'=>'',
-                'view'=>'all',
-                'child'=>[
-                    [
-                        'title'=>'Login',
-                        'route_name'=>'login',
-                        'view'=>'guest',
-                        'child'=>[]
-                    ],
-                    [
-                        'title'=>'Signup',
-                        'route_name'=>'signup',
-                        'view'=>'guest',
-                        'child'=>[]
-                    ],
-                    [
-                        'title'=>'Dashboard',
-                        'route_name'=>'dashboard',
-                        'view'=>'auth',
-                        'child'=>[]
-                    ],
-                    [
-                    'title'=>'logout',
-                    'route_name'=>'logout',
-                    'view'=>'auth',
-                    'child'=>[]
-                ]
                 ]
             ]
         ];

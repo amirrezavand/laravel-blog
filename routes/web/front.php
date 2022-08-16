@@ -14,7 +14,7 @@ Route::get('/test',function (){
 
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/products',function (){
-    return 'Great Things Coming Soon!';
+    return view('front.course.index');
 })->name('product');
 
 Route::get('/blogs',[BlogController::class,'index'])->name('blog');
