@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- ============================ Course Header Info Start================================== -->
-    <div class="image-cover ed_detail_head lg theme-ov" style="background:#f4f4f4 url(assets/img/banner-4.jpg);" data-overlay="9">
+    <div class="image-cover ed_detail_head lg theme-ov" style="background:#f4f4f4 url(/front/img/banner-4.jpg);" data-overlay="9">
         <div class="container">
             <div class="row">
 
@@ -197,7 +197,7 @@
                     <!-- instructor -->
                     <div class="single_instructor border">
                         <div class="single_instructor_thumb">
-                            <a href="#"><img src="assets/img/user-3.jpg" class="img-fluid" alt=""></a>
+                            <a href="#"><img src="/front/img/user-3.jpg" class="img-fluid" alt=""></a>
                         </div>
                         <div class="single_instructor_caption">
                             <h4><a href="#">مهندس رضایی</a></h4>
@@ -225,7 +225,7 @@
                             <!-- reviews-comments-item -->
                             <div class="reviews-comments-item">
                                 <div class="review-comments-avatar">
-                                    <img src="assets/img/user-1.jpg" class="img-fluid" alt="">
+                                    <img src="/front/img/user-1.jpg" class="img-fluid" alt="">
                                 </div>
                                 <div class="reviews-comments-item-text">
                                     <h4><a href="#">محمد خاکپور</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>10 بهمن 1399</span></h4>
@@ -245,7 +245,7 @@
                             <!-- reviews-comments-item -->
                             <div class="reviews-comments-item">
                                 <div class="review-comments-avatar">
-                                    <img src="assets/img/user-2.jpg" class="img-fluid" alt="">
+                                    <img src="/front/img/user-2.jpg" class="img-fluid" alt="">
                                 </div>
                                 <div class="reviews-comments-item-text">
                                     <h4><a href="#">الهام پاکزاد</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>26 مرداد 1399</span></h4>
@@ -265,7 +265,7 @@
                             <!-- reviews-comments-item -->
                             <div class="reviews-comments-item">
                                 <div class="review-comments-avatar">
-                                    <img src="assets/img/user-3.jpg" class="img-fluid" alt="">
+                                    <img src="/front/img/user-3.jpg" class="img-fluid" alt="">
                                 </div>
                                 <div class="reviews-comments-item-text">
                                     <h4><a href="#">مهدی فدایی</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>20 بهمن 1398</span></h4>
@@ -333,7 +333,7 @@
 
                         <div class="property_video sm">
                             <div class="thumb">
-                                <img class="pro_img img-fluid w100" src="assets/img/banner-5.jpg" alt="7.jpg">
+                                <img class="pro_img img-fluid w100" src="/front/img/banner-5.jpg" alt="7.jpg">
                                 <div class="overlay_icon">
                                     <div class="bb-video-box">
                                         <div class="bb-video-box-inner">

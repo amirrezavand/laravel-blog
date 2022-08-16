@@ -7,8 +7,8 @@
             <!-- Type -->
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-8 col-sm-12">
-                    <h1 class="cl_2 f_2 large_h">تمدید جشنواره بهار<br><span class="theme-cl">به مدت 30 روز</span></h1>
-                    <p>بهترین پلتفرم یادگیری و دوره های آموزشی که با مناسب ترین قیمت توسط مدرسین مجرب آموزش داده می شود تا به شما در کسب مهارت های جدید کمک کند.</p>
+                    <h1 class="cl_2 f_2 large_h">تمدید جشنواره تابستان<br><span class="theme-cl">به مدت 30 روز</span></h1>
+                    <p>بهترین پلتفرم یادگیری و دوره های آموزشی حوزه وب که با مناسب ترین قیمت توسط مدرس وبسایت آستراکدر، آموزش داده می شود تا به شما در کسب مهارت های جدید کمک کند.</p>
                     <div class="banner-search shadow_high mt-4">
                         <div class="search_hero_wrapping">
                             <div class="row">
@@ -112,6 +112,7 @@
             </div>
 
             <div class="row">
+
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="edu_cat_2 cat-1">
                         <div class="edu_cat_icons">
@@ -121,34 +122,6 @@
                             <h4 class="title"><a href="#">مهندسی نرم افزار</a></h4>
                             <ul class="meta">
                                 <li class="video"><i class="ti-video-clapper"></i>23 دوره آموزشی</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="edu_cat_2 cat-2">
-                        <div class="edu_cat_icons">
-                            <a class="pic-main" href="#"><img src="/front/img/briefcase.png" class="img-fluid" alt="" /></a>
-                        </div>
-                        <div class="edu_cat_data">
-                            <h4 class="title"><a href="#">کسب و کار</a></h4>
-                            <ul class="meta">
-                                <li class="video"><i class="ti-video-clapper"></i>58 دوره آموزشی</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="edu_cat_2 cat-3">
-                        <div class="edu_cat_icons">
-                            <a class="pic-main" href="#"><img src="/front/img/career.png" class="img-fluid" alt="" /></a>
-                        </div>
-                        <div class="edu_cat_data">
-                            <h4 class="title"><a href="#">حسابداری</a></h4>
-                            <ul class="meta">
-                                <li class="video"><i class="ti-video-clapper"></i>74 دوره آموزشی</li>
                             </ul>
                         </div>
                     </div>
@@ -182,61 +155,6 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="edu_cat_2 cat-6">
-                        <div class="edu_cat_icons">
-                            <a class="pic-main" href="#"><img src="/front/img/speaker.png" class="img-fluid" alt="" /></a>
-                        </div>
-                        <div class="edu_cat_data">
-                            <h4 class="title"><a href="#">بورس و بازار سهام</a></h4>
-                            <ul class="meta">
-                                <li class="video"><i class="ti-video-clapper"></i>82 دوره آموزشی</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="edu_cat_2 cat-7">
-                        <div class="edu_cat_icons">
-                            <a class="pic-main" href="#"><img src="/front/img/photo.png" class="img-fluid" alt="" /></a>
-                        </div>
-                        <div class="edu_cat_data">
-                            <h4 class="title"><a href="#">هنر و عکاسی</a></h4>
-                            <ul class="meta">
-                                <li class="video"><i class="ti-video-clapper"></i>25 دوره آموزشی</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="edu_cat_2 cat-8">
-                        <div class="edu_cat_icons">
-                            <a class="pic-main" href="#"><img src="/front/img/yoga.png" class="img-fluid" alt="" /></a>
-                        </div>
-                        <div class="edu_cat_data">
-                            <h4 class="title"><a href="#">ورزش و سلامتی</a></h4>
-                            <ul class="meta">
-                                <li class="video"><i class="ti-video-clapper"></i>43 دوره آموزشی</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="edu_cat_2 cat-9">
-                        <div class="edu_cat_icons">
-                            <a class="pic-main" href="#"><img src="/front/img/health.png" class="img-fluid" alt="" /></a>
-                        </div>
-                        <div class="edu_cat_data">
-                            <h4 class="title"><a href="#">سبک زندگی</a></h4>
-                            <ul class="meta">
-                                <li class="video"><i class="ti-video-clapper"></i>38 دوره آموزشی</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -358,207 +276,6 @@
                     </div>
                 </div>
 
-                <!-- Cource Grid 1 -->
-                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                    <div class="education_block_list_layout style-2">
-
-                        <div class="education_block_thumb n-shadow">
-                            <a href="course-detail.html"><img src="/front/img/co-4.jpg" class="img-fluid" alt=""></a>
-                        </div>
-
-                        <div class="list_layout_ecucation_caption">
-
-                            <div class="education_block_body">
-                                <h4 class="bl-title"><a href="course-detail.html">آموزش برنامه نویسی‌اندروید</a></h4>
-                                <div class="_course_admin_ol12">مدرس: <strong>مسعود زارعی</strong></div>
-
-                                <div class="_course_less_infor">
-                                    <ul>
-                                        <li><i class="ti-desktop ml-1"></i>15 دوره</li>
-                                        <li><span class="class online"></span>آنلاین</li>
-                                    </ul>
-                                </div>
-
-                                <div class="course_rate_system_wrap">
-                                    <div class="course_rate_system">
-                                        <div class="course_ratting">
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="course_reviews_info">
-                                            <strong class="mid">4.7</strong>
-                                        </div>
-                                    </div>
-                                    <div class="_course_category_01"><span class="cat-4">استارت آپ</span></div>
-                                </div>
-                            </div>
-
-                            <div class="education_block_footer">
-                                <div class="cources_price">549ت<div class="less_offer">849ت</div></div>
-                                <div class="cources_info_style3">
-                                    <a href="course-detail.html" class="_cr_detail_arrow"><i class="fa fa-arrow-left"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Cource Grid 1 -->
-                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                    <div class="education_block_list_layout style-2">
-
-                        <div class="education_block_thumb n-shadow">
-                            <a href="course-detail.html"><img src="/front/img/co-5.jpg" class="img-fluid" alt=""></a>
-                        </div>
-
-                        <div class="list_layout_ecucation_caption">
-
-                            <div class="education_block_body">
-                                <h4 class="bl-title"><a href="course-detail.html">آموزش تبدیل PSD به HTML (یک)</a></h4>
-                                <div class="_course_admin_ol12">مدرس: <strong>نیلوفر کشاورز</strong></div>
-
-                                <div class="_course_less_infor">
-                                    <ul>
-                                        <li><i class="ti-desktop ml-1"></i>16 دوره</li>
-                                        <li><span class="class online"></span>آنلاین</li>
-                                    </ul>
-                                </div>
-
-                                <div class="course_rate_system_wrap">
-                                    <div class="course_rate_system">
-                                        <div class="course_ratting">
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="course_reviews_info">
-                                            <strong class="mid">4.9</strong>
-                                        </div>
-                                    </div>
-                                    <div class="_course_category_01"><span class="cat-3">گرافیک</span></div>
-                                </div>
-                            </div>
-
-                            <div class="education_block_footer">
-                                <div class="cources_price">449ت<div class="less_offer">749ت</div></div>
-                                <div class="cources_info_style3">
-                                    <a href="course-detail.html" class="_cr_detail_arrow"><i class="fa fa-arrow-left"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Cource Grid 1 -->
-                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                    <div class="education_block_list_layout style-2">
-
-                        <div class="education_block_thumb n-shadow">
-                            <a href="course-detail.html"><img src="/front/img/co-6.jpg" class="img-fluid" alt=""></a>
-                        </div>
-
-                        <div class="list_layout_ecucation_caption">
-
-                            <div class="education_block_body">
-                                <h4 class="bl-title"><a href="course-detail.html">آموزش کار با وکتور در فتوشاپ</a></h4>
-                                <div class="_course_admin_ol12">مدرس: <strong>الهام کریمی</strong></div>
-
-                                <div class="_course_less_infor">
-                                    <ul>
-                                        <li><i class="ti-desktop ml-1"></i>10 دوره</li>
-                                        <li><span class="class online"></span>آنلاین</li>
-                                    </ul>
-                                </div>
-
-                                <div class="course_rate_system_wrap">
-                                    <div class="course_rate_system">
-                                        <div class="course_ratting">
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="course_reviews_info">
-                                            <strong class="mid">4.8</strong>
-                                        </div>
-                                    </div>
-                                    <div class="_course_category_01"><span class="cat-2">انیمیشن</span></div>
-                                </div>
-                            </div>
-
-                            <div class="education_block_footer">
-                                <div class="cources_price">599ت<div class="less_offer">699ت</div></div>
-                                <div class="cources_info_style3">
-                                    <a href="course-detail.html" class="_cr_detail_arrow"><i class="fa fa-arrow-left"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Cource Grid 1 -->
-                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                    <div class="education_block_list_layout style-2">
-
-                        <div class="education_block_thumb n-shadow">
-                            <a href="course-detail.html"><img src="/front/img/co-7.jpg" class="img-fluid" alt=""></a>
-                        </div>
-
-                        <div class="list_layout_ecucation_caption">
-
-                            <div class="education_block_body">
-                                <h4 class="bl-title"><a href="course-detail.html">آموزش طراحی قالب ریسپانسیو</a></h4>
-                                <div class="_course_admin_ol12">مدرس: <strong>رابرت ویلسون</strong></div>
-
-                                <div class="_course_less_infor">
-                                    <ul>
-                                        <li><i class="ti-desktop ml-1"></i>12 دوره</li>
-                                        <li><span class="class online"></span>آنلاین</li>
-                                    </ul>
-                                </div>
-
-                                <div class="course_rate_system_wrap">
-                                    <div class="course_rate_system">
-                                        <div class="course_ratting">
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star filled"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="course_reviews_info">
-                                            <strong class="mid">4.7</strong>
-                                        </div>
-                                    </div>
-                                    <div class="_course_category_01"><span class="cat-1">طراحی سایت</span></div>
-                                </div>
-                            </div>
-
-                            <div class="education_block_footer">
-                                <div class="cources_price">700ت<div class="less_offer">1099ت</div></div>
-                                <div class="cources_info_style3">
-                                    <a href="course-detail.html" class="_cr_detail_arrow"><i class="fa fa-arrow-left"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-
             </div>
 
         </div>
@@ -601,123 +318,6 @@
 
         </div>
     </section>
-
-    <!-- ============================ Featured Instructor Start ================================== -->
-    <section class="pt-0">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-lg-5 col-md-6 col-sm-12">
-                    <div class="sec-heading center">
-                        <p>استاتید برتر</p>
-                        <h2>معلم های <span class="theme-cl">تدریس خصوصی</span> درس های مختلف</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-
-                    <div class="four_slide-dots articles arrow_middle" dir="rtl">
-
-                        <!-- Single Slide -->
-                        <div class="singles_items">
-                            <div class="instructor_wrap">
-                                <div class="instructor_thumb">
-                                    <a href="instructor-detail.html"><img src="/front/img/user-1.jpg" class="img-fluid" alt=""></a>
-                                </div>
-                                <div class="instructor_caption">
-                                    <h4><a href="instructor-detail.html">دانیل دیوانسکر</a></h4>
-                                    <span>طراح وب</span>
-                                    <ul>
-                                        <li><a href="#" class="cl-fb"><i class="ti-facebook"></i></a></li>
-                                        <li><a href="#" class="cl-twitter"><i class="ti-twitter"></i></a></li>
-                                        <li><a href="#" class="cl-linked"><i class="ti-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Slide -->
-                        <div class="singles_items">
-                            <div class="instructor_wrap">
-                                <div class="instructor_thumb">
-                                    <a href="instructor-detail.html"><img src="/front/img/user-2.jpg" class="img-fluid" alt=""></a>
-                                </div>
-                                <div class="instructor_caption">
-                                    <h4><a href="instructor-detail.html">شیلپا سینگ</a></h4>
-                                    <span>مدیر تیم</span>
-                                    <ul>
-                                        <li><a href="#" class="cl-fb"><i class="ti-facebook"></i></a></li>
-                                        <li><a href="#" class="cl-twitter"><i class="ti-twitter"></i></a></li>
-                                        <li><a href="#" class="cl-linked"><i class="ti-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Slide -->
-                        <div class="singles_items">
-                            <div class="instructor_wrap">
-                                <div class="instructor_thumb">
-                                    <a href="instructor-detail.html"><img src="/front/img/user-3.jpg" class="img-fluid" alt=""></a>
-                                </div>
-                                <div class="instructor_caption">
-                                    <h4><a href="instructor-detail.html">آدام ویستون</a></h4>
-                                    <span>مدیر فروش</span>
-                                    <ul>
-                                        <li><a href="#" class="cl-fb"><i class="ti-facebook"></i></a></li>
-                                        <li><a href="#" class="cl-twitter"><i class="ti-twitter"></i></a></li>
-                                        <li><a href="#" class="cl-linked"><i class="ti-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Slide -->
-                        <div class="singles_items">
-                            <div class="instructor_wrap">
-                                <div class="instructor_thumb">
-                                    <a href="instructor-detail.html"><img src="/front/img/user-4.jpg" class="img-fluid" alt=""></a>
-                                </div>
-                                <div class="instructor_caption">
-                                    <h4><a href="instructor-detail.html">راگینی سینگ</a></h4>
-                                    <span>مدیر عامل</span>
-                                    <ul>
-                                        <li><a href="#" class="cl-fb"><i class="ti-facebook"></i></a></li>
-                                        <li><a href="#" class="cl-twitter"><i class="ti-twitter"></i></a></li>
-                                        <li><a href="#" class="cl-linked"><i class="ti-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Slide -->
-                        <div class="singles_items">
-                            <div class="instructor_wrap">
-                                <div class="instructor_thumb">
-                                    <a href="instructor-detail.html"><img src="/front/img/user-5.jpg" class="img-fluid" alt=""></a>
-                                </div>
-                                <div class="instructor_caption">
-                                    <h4><a href="instructor-detail.html">دانیال ویلسون</a></h4>
-                                    <span>برنامه نویس</span>
-                                    <ul>
-                                        <li><a href="#" class="cl-fb"><i class="ti-facebook"></i></a></li>
-                                        <li><a href="#" class="cl-twitter"><i class="ti-twitter"></i></a></li>
-                                        <li><a href="#" class="cl-linked"><i class="ti-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- ============================ Featured Instructor End ================================== -->
 
     <!-- ========================== Articles Section =============================== -->
     <section class="bg-light min-sec">
@@ -796,7 +396,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <div class="sec-heading center">
-                        <p>مردم چه می گویند؟</p>
+                        <p>دانشجویان چه می گویند؟</p>
                         <h2><span class="theme-cl">امتیازات</span> دانشجویان موفق و برتر</h2>
                     </div>
                 </div>
@@ -945,24 +545,5 @@
         </div>
     </section>
     <!-- ========================== Brand Section =============================== -->
-
-    <!-- ============================== Start Newsletter ================================== -->
-    <section class="newsletter theme-bg inverse-theme">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8 col-sm-12">
-                    <div class="text-center">
-                        <h2>به جامعه هزاران دانشجو بپیوندید!</h2>
-                        <p>به جامعه میلیونی دانشجویان ما بپیوندید و به هزاران ساعت آموزش در حوزه‌های گوناگون دسترسی داشته باشید.</p>
-                        <form class="sup-form">
-                            <input type="email" class="form-control sigmup-me" placeholder="ایمیل خود را وارد کنید..." required="required">
-                            <input type="submit" class="btn btn-theme" value="عضویت">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ================================= End Newsletter =============================== -->
 
 @endsection

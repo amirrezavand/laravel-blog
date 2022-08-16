@@ -8,11 +8,11 @@
                 <div class="col-lg-12 col-md-12">
 
                     <div class="breadcrumbs-wrap">
-                        <h1 class="breadcrumb-title">نمای تمام صفحه</h1>
+                        <h1 class="breadcrumb-title">لیست دوره ها</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">خانه</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">نسخه 3</li>
+                                <li class="breadcrumb-item active" aria-current="page">لیست دوره ها</li>
                             </ol>
                         </nav>
                     </div>
@@ -362,8 +362,26 @@
 
                             <!-- Pagination -->
                             <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                                    <button type="button" class="btn btn-loader"><i class="ti-reload ml-3"></i> فهرست کامل</button>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <ul class="pagination p-center">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span class="ti-arrow-left"></span>
+                                                <span class="sr-only">قبل</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">18</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span class="ti-arrow-right"></span>
+                                                <span class="sr-only">بعد</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
 
@@ -380,22 +398,4 @@
     </section>
     <!-- ============================ Full Width Courses End ================================== -->
 
-    <!-- ============================== Start Newsletter ================================== -->
-    <section class="newsletter theme-bg inverse-theme">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8 col-sm-12">
-                    <div class="text-center">
-                        <h2>به جامعه هزاران دانشجو بپیوندید!</h2>
-                        <p>به جامعه میلیونی دانشجویان ما بپیوندید و به هزاران ساعت آموزش در حوزه‌های گوناگون دسترسی داشته باشید.</p>
-                        <form class="sup-form">
-                            <input type="email" class="form-control sigmup-me" placeholder="ایمیل خود را وارد کنید..." required="required">
-                            <input type="submit" class="btn btn-theme" value="عضویت">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ================================= End Newsletter =============================== -->
 @endsection

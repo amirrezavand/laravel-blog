@@ -50,20 +50,27 @@ if(!function_exists('getHeader')){
                 'title'=>'تماس با ما',
                 'route_name'=>'contact_us',
                 'view'=>'all',
-                'child'=>[
-                    [
-                        'title'=>'تیم ما',
-                        'route_name'=>'our_team',
-                        'view'=>'all',
-                        'child'=>[]
-                    ],
-                    [
-                        'title'=>'درباره ما',
-                        'route_name'=>'about_us',
-                        'view'=>'all',
-                        'child'=>[]
-                    ]
-                ]
+                'child'=>[],
+//                'child'=>[
+//                    [
+//                        'title'=>'تیم ما',
+//                        'route_name'=>'our_team',
+//                        'view'=>'all',
+//                        'child'=>[]
+//                    ],
+//                    [
+//                        'title'=>'درباره ما',
+//                        'route_name'=>'about_us',
+//                        'view'=>'all',
+//                        'child'=>[]
+//                    ]
+//                ]
+            ],
+            [
+                'title'=>'درباره ما',
+                'route_name'=>'about_us',
+                'view'=>'all',
+                'child'=>[] ,
             ]
         ];
     }

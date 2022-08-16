@@ -1,358 +1,277 @@
 @extends('front.layouts.master')
 
 @section('content')
-    <!-- Start About Area -->
-    <section class="about-area ptb-100">
-        <div class="container">
-            <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <div class="about-content">
-                        <div class="section-title">
-                            <h2>Our process is simple; Our products are powerful.</h2>
-                            <div class="bar"></div>
-                            <p>Lorem ipsum dolor sit amet, con se ctetur adipiscing elit. In sagittis eg esta ante, sed viverra nunc tinci dunt nec elei fend et tiram.</p>
-                        </div>
-                        <p>Business-to-business metrics analytics value proposition funding angel investor entrepreneur alpha ramen equity gamification. Social proof partner network research.</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis egestas ante, sed viverra nunc tincidunt nec nteger nonsed condimntum elit, sit amet feugiat lorem. Proin tempus sagittis velit vitae scelerisque.</p>
-
-                        <p>Lorem ipsum dolor sit amet, con se ctetur adipiscing elit. In sagittis eg esta ante, sed viverra nunc tinci dunt nec elei fend et tiram.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-12">
-                    <img src="/front/assets/img/marketing.png" alt="image">
-                </div>
-            </div>
-        </div>
-
-        <div class="about-inner-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="about-text">
-                            <h3>Our Company</h3>
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="about-text">
-                            <h3>Who we are</h3>
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="about-text">
-                            <h3>What we Value</h3>
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="about-text">
-                            <h3>Contact Us</h3>
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End About Area -->
-
-    <!-- Start Team Area -->
-    <section class="team-area ptb-100 bg-gray">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Smart Team</h2>
-                <div class="bar"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-
-            <div class="row">
-                <div class="team-slides">
-                    <div class="col-lg-12">
-                        <div class="single-team-member">
-                            <img src="/front/assets/img/team-img1.jpg" alt="team">
-
-                            <div class="team-content">
-                                <h3>John Doe</h3>
-                                <span>CEO</span>
-
-                                <ul>
-                                    <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icofont-instagram"></i></a></li>
-                                    <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icofont-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="single-team-member">
-                            <img src="/front/assets/img/team-img2.jpg" alt="team">
-
-                            <div class="team-content">
-                                <h3>Steven Smith</h3>
-                                <span>Developer</span>
-
-                                <ul>
-                                    <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icofont-instagram"></i></a></li>
-                                    <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icofont-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="single-team-member">
-                            <img src="/front/assets/img/team-img3.jpg" alt="team">
-
-                            <div class="team-content">
-                                <h3>David Luiz</h3>
-                                <span>Designer</span>
-
-                                <ul>
-                                    <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icofont-instagram"></i></a></li>
-                                    <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icofont-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="single-team-member">
-                            <img src="/front/assets/img/team-img4.jpg" alt="team">
-
-                            <div class="team-content">
-                                <h3>Park Tim</h3>
-                                <span>SEO Expert</span>
-
-                                <ul>
-                                    <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icofont-instagram"></i></a></li>
-                                    <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icofont-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="single-team-member">
-                            <img src="/front/assets/img/team-img5.jpg" alt="team">
-
-                            <div class="team-content">
-                                <h3>Doglas Costa</h3>
-                                <span>Manager</span>
-
-                                <ul>
-                                    <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icofont-instagram"></i></a></li>
-                                    <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icofont-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Team Area -->
-
-    <!-- Start CTA Area -->
-    <div class="cta-area">
-        <div class="container">
-            <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-lg-7 col-md-7">
-                    <p>Want a bite? You're in the right place!</p>
-                </div>
-
-                <div class="col-lg-5 col-md-5 text-right">
-                    <a href="#" class="btn btn-primary">Take a Test Drive</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End CTA Area -->
-
-    <!-- Start Feedback Area -->
-    <section class="feedback-area ptb-100 bg-gray">
-        <div class="container">
-            <div class="section-title">
-                <h2>Testimonials</h2>
-                <div class="bar"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-
-            <div class="row">
-                <div class="feedback-slides">
-                    <div class="col-lg-12">
-                        <div class="single-feedback">
-                            <div class="client-info">
-                                <img src="/front/assets/img/client1.jpg" alt="client">
-                                <h3>Alit John</h3>
-                                <span>Web Developer</span>
-                            </div>
-                            <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project individual.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="single-feedback">
-                            <div class="client-info">
-                                <img src="/front/assets/img/client2.jpg" alt="client">
-                                <h3>Alit John</h3>
-                                <span>Jhon Smith</span>
-                            </div>
-                            <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project individual.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="single-feedback">
-                            <div class="client-info">
-                                <img src="/front/assets/img/client3.jpg" alt="client">
-                                <h3>Steven John</h3>
-                                <span>Web Developer</span>
-                            </div>
-                            <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project individual.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="single-feedback">
-                            <div class="client-info">
-                                <img src="/front/assets/img/client1.jpg" alt="client">
-                                <h3>David Warner</h3>
-                                <span>Web Developer</span>
-                            </div>
-                            <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project individual.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <svg class="svg-feedback-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path d="M0,70 C30,130 70,50 100,70 L100,100 0,100 Z" fill="#ffffff"/>
-        </svg>
-    </section>
-    <!-- End Feedback Area -->
-
-    <!-- Start Partner Area -->
-    <div class="partner-area">
-        <div class="container">
-            <div class="row">
-                <div class="partner-slides">
-                    <div class="col-lg-12">
-                        <div class="item">
-                            <a href="#"><img src="/front/assets/img/partner-1.png" alt="partner"></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="item">
-                            <a href="#"><img src="/front/assets/img/partner-2.png" alt="partner"></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="item">
-                            <a href="#"><img src="/front/assets/img/partner-3.png" alt="partner"></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="item">
-                            <a href="#"><img src="/front/assets/img/partner-4.png" alt="partner"></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="item">
-                            <a href="#"><img src="/front/assets/img/partner-5.png" alt="partner"></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="item">
-                            <a href="#"><img src="/front/assets/img/partner-6.png" alt="partner"></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="item">
-                            <a href="#"><img src="/front/assets/img/partner-7.png" alt="partner"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Partner Area -->
-
-    <!-- Start Platform Connect -->
-    <section class="platform-connect ptb-100">
+    <!-- ============================ Page Title Start================================== -->
+    <section class="page-title">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <h2>Interact With Your Users On Every Single Platform</h2>
-                </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <a href="#" class="box">
-                        <img src="/front/assets/img/mailchimp.png" alt="mailchimp">
+                    <div class="breadcrumbs-wrap">
+                        <h1 class="breadcrumb-title">درباره ما چه میگویند؟</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">خانه</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">درباره ما</li>
+                            </ol>
+                        </nav>
+                    </div>
 
-                        <h3>Mail Chimp</h3>
-                        <span>Send Mail</span>
-
-                        <i class="icofont-bubble-right"></i>
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <a href="#" class="box">
-                        <img src="/front/assets/img/slack.png" alt="mailchimp">
-
-                        <h3>Slack</h3>
-                        <span>Messaging</span>
-
-                        <i class="icofont-bubble-right"></i>
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <a href="#" class="box">
-                        <img src="/front/assets/img/twitter.png" alt="mailchimp">
-
-                        <h3>Twitter</h3>
-                        <span>Twitter Feed</span>
-
-                        <i class="icofont-bubble-right"></i>
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <a href="#" class="box">
-                        <img src="/front/assets/img/instagram.png" alt="mailchimp">
-
-                        <h3>Instagram</h3>
-                        <span>News Feed</span>
-
-                        <i class="icofont-bubble-right"></i>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Platform Connect -->
+    <!-- ============================ Page Title End ================================== -->
+
+    <!-- ========================== About Facts List Section =============================== -->
+    <section class="pt-0">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="list_facts_wrap">
+                        <div class="sec-heading mb-3 f-24">
+                            <h2>مسیرهای <span class="theme-cl">یادگیری </span>و مجموعه های آموزشی</h2>
+                        </div>
+                        <div class="list_facts">
+                            <div class="list_facts_icons"><i class="ti-desktop"></i></div>
+                            <div class="list_facts_caption">
+                                <h4>نظارت دقیق و ارزیابی عملکرد معلمان</h4>
+                                <p>هر کجای ایران یا دنیا که هستید، معلم های ما به صورت زنده به شما تدریس می کنند.</p>
+                            </div>
+                        </div>
+                        <div class="list_facts">
+                            <div class="list_facts_icons"><i class="ti-heart"></i></div>
+                            <div class="list_facts_caption">
+                                <h4>شفافیت قیمت و تضمین پایین‌ترین قیمت‌ها</h4>
+                                <p>در زمان ثبت درخواست امکان نحوه برگزاری کلاس بصورت حضوری یا آنلاین وجود دارد.</p>
+                            </div>
+                        </div>
+                        <div class="list_facts">
+                            <div class="list_facts_icons"><i class="ti-harddrives"></i></div>
+                            <div class="list_facts_caption">
+                                <h4>امکان برگزاری کلاس بصورت حضوری یا آنلاین</h4>
+                                <p>از بین بیش از 2000 معلم فعال با استفاده از فیلتر‌ها بهترین استاد متناسب با شرایط خود را بیابید.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="#" class="btn btn-modern">درباره ما<span><i class="ti-arrow-left"></i></span></a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="list_facts_wrap_img">
+
+                        <img src="/front/img/edu_2.png" class="img-fluid" alt="" />
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ========================== About Facts List Section =============================== -->
+
+    <!-- ============================ Featured Instructor Start ================================== -->
+    <section class="bg-light">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="sec-heading center">
+                        <p>استاتید برتر</p>
+                        <h2>معلم های <span class="theme-cl">تدریس خصوصی</span> درس های مختلف</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+
+                    <div class="four_slide-dots articles arrow_middle" dir="rtl">
+
+                        <!-- Single Slide -->
+                        <div class="singles_items">
+                            <div class="instructor_wrap">
+                                <div class="instructor_thumb">
+                                    <a href="instructor-detail.html"><img src="/front/img/user-1.jpg" class="img-fluid" alt=""></a>
+                                </div>
+                                <div class="instructor_caption">
+                                    <h4><a href="instructor-detail.html">دانیل دیوانسکر</a></h4>
+                                    <span>طراح وب</span>
+                                    <ul>
+                                        <li><a href="#" class="cl-fb"><i class="ti-facebook"></i></a></li>
+                                        <li><a href="#" class="cl-twitter"><i class="ti-twitter"></i></a></li>
+                                        <li><a href="#" class="cl-linked"><i class="ti-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Slide -->
+                        <div class="singles_items">
+                            <div class="instructor_wrap">
+                                <div class="instructor_thumb">
+                                    <a href="instructor-detail.html"><img src="/front/img/user-2.jpg" class="img-fluid" alt=""></a>
+                                </div>
+                                <div class="instructor_caption">
+                                    <h4><a href="instructor-detail.html">شیلپا سینگ</a></h4>
+                                    <span>مدیر تیم</span>
+                                    <ul>
+                                        <li><a href="#" class="cl-fb"><i class="ti-facebook"></i></a></li>
+                                        <li><a href="#" class="cl-twitter"><i class="ti-twitter"></i></a></li>
+                                        <li><a href="#" class="cl-linked"><i class="ti-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Slide -->
+                        <div class="singles_items">
+                            <div class="instructor_wrap">
+                                <div class="instructor_thumb">
+                                    <a href="instructor-detail.html"><img src="/front/img/user-3.jpg" class="img-fluid" alt=""></a>
+                                </div>
+                                <div class="instructor_caption">
+                                    <h4><a href="instructor-detail.html">آدام ویستون</a></h4>
+                                    <span>مدیر فروش</span>
+                                    <ul>
+                                        <li><a href="#" class="cl-fb"><i class="ti-facebook"></i></a></li>
+                                        <li><a href="#" class="cl-twitter"><i class="ti-twitter"></i></a></li>
+                                        <li><a href="#" class="cl-linked"><i class="ti-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Slide -->
+                        <div class="singles_items">
+                            <div class="instructor_wrap">
+                                <div class="instructor_thumb">
+                                    <a href="instructor-detail.html"><img src="/front/img/user-4.jpg" class="img-fluid" alt=""></a>
+                                </div>
+                                <div class="instructor_caption">
+                                    <h4><a href="instructor-detail.html">راگینی سینگ</a></h4>
+                                    <span>مدیر عامل</span>
+                                    <ul>
+                                        <li><a href="#" class="cl-fb"><i class="ti-facebook"></i></a></li>
+                                        <li><a href="#" class="cl-twitter"><i class="ti-twitter"></i></a></li>
+                                        <li><a href="#" class="cl-linked"><i class="ti-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Slide -->
+                        <div class="singles_items">
+                            <div class="instructor_wrap">
+                                <div class="instructor_thumb">
+                                    <a href="instructor-detail.html"><img src="/front/img/user-5.jpg" class="img-fluid" alt=""></a>
+                                </div>
+                                <div class="instructor_caption">
+                                    <h4><a href="instructor-detail.html">دانیال ویلسون</a></h4>
+                                    <span>برنامه نویس</span>
+                                    <ul>
+                                        <li><a href="#" class="cl-fb"><i class="ti-facebook"></i></a></li>
+                                        <li><a href="#" class="cl-twitter"><i class="ti-twitter"></i></a></li>
+                                        <li><a href="#" class="cl-linked"><i class="ti-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ============================ Featured Instructor End ================================== -->
+
+    <!-- ============================ Testimonial Start ================================== -->
+    <section style="background:url(/front/img/testimonial.png)">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="sec-heading center">
+                        <p>مردم چه می گویند؟</p>
+                        <h2><span class="theme-cl">امتیازات</span> دانشجویان موفق و برتر</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="testimonials_style" class="slick-carousel-3 arrow_middle" dir="rtl">
+                        <div class="testimonial-detail">
+                            <div class="client-detail-box">
+                                <div class="pic">
+                                    <img src="/front/img/user-1.jpg" alt="">
+                                </div>
+                                <div class="client-detail">
+                                    <h3 class="testimonial-title">آدام آلوریام</h3>
+                                    <span class="post">برنامه نویس وب</span>
+                                </div>
+                            </div>
+                            <p class="description">
+                                " ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. "
+                            </p>
+                        </div>
+
+                        <div class="testimonial-detail">
+                            <div class="client-detail-box">
+                                <div class="pic">
+                                    <img src="/front/img/user-2.jpg" alt="">
+                                </div>
+                                <div class="client-detail">
+                                    <h3 class="testimonial-title">ایلا میلیا</h3>
+                                    <span class="post">مدیر پروژه</span>
+                                </div>
+                            </div>
+                            <p class="description">
+                                " در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد."
+                            </p>
+                        </div>
+
+                        <div class="testimonial-detail">
+                            <div class="client-detail-box">
+                                <div class="pic">
+                                    <img src="/front/img/user-3.jpg" alt="">
+                                </div>
+                                <div class="client-detail">
+                                    <h3 class="testimonial-title">سینا زارعی</h3>
+                                    <span class="post">طراح وب</span>
+                                </div>
+                            </div>
+                            <p class="description">
+                                " کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد."
+                            </p>
+                        </div>
+
+                        <div class="testimonial-detail">
+                            <div class="client-detail-box">
+                                <div class="pic">
+                                    <img src="/front/img/user-4.jpg" alt="">
+                                </div>
+                                <div class="client-detail">
+                                    <h3 class="testimonial-title">ویلیامسون</h3>
+                                    <span class="post">طراح وب</span>
+                                </div>
+                            </div>
+                            <p class="description">
+                                " چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. "
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ============================ Testimonial End ================================== -->
+
 @endsection

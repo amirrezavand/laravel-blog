@@ -33,6 +33,7 @@
 
     @yield('content')
 
+    @include('front.include.news_letter')
     @include('front.layouts.footer')
 
     <!-- Log In Modal -->
