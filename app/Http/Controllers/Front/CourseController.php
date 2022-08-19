@@ -17,7 +17,7 @@ class CourseController extends Controller
 
     public function single($id){
 
-        $course=Course::whereRaw('courses.id = ?',$id)->leftJoin('users','users.id','=','courses.user_id')->select(DB::raw('courses.*'),DB::raw('users.name as teacher_name'),DB::raw('users.avatar as teacher_avatar'))->orderby('id','desc')->first();
+        $course=Course::with('user')->first();
         return view('front.course.single',compact('course'));
     }
 }

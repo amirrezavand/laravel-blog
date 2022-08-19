@@ -135,53 +135,53 @@
                     </div>
 
                     <!-- Reviews -->
-                    <div class="rating-overview border">
-                        <div class="rating-overview-box">
-                            <span class="rating-overview-box-total">4.2</span>
-                            <span class="rating-overview-box-percent">از امتیاز 5</span>
-                            <div class="star-rating" data-rating="5"><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                            </div>
-                        </div>
+{{--                    <div class="rating-overview border">--}}
+{{--                        <div class="rating-overview-box">--}}
+{{--                            <span class="rating-overview-box-total">4.2</span>--}}
+{{--                            <span class="rating-overview-box-percent">از امتیاز 5</span>--}}
+{{--                            <div class="star-rating" data-rating="5"><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="rating-bars">
-                            <div class="rating-bars-item">
-                                <span class="rating-bars-name">5 ستاره</span>
-                                <span class="rating-bars-inner">
-											<span class="rating-bars-rating high" data-rating="4.7">
-												<span class="rating-bars-rating-inner" style="width: 85%;"></span>
-											</span>
-											<strong>85%</strong>
-										</span>
-                            </div>
-                            <div class="rating-bars-item">
-                                <span class="rating-bars-name">4 ستاره</span>
-                                <span class="rating-bars-inner">
-											<span class="rating-bars-rating good" data-rating="3.9">
-												<span class="rating-bars-rating-inner" style="width: 75%;"></span>
-											</span>
-											<strong>75%</strong>
-										</span>
-                            </div>
-                            <div class="rating-bars-item">
-                                <span class="rating-bars-name">3 ستاره</span>
-                                <span class="rating-bars-inner">
-											<span class="rating-bars-rating mid" data-rating="3.2">
-												<span class="rating-bars-rating-inner" style="width: 52.2%;"></span>
-											</span>
-											<strong>53%</strong>
-										</span>
-                            </div>
-                            <div class="rating-bars-item">
-                                <span class="rating-bars-name">1 ستاره</span>
-                                <span class="rating-bars-inner">
-											<span class="rating-bars-rating poor" data-rating="2.0">
-												<span class="rating-bars-rating-inner" style="width:20%;"></span>
-											</span>
-											<strong>20%</strong>
-										</span>
-                            </div>
-                        </div>
-                    </div>
+{{--                        <div class="rating-bars">--}}
+{{--                            <div class="rating-bars-item">--}}
+{{--                                <span class="rating-bars-name">5 ستاره</span>--}}
+{{--                                <span class="rating-bars-inner">--}}
+{{--											<span class="rating-bars-rating high" data-rating="4.7">--}}
+{{--												<span class="rating-bars-rating-inner" style="width: 85%;"></span>--}}
+{{--											</span>--}}
+{{--											<strong>85%</strong>--}}
+{{--										</span>--}}
+{{--                            </div>--}}
+{{--                            <div class="rating-bars-item">--}}
+{{--                                <span class="rating-bars-name">4 ستاره</span>--}}
+{{--                                <span class="rating-bars-inner">--}}
+{{--											<span class="rating-bars-rating good" data-rating="3.9">--}}
+{{--												<span class="rating-bars-rating-inner" style="width: 75%;"></span>--}}
+{{--											</span>--}}
+{{--											<strong>75%</strong>--}}
+{{--										</span>--}}
+{{--                            </div>--}}
+{{--                            <div class="rating-bars-item">--}}
+{{--                                <span class="rating-bars-name">3 ستاره</span>--}}
+{{--                                <span class="rating-bars-inner">--}}
+{{--											<span class="rating-bars-rating mid" data-rating="3.2">--}}
+{{--												<span class="rating-bars-rating-inner" style="width: 52.2%;"></span>--}}
+{{--											</span>--}}
+{{--											<strong>53%</strong>--}}
+{{--										</span>--}}
+{{--                            </div>--}}
+{{--                            <div class="rating-bars-item">--}}
+{{--                                <span class="rating-bars-name">1 ستاره</span>--}}
+{{--                                <span class="rating-bars-inner">--}}
+{{--											<span class="rating-bars-rating poor" data-rating="2.0">--}}
+{{--												<span class="rating-bars-rating-inner" style="width:20%;"></span>--}}
+{{--											</span>--}}
+{{--											<strong>20%</strong>--}}
+{{--										</span>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
                     <!-- instructor -->
                     <div class="single_instructor border">
@@ -189,13 +189,13 @@
                             <a href="#"><img src="/front/img/user-3.jpg" class="img-fluid" alt=""></a>
                         </div>
                         <div class="single_instructor_caption">
-                            <h4><a href="#">مهندس رضایی</a></h4>
+                            <h4><a href="#">{{$course->user->name}}</a></h4>
                             <ul class="instructor_info">
-                                <li><i class="ti-video-camera"></i>72 ویدئو</li>
-                                <li><i class="ti-control-forward"></i>102 دوره</li>
-                                <li><i class="ti-user"></i>آپدیت بهمن ماه</li>
+                                <li><i class="ti-video-camera"></i>5 ویدئو</li>
+                                <li><i class="ti-control-forward"></i>1 دوره</li>
+                                <li><i class="ti-user"></i> آپدیت تیر ماه</li>
                             </ul>
-                            <p>اول داستان، طراح گرافیک بودم و ۲ سالی به عنوان طراح مشغول بودم، بعد به برنامه‌نویسی علاقمند شدم و الان بیشتر از ۱۰ ساله که عاشق کدزنی و چالش‌های پروژه‌های مختلفم.</p>
+                            <p>{{$course->user->about}}</p>
                             <ul class="social_info">
                                 <li><a href="#"><i class="ti-facebook"></i></a></li>
                                 <li><a href="#"><i class="ti-twitter"></i></a></li>
@@ -208,70 +208,74 @@
                     <!-- Reviews -->
                     <div class="list-single-main-item fl-wrap border">
                         <div class="list-single-main-item-title fl-wrap">
-                            <h3>تاکنون <span> 3 </span> دیدگاه ثبت شده است!</h3>
+                            @if(false)
+                                <h3>تاکنون <span> 3 </span> دیدگاه ثبت شده است!</h3>
+                            @else
+                                <h3>تا کنون دیدگاهی ثبت نشده است. </h3>
+                            @endif
                         </div>
-                        <div class="reviews-comments-wrap">
-                            <!-- reviews-comments-item -->
-                            <div class="reviews-comments-item">
-                                <div class="review-comments-avatar">
-                                    <img src="/front/img/user-1.jpg" class="img-fluid" alt="">
-                                </div>
-                                <div class="reviews-comments-item-text">
-                                    <h4><a href="#">محمد خاکپور</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>10 بهمن 1399</span></h4>
+{{--                        <div class="reviews-comments-wrap">--}}
+{{--                            <!-- reviews-comments-item -->--}}
+{{--                            <div class="reviews-comments-item">--}}
+{{--                                <div class="review-comments-avatar">--}}
+{{--                                    <img src="/front/img/user-1.jpg" class="img-fluid" alt="">--}}
+{{--                                </div>--}}
+{{--                                <div class="reviews-comments-item-text">--}}
+{{--                                    <h4><a href="#">محمد خاکپور</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>10 بهمن 1399</span></h4>--}}
 
-                                    <div class="listing-rating high" data-starrating2="5"><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><span class="review-count">4.9</span> </div>
-                                    <div class="clearfix"></div>
-                                    <p>"ظاهرا آموزش کاملی بنظر میاد و میخوام بخرم ولی کاش بجای ساخت فروشگاه، پلاگین نویسی برا ووکامرس رو هم توضیح میدادین، البته میتونین تکمیل کنین این دوره رو و آپدیت کنین"</p>
-                                    <div class="pull-left reviews-reaction">
-                                        <a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>
-                                        <a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>
-                                        <a href="#" class="comment-love active"><i class="ti-heart"></i> 07</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--reviews-comments-item end-->
+{{--                                    <div class="listing-rating high" data-starrating2="5"><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><span class="review-count">4.9</span> </div>--}}
+{{--                                    <div class="clearfix"></div>--}}
+{{--                                    <p>"ظاهرا آموزش کاملی بنظر میاد و میخوام بخرم ولی کاش بجای ساخت فروشگاه، پلاگین نویسی برا ووکامرس رو هم توضیح میدادین، البته میتونین تکمیل کنین این دوره رو و آپدیت کنین"</p>--}}
+{{--                                    <div class="pull-left reviews-reaction">--}}
+{{--                                        <a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>--}}
+{{--                                        <a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>--}}
+{{--                                        <a href="#" class="comment-love active"><i class="ti-heart"></i> 07</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <!--reviews-comments-item end-->--}}
 
-                            <!-- reviews-comments-item -->
-                            <div class="reviews-comments-item">
-                                <div class="review-comments-avatar">
-                                    <img src="/front/img/user-2.jpg" class="img-fluid" alt="">
-                                </div>
-                                <div class="reviews-comments-item-text">
-                                    <h4><a href="#">الهام پاکزاد</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>26 مرداد 1399</span></h4>
+{{--                            <!-- reviews-comments-item -->--}}
+{{--                            <div class="reviews-comments-item">--}}
+{{--                                <div class="review-comments-avatar">--}}
+{{--                                    <img src="/front/img/user-2.jpg" class="img-fluid" alt="">--}}
+{{--                                </div>--}}
+{{--                                <div class="reviews-comments-item-text">--}}
+{{--                                    <h4><a href="#">الهام پاکزاد</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>26 مرداد 1399</span></h4>--}}
 
-                                    <div class="listing-rating mid" data-starrating2="5"><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star"></i><span class="review-count">3.7</span> </div>
-                                    <div class="clearfix"></div>
-                                    <p>"سلام.من PHP رو تو دوران هنرستان یاد گرفتم.اگه PHP رو به صورت مقدماتی کار کرده باشم ولی در حدی باشیم که درک نسبتا کاملی از کد خط ها و معنا و مفهوم آن داشته باشیم، کفایت میکنه یا باید پیشرفته تر آموزش ویدیویی ببینم؟ "</p>
-                                    <div class="pull-left reviews-reaction">
-                                        <a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>
-                                        <a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>
-                                        <a href="#" class="comment-love active"><i class="ti-heart"></i> 07</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--reviews-comments-item end-->
+{{--                                    <div class="listing-rating mid" data-starrating2="5"><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star"></i><span class="review-count">3.7</span> </div>--}}
+{{--                                    <div class="clearfix"></div>--}}
+{{--                                    <p>"سلام.من PHP رو تو دوران هنرستان یاد گرفتم.اگه PHP رو به صورت مقدماتی کار کرده باشم ولی در حدی باشیم که درک نسبتا کاملی از کد خط ها و معنا و مفهوم آن داشته باشیم، کفایت میکنه یا باید پیشرفته تر آموزش ویدیویی ببینم؟ "</p>--}}
+{{--                                    <div class="pull-left reviews-reaction">--}}
+{{--                                        <a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>--}}
+{{--                                        <a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>--}}
+{{--                                        <a href="#" class="comment-love active"><i class="ti-heart"></i> 07</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <!--reviews-comments-item end-->--}}
 
-                            <!-- reviews-comments-item -->
-                            <div class="reviews-comments-item">
-                                <div class="review-comments-avatar">
-                                    <img src="/front/img/user-3.jpg" class="img-fluid" alt="">
-                                </div>
-                                <div class="reviews-comments-item-text">
-                                    <h4><a href="#">مهدی فدایی</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>20 بهمن 1398</span></h4>
+{{--                            <!-- reviews-comments-item -->--}}
+{{--                            <div class="reviews-comments-item">--}}
+{{--                                <div class="review-comments-avatar">--}}
+{{--                                    <img src="/front/img/user-3.jpg" class="img-fluid" alt="">--}}
+{{--                                </div>--}}
+{{--                                <div class="reviews-comments-item-text">--}}
+{{--                                    <h4><a href="#">مهدی فدایی</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>20 بهمن 1398</span></h4>--}}
 
-                                    <div class="listing-rating good" data-starrating2="5"><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star"></i> <span class="review-count">4.2</span> </div>
-                                    <div class="clearfix"></div>
-                                    <p>" سلام. برای یادگرفتن پیش نیاز این دوره که پی اچ پی هست تا کدام قسمت از اموزش پی اچ پی لازمه که یاد گرفته بشه؟(مطابق سرفصل های همین دوره در سایت) "</p>
-                                    <div class="pull-left reviews-reaction">
-                                        <a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>
-                                        <a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>
-                                        <a href="#" class="comment-love active"><i class="ti-heart"></i> 07</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--reviews-comments-item end-->
+{{--                                    <div class="listing-rating good" data-starrating2="5"><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star"></i> <span class="review-count">4.2</span> </div>--}}
+{{--                                    <div class="clearfix"></div>--}}
+{{--                                    <p>" سلام. برای یادگرفتن پیش نیاز این دوره که پی اچ پی هست تا کدام قسمت از اموزش پی اچ پی لازمه که یاد گرفته بشه؟(مطابق سرفصل های همین دوره در سایت) "</p>--}}
+{{--                                    <div class="pull-left reviews-reaction">--}}
+{{--                                        <a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>--}}
+{{--                                        <a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>--}}
+{{--                                        <a href="#" class="comment-love active"><i class="ti-heart"></i> 07</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <!--reviews-comments-item end-->--}}
 
-                        </div>
+{{--                        </div>--}}
                     </div>
 
                     <!-- Submit Reviews -->
@@ -322,33 +326,33 @@
 
                         <div class="property_video sm">
                             <div class="thumb">
-                                <img class="pro_img img-fluid w100" src="/front/img/banner-5.jpg" alt="7.jpg">
-                                <div class="overlay_icon">
-                                    <div class="bb-video-box">
-                                        <div class="bb-video-box-inner">
-                                            <div class="bb-video-box-innerup">
-                                                <a href="https://www.aparat.com/video/video/embed/videohash/cNpW0/vt/frame" data-toggle="modal" data-target="#popup-video" class="theme-cl"><i class="ti-control-play"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <img class="pro_img img-fluid w100" src="{{$course->img}}" alt="7.jpg">
+{{--                                <div class="overlay_icon">--}}
+{{--                                    <div class="bb-video-box">--}}
+{{--                                        <div class="bb-video-box-inner">--}}
+{{--                                            <div class="bb-video-box-innerup">--}}
+{{--                                                <a href="https://www.aparat.com/video/video/embed/videohash/cNpW0/vt/frame" data-toggle="modal" data-target="#popup-video" class="theme-cl"><i class="ti-control-play"></i></a>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                             </div>
                         </div>
 
                         <div class="ed_view_price pl-4">
                             <span>قیمت آموزش</span>
-                            <h2 class="theme-cl">149 هزار تومان</h2>
+                            <h2 class="theme-cl">@if($course->price==null||$course->price=='0') رایگان @else 149 هزار تومان @endif</h2>
                         </div>
-                        <div class="ed_view_features pl-4">
-                            <span>ویدئوهای نمونه</span>
-                            <ul>
-                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش مقدمه</li>
-                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش دهم</li>
-                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش سی</li>
-                                <li><i class="ti-angle-left"></i>پیاده سازی افزونه وردپرس</li>
-                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش نهایی</li>
-                            </ul>
-                        </div>
+{{--                        <div class="ed_view_features pl-4">--}}
+{{--                            <span>ویدئوهای نمونه</span>--}}
+{{--                            <ul>--}}
+{{--                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش مقدمه</li>--}}
+{{--                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش دهم</li>--}}
+{{--                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش سی</li>--}}
+{{--                                <li><i class="ti-angle-left"></i>پیاده سازی افزونه وردپرس</li>--}}
+{{--                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش نهایی</li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
                         <div class="ed_view_link">
                             <a href="#" class="btn btn-theme enroll-btn">دریافت<i class="ti-angle-left"></i></a>
                         </div>
@@ -358,13 +362,12 @@
                     <div class="edu_wraper border">
                         <h4 class="edu_title">ویژگی های دوره</h4>
                         <ul class="edu_list right">
-                            <li><i class="ti-user"></i>شرکت کنندگان:<strong>1740 نفر</strong></li>
-                            <li><i class="ti-files"></i>تعداد دوره:<strong>10</strong></li>
-                            <li><i class="ti-game"></i>جلسات:<strong>4</strong></li>
-                            <li><i class="ti-time"></i>مدت دوره:<strong>60 ساعت</strong></li>
-                            <li><i class="ti-tag"></i>سطح دوره:<strong>مقدماتی</strong></li>
+                            <li><i class="ti-user"></i>شرکت کنندگان:<strong>12 نفر</strong></li>
+                            <li><i class="ti-files"></i>جلسات:<strong>5</strong></li>
+                            <li><i class="ti-time"></i>مدت دوره:<strong>10 ساعت</strong></li>
+                            <li><i class="ti-tag"></i>سطح دوره:<strong>مقدماتی تا پیشرفته</strong></li>
                             <li><i class="ti-flag-alt"></i>زبان:<strong>فارسی</strong></li>
-                            <li><i class="ti-shine"></i>نوع دوره:<strong>رایگان</strong></li>
+                            <li><i class="ti-shine"></i>نوع دوره:<strong>@if($course->price==0||$course->price==null) رایگان @endif</strong></li>
                         </ul>
                     </div>
 
