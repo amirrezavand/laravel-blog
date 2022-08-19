@@ -14,13 +14,9 @@ Route::get('/test',function (){
 
 Route::get('/',[HomeController::class,'index'])->name('home');
 
-Route::get('/products',function (){
-    return view('front.course.index');
-})->name('product');
+Route::get('/courses',[\App\Http\Controllers\Front\CourseController::class,'index'])->name('course');
+Route::get('/courses/{id}',[\App\Http\Controllers\Front\CourseController::class,'single'])->name('course.single');
 
-Route::get('/products/{id}',function (){
-    return view('front.course.single');
-})->name('product.single');
 
 Route::get('/blogs',[BlogController::class,'index'])->name('blog');
 Route::get('/blogs/{blog}',[BlogController::class,'single'])->name('blog.single');

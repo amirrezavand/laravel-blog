@@ -36,7 +36,7 @@ if(!function_exists('getHeader')){
             ],
             [
                 'title'=>'دوره ها',
-                'route_name'=>'product',
+                'route_name'=>'course',
                 'view'=>'all',
                 'child'=>[]
             ],

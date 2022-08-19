@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BlogRequest;
+use App\Http\Requests\CourseRequest;
 use App\Models\Blog;
 use App\Models\Course;
 use App\Models\Lookup;
@@ -44,7 +45,7 @@ class CourseController extends Controller
         $course=new Course();
         $contentStatuses=Lookup::where('group_key','content_status')->get();
 
-        return view('admin.blog.create-edit',compact('course','contentStatuses'));
+        return view('admin.course.create-edit',compact('course','contentStatuses'));
     }
 
     /**
@@ -53,23 +54,24 @@ class CourseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(BlogRequest $request)
+    public function store(CourseRequest $request)
     {
         $validateData=(object) $request->all();
+
 
         //upload image
         $img=$request->file('img');
         if(is_null($img)) {
             unset($validateData->img);
         } else {
-            $name = 'blog/' . time() . Str::random(5) . '.' . $img->getClientOriginalExtension();
+            $name = 'course/' . time() . Str::random(5) . '.' . $img->getClientOriginalExtension();
             Storage::disk("upload")->put($name,file_get_contents($img));
             $validateData->img=Storage::disk('upload')->url($name);
         }
         //end upload image
 
-        auth()->user()->blogs()->create((array) $validateData);
-        return redirect(route('admin.blog.index'));
+        auth()->user()->courses()->create((array) $validateData);
+        return redirect(route('admin.course.index'));
     }
 
     /**
@@ -78,11 +80,11 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blog $blog)
+    public function edit(Course $course)
     {
         $contentStatuses=Lookup::where('group_key','content_status')->get();
 
-        return view('admin.blog.create-edit',compact('blog','contentStatuses'));
+        return view('admin.course.create-edit',compact('course','contentStatuses'));
     }
 
     /**
@@ -92,7 +94,7 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(BlogRequest $request, Blog $blog)
+    public function update(CourseRequest $request, Course $course)
     {
         $validateData=(object) $request->all();
 
@@ -101,14 +103,14 @@ class CourseController extends Controller
         if(is_null($img)) {
             unset($validateData->img);
         } else {
-            $name = '/blog/' . time() . Str::random(5) . '.' . $img->getClientOriginalExtension();
+            $name = '/course/' . time() . Str::random(5) . '.' . $img->getClientOriginalExtension();
             Storage::disk("upload")->put($name,file_get_contents($img));
             $validateData->img=Storage::disk('upload')->url($name);
         }
         //end upload image
 
-        $blog->update((array) $validateData);
-        return redirect(route('admin.blog.index'));
+        $course->update((array) $validateData);
+        return redirect(route('admin.course.index'));
     }
 
     /**
@@ -117,16 +119,17 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blog $blog)
+    public function destroy(Course $course)
     {
-        $blog->delete();
+        $course->delete();
         return back();
     }
 
-    public function deleteImg(Blog $blog){
-        $blog->update([
+    public function deleteImg(Course $course){
+        $course->update([
             'img'=>null
         ]);
         return back();
     }
+
 }

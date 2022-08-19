@@ -136,257 +136,100 @@
                     <!-- Row -->
                     <div class="row align-items-center mb-3">
                         <div class="col-lg-6 col-md-6 col-sm-12">
-                            <strong>142</strong> دوره آموزشی یافت شد.
+                            <strong>{{$courses->count()}}</strong> دوره آموزشی یافت شد.
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 ordering">
-                            <div class="filter_wraps">
-                                <div class="dl">
-                                    <div id="main2">
-                                        <a href="javascript:void(0)" class="btn btn-theme arrow-btn filter_open" onclick="openNav()" id="open2"><span><i class="fas fa-arrow-alt-circle-right"></i></span>باکس فیلتر</a>
-                                    </div>
-                                </div>
-                                <div class="dropdown show">
-                                    <a class="btn btn-custom dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        دوره های آموزشی
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="#">پرمخاطب</a>
-                                        <a class="dropdown-item" href="#">جدید</a>
-                                        <a class="dropdown-item" href="#">ویژه</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+{{--                        <div class="col-lg-6 col-md-6 col-sm-12 ordering">--}}
+{{--                            <div class="filter_wraps">--}}
+{{--                                <div class="dl">--}}
+{{--                                    <div id="main2">--}}
+{{--                                        <a href="javascript:void(0)" class="btn btn-theme arrow-btn filter_open" onclick="openNav()" id="open2"><span><i class="fas fa-arrow-alt-circle-right"></i></span>باکس فیلتر</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="dropdown show">--}}
+{{--                                    <a class="btn btn-custom dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--                                        دوره های آموزشی--}}
+{{--                                    </a>--}}
+{{--                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">--}}
+{{--                                        <a class="dropdown-item" href="#">پرمخاطب</a>--}}
+{{--                                        <a class="dropdown-item" href="#">جدید</a>--}}
+{{--                                        <a class="dropdown-item" href="#">ویژه</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                     <!-- /Row -->
 
                     <div class="row">
 
-                        <!-- Cource Grid 1 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="education_block_grid style_2">
+                        @foreach($courses as $course)
+                            <!-- Cource Grid 1 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="education_block_grid style_2">
 
-                                <div class="education_block_thumb">
-                                    <a href="course-detail.html"><img src="/front/img/course-1.jpg" class="img-fluid" alt=""></a>
-                                    <div class="education_ratting"><i class="fa fa-star"></i>4.7 (40)</div>
-                                </div>
-
-                                <div class="education_block_body">
-                                    <h4 class="bl-title"><a href="course-detail.html">آموزش بیوانفورماتیک و پیاده سازی در پایتون</a></h4>
-                                </div>
-
-                                <div class="cources_info_style3">
-                                    <ul>
-                                        <li><i class="ti-eye ml-2"></i>10682 بازدید</li>
-                                        <li><i class="ti-control-skip-forward ml-2"></i>82 دوره</li>
-                                        <li><i class="ti-time ml-2"></i>9ساعت 45دقیقه</li>
-                                    </ul>
-                                </div>
-
-                                <div class="education_block_footer">
-                                    <div class="education_block_author">
-                                        <div class="path-img"><a href="instructor-detail.html"><img src="/front/img/user-2.jpg" class="img-fluid" alt=""></a></div>
-                                        <h5><a href="instructor-detail.html">الهام کریمی</a></h5>
+                                    <div class="education_block_thumb">
+                                        <a href="course-detail.html"><img src="{{$course->img}}" class="img-fluid" alt=""></a>
+                                        <div class="education_ratting"><i class="fa fa-star"></i>4.7 (40)</div>
                                     </div>
-                                    <div class="cources_price_foot"><span class="price_off">980ت</span>720</div>
-                                </div>
 
-                            </div>
-                        </div>
-
-                        <!-- Cource Grid 1 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="education_block_grid style_2">
-
-                                <div class="education_block_thumb">
-                                    <a href="course-detail.html"><img src="/front/img/course-2.jpg" class="img-fluid" alt=""></a>
-                                    <div class="education_ratting"><i class="fa fa-star"></i>4.9 (29)</div>
-                                </div>
-
-                                <div class="education_block_body">
-                                    <h4 class="bl-title"><a href="course-detail.html">پروژه محور : بازی مسابقه ماشین با UDK</a></h4>
-                                </div>
-
-                                <div class="cources_info_style3">
-                                    <ul>
-                                        <li><i class="ti-eye ml-2"></i>9882 بازدید</li>
-                                        <li><i class="ti-control-skip-forward ml-2"></i>47 دوره</li>
-                                        <li><i class="ti-time ml-2"></i>6ساعت 30دقیقه</li>
-                                    </ul>
-                                </div>
-
-                                <div class="education_block_footer">
-                                    <div class="education_block_author">
-                                        <div class="path-img"><a href="instructor-detail.html"><img src="/front/img/user-3.jpg" class="img-fluid" alt=""></a></div>
-                                        <h5><a href="instructor-detail.html">وحید فرخ نژاد</a></h5>
+                                    <div class="education_block_body">
+                                        <h4 class="bl-title"><a href="/courses/{{$course->id}}">{{$course->title}}</a></h4>
                                     </div>
-                                    <div class="cources_price_foot"><span class="price_off">235ت</span>189</div>
-                                </div>
 
-                            </div>
-                        </div>
-
-                        <!-- Cource Grid 1 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="education_block_grid style_2">
-
-                                <div class="education_block_thumb">
-                                    <a href="course-detail.html"><img src="/front/img/course-3.jpg" class="img-fluid" alt=""></a>
-                                    <div class="education_ratting"><i class="fa fa-star"></i>4.7 (60)</div>
-                                </div>
-
-                                <div class="education_block_body">
-                                    <h4 class="bl-title"><a href="course-detail.html">آموزش پروژه محور فلاتر - طراحی رابط کاربری UI</a></h4>
-                                </div>
-
-                                <div class="cources_info_style3">
-                                    <ul>
-                                        <li><i class="ti-eye ml-2"></i>5882 بازدید</li>
-                                        <li><i class="ti-control-skip-forward ml-2"></i>52 دوره</li>
-                                        <li><i class="ti-time ml-2"></i>8ساعت 10دقیقه</li>
-                                    </ul>
-                                </div>
-
-                                <div class="education_block_footer">
-                                    <div class="education_block_author">
-                                        <div class="path-img"><a href="instructor-detail.html"><img src="/front/img/user-4.jpg" class="img-fluid" alt=""></a></div>
-                                        <h5><a href="instructor-detail.html">شیلپا شیخ</a></h5>
+                                    <div class="cources_info_style3">
+                                        <ul>
+                                            <li><i class="ti-eye ml-2"></i>10682 بازدید</li>
+{{--                                            <li><i class="ti-control-skip-forward ml-2"></i>82 دوره</li>--}}
+                                            <li><i class="ti-time ml-2"></i>9ساعت 45دقیقه</li>
+                                        </ul>
                                     </div>
-                                    <div class="cources_price_foot"><span class="price_off">309ت</span>250</div>
-                                </div>
 
-                            </div>
-                        </div>
-
-                        <!-- Cource Grid 1 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="education_block_grid style_2">
-
-                                <div class="education_block_thumb">
-                                    <a href="course-detail.html"><img src="/front/img/course-4.jpg" class="img-fluid" alt=""></a>
-                                    <div class="education_ratting"><i class="fa fa-star"></i>4.8 (45)</div>
-                                </div>
-
-                                <div class="education_block_body">
-                                    <h4 class="bl-title"><a href="course-detail.html">پروژه محور : تابلو روان و کنترل با گوشی</a></h4>
-                                </div>
-
-                                <div class="cources_info_style3">
-                                    <ul>
-                                        <li><i class="ti-eye ml-2"></i>4732 بازدید</li>
-                                        <li><i class="ti-control-skip-forward ml-2"></i>32 دوره</li>
-                                        <li><i class="ti-time ml-2"></i>3ساعت 23دقیقه</li>
-                                    </ul>
-                                </div>
-
-                                <div class="education_block_footer">
-                                    <div class="education_block_author">
-                                        <div class="path-img"><a href="instructor-detail.html"><img src="/front/img/user-5.jpg" class="img-fluid" alt=""></a></div>
-                                        <h5><a href="instructor-detail.html">شاوریا پریت</a></h5>
+                                    <div class="education_block_footer">
+                                        <div class="education_block_author">
+                                            <div class="path-img"><a href="instructor-detail.html"><img src="{{$course->teacher_avatar}}" class="img-fluid" alt=""></a></div>
+                                            <h5><a href="#">{{$course->teacher_name}}</a></h5>
+                                        </div>
+                                        <div class="cources_price_foot">@if($course->price=='0' || $course->price==null) رایگان @else {{$course->price}} ت @endif</div>
                                     </div>
-                                    <div class="cources_price_foot"><span class="price_off">135ت</span>89500</div>
-                                </div>
 
+                                </div>
                             </div>
-                        </div>
+                        @endforeach
 
-                        <!-- Cource Grid 1 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="education_block_grid style_2">
-
-                                <div class="education_block_thumb">
-                                    <a href="course-detail.html"><img src="/front/img/course-5.jpg" class="img-fluid" alt=""></a>
-                                    <div class="education_ratting"><i class="fa fa-star"></i>4.7 (40)</div>
-                                </div>
-
-                                <div class="education_block_body">
-                                    <h4 class="bl-title"><a href="course-detail.html">آموزش تست نفوذ سایت های وردپرسی</a></h4>
-                                </div>
-
-                                <div class="cources_info_style3">
-                                    <ul>
-                                        <li><i class="ti-eye ml-2"></i>7582 بازدید</li>
-                                        <li><i class="ti-control-skip-forward ml-2"></i>62 دوره</li>
-                                        <li><i class="ti-time ml-2"></i>3ساعت 10دقیقه</li>
-                                    </ul>
-                                </div>
-
-                                <div class="education_block_footer">
-                                    <div class="education_block_author">
-                                        <div class="path-img"><a href="instructor-detail.html"><img src="/front/img/user-6.jpg" class="img-fluid" alt=""></a></div>
-                                        <h5><a href="instructor-detail.html">لیتا انشال</a></h5>
-                                    </div>
-                                    <div class="cources_price_foot"><span class="price_off">145ت</span>9900</div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Cource Grid 1 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="education_block_grid style_2">
-
-                                <div class="education_block_thumb">
-                                    <a href="course-detail.html"><img src="/front/img/course-6.jpg" class="img-fluid" alt=""></a>
-                                    <div class="education_ratting"><i class="fa fa-star"></i>4.8 (70)</div>
-                                </div>
-
-                                <div class="education_block_body">
-                                    <h4 class="bl-title"><a href="course-detail.html">آموزش ساخت فروشگاه دیجی استایل با لاراول</a></h4>
-                                </div>
-
-                                <div class="cources_info_style3">
-                                    <ul>
-                                        <li><i class="ti-eye ml-2"></i>7482 بازدید</li>
-                                        <li><i class="ti-control-skip-forward ml-2"></i>63 دوره</li>
-                                        <li><i class="ti-time ml-2"></i>5ساعت 20دقیقه</li>
-                                    </ul>
-                                </div>
-
-                                <div class="education_block_footer">
-                                    <div class="education_block_author">
-                                        <div class="path-img"><a href="instructor-detail.html"><img src="/front/img/user-1.jpg" class="img-fluid" alt=""></a></div>
-                                        <h5><a href="instructor-detail.html">مهدی عظیمی</a></h5>
-                                    </div>
-                                    <div class="cources_price_foot"><span class="price_off">420ت</span>386</div>
-                                </div>
-
-                            </div>
-                        </div>
 
                     </div>
 
                     <!-- Row -->
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
+{{--                    <div class="row">--}}
+{{--                        <div class="col-lg-12 col-md-12 col-sm-12">--}}
 
-                            <!-- Pagination -->
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <ul class="pagination p-center">
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Previous">
-                                                <span class="ti-arrow-left"></span>
-                                                <span class="sr-only">قبل</span>
-                                            </a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item active"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">...</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">18</a></li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <span class="ti-arrow-right"></span>
-                                                <span class="sr-only">بعد</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+{{--                            <!-- Pagination -->--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-lg-12 col-md-12 col-sm-12">--}}
+{{--                                    <ul class="pagination p-center">--}}
+{{--                                        <li class="page-item">--}}
+{{--                                            <a class="page-link" href="#" aria-label="Previous">--}}
+{{--                                                <span class="ti-arrow-left"></span>--}}
+{{--                                                <span class="sr-only">قبل</span>--}}
+{{--                                            </a>--}}
+{{--                                        </li>--}}
+{{--                                        <li class="page-item"><a class="page-link" href="#">1</a></li>--}}
+{{--                                        <li class="page-item"><a class="page-link" href="#">2</a></li>--}}
+{{--                                        <li class="page-item active"><a class="page-link" href="#">3</a></li>--}}
+{{--                                        <li class="page-item"><a class="page-link" href="#">...</a></li>--}}
+{{--                                        <li class="page-item"><a class="page-link" href="#">18</a></li>--}}
+{{--                                        <li class="page-item">--}}
+{{--                                            <a class="page-link" href="#" aria-label="Next">--}}
+{{--                                                <span class="ti-arrow-right"></span>--}}
+{{--                                                <span class="sr-only">بعد</span>--}}
+{{--                                            </a>--}}
+{{--                                        </li>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                        </div>
-                    </div>
+{{--                        </div>--}}
+{{--                    </div>--}}
                     <!-- /Row -->
 
                 </div>

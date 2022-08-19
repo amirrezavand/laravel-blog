@@ -5,10 +5,12 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
-
 Route::resource('blog', BlogController::class)->except(['show']);
 Route::get('delete_img/{blog}',[BlogController::class,'deleteImg'])->name('blog.delete_img');
 
-Route::resource('user', UserController::class)->except(['show']);
 Route::resource('course', CourseController::class)->except(['show']);
+Route::get('course_img/{course}',[CourseController::class,'deleteImg'])->name('course.delete_img');
+
+Route::resource('user', UserController::class)->except(['show']);
+
 

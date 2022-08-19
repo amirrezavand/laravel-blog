@@ -58,19 +58,19 @@
                                     <tr>
                                         <td class="px-4">{{$course->id}}</td>
                                         <td>{{$course->title}}</td>
-{{--                                        <td>{{$blog->user->name}}</td>--}}
-{{--                                        <td>--}}
-{{--                                            <a class="btn btn-warning btn-sm"--}}
-{{--                                               href="{{route('admin.blog.edit',['blog'=>$blog->id])}}">edit</a>--}}
-{{--                                            <a class="btn btn-danger btn-sm" href="#"--}}
-{{--                                               onclick="event.preventDefault(); document.getElementById('delete-{{$loop->index}}').submit();">delete</a>--}}
-{{--                                            <form--}}
-{{--                                                action="{{route('admin.blog.destroy',['blog'=>$blog->id])}}"--}}
-{{--                                                method="post" class="d-none" id="delete-{{$loop->index}}">--}}
-{{--                                                @csrf--}}
-{{--                                                @method('delete')--}}
-{{--                                            </form>--}}
-{{--                                        </td>--}}
+                                        <td>{{$course->user->name}}</td>
+                                        <td>
+                                            <a class="btn btn-warning btn-sm"
+                                               href="{{route('admin.course.edit',['course'=>$course->id])}}">edit</a>
+                                            <a class="btn btn-danger btn-sm" href="#"
+                                               onclick="event.preventDefault(); document.getElementById('delete-{{$loop->index}}').submit();">delete</a>
+                                            <form
+                                                action="{{route('admin.course.destroy',['course'=>$course->id])}}"
+                                                method="post" class="d-none" id="delete-{{$loop->index}}">
+                                                @csrf
+                                                @method('delete')
+                                            </form>
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
