@@ -58,78 +58,26 @@
                     <div class="edu_wraper border">
                         <h4 class="edu_title">سرفصل های دوره</h4>
                         <div id="accordionExample" class="accordion shadow circullum">
+                            @php($sections=$course->contents->unique('section')->pluck('section'))
 
-                            <!-- Part 1 -->
-                            <div class="card">
-                                <div id="headingOne" class="card-header bg-white shadow-sm border-0">
-                                    <h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="d-block position-relative text-dark collapsible-link py-2">دوره اول: مقدمه و معرفی مدرس</a></h6>
-                                </div>
-                                <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
-                                    <div class="card-body pl-3 pr-3">
-                                        <ul class="lectures_lists">
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 01</div>معرفی دوره</li>
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 02</div>ساخت منوها در بخش مدیریت</li>
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 03</div>متاباکس و ذخیره اطلاعات برای پست ها</li>
-                                            <li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 04</div>استفاده از قالب استاندارد وردپرس در پلاگین ها</li>
-                                            <li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 05</div>ذخیره و بازیابی تنظیمات در وردپرس</li>
-                                        </ul>
+                            @foreach($sections as $section)
+                                <!-- Part {{$sections}} -->
+                                <div class="card">
+                                    <div id="heading{{$section}}" class="card-header bg-white shadow-sm border-0">
+                                        <h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapse{{$section}}" aria-expanded="false" aria-controls="collapse{{$section}}" class="d-block position-relative collapsed text-dark collapsible-link py-2">بخش {{$section}}: {{$course->contents->where('section',$section)->where('is_main',1)->first()->title}}</a></h6>
+                                    </div>
+                                    <div id="collapse{{$section}}" aria-labelledby="heading{{$section}}" data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body pl-3 pr-3">
+                                            <ul class="lectures_lists">
+                                                @foreach($course->contents->where('section',$section)->where('is_main','0') as $content )
+                                                    <li @if($content->is_free==0) class="unview" @endif><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 01</div>{{$content->title}}</li>
+                                                @endforeach
+
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Part 2 -->
-                            <div class="card">
-                                <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
-                                    <h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="d-block position-relative collapsed text-dark collapsible-link py-2">دوره دوم: پیاده سازی پلاگین آمار بازدید مطالب</a></h6>
-                                </div>
-                                <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
-                                    <div class="card-body pl-3 pr-3">
-                                        <ul class="lectures_lists">
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 01</div>معرفی دوره</li>
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 02</div>ساخت منوها در بخش مدیریت</li>
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 03</div>متاباکس و ذخیره اطلاعات برای پست ها</li>
-                                            <li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 04</div>استفاده از قالب استاندارد وردپرس در پلاگین ها</li>
-                                            <li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 05</div>ذخیره و بازیابی تنظیمات در وردپرس</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Part 3 -->
-                            <div class="card">
-                                <div id="headingThree" class="card-header bg-white shadow-sm border-0">
-                                    <h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="d-block position-relative collapsed text-dark collapsible-link py-2">دوره سوم: پیاده سازی پلاگین رای دادن به مطالب توسط بازدید کنندگان</a></h6>
-                                </div>
-                                <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
-                                    <div class="card-body pl-3 pr-3">
-                                        <ul class="lectures_lists">
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 01</div>معرفی دوره</li>
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 02</div>ساخت منوها در بخش مدیریت</li>
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 03</div>متاباکس و ذخیره اطلاعات برای پست ها</li>
-                                            <li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 04</div>استفاده از قالب استاندارد وردپرس در پلاگین ها</li>
-                                            <li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 05</div>ذخیره و بازیابی تنظیمات در وردپرس</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Part 04 -->
-                            <div class="card">
-                                <div id="headingFour" class="card-header bg-white shadow-sm border-0">
-                                    <h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="d-block position-relative collapsed text-dark collapsible-link py-2">دوره نهایی: پیاده سازی پلاگین فروشگاه اینترنتی با درگاه پرداخت</a></h6>
-                                </div>
-                                <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" class="collapse">
-                                    <div class="card-body pl-3 pr-3">
-                                        <ul class="lectures_lists">
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 01</div>معرفی دوره</li>
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 02</div>ساخت منوها در بخش مدیریت</li>
-                                            <li><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 03</div>متاباکس و ذخیره اطلاعات برای پست ها</li>
-                                            <li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 04</div>استفاده از قالب استاندارد وردپرس در پلاگین ها</li>
-                                            <li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 05</div>ذخیره و بازیابی تنظیمات در وردپرس</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
 
                         </div>
                     </div>
