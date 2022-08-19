@@ -8,8 +8,8 @@
                     <div class="footer-widget">
                         <img src="/front/img/logo-light.png" class="img-footer" alt="" />
                         <div class="footer-add">
-                            <p>تهران، خیابان پیروزی</p>
-                            <p>+98 9100968228</p>
+                            <p>تهران، خیابان انقلاب</p>
+                            <p class="text-right" dir="ltr">+98 9100968228</p>
                             <p>codewithastra@gmail.com</p>
                         </div>
 
