@@ -14,7 +14,7 @@
 
     <!-- Custom Color Option -->
     <link href="/front/css/colors.css" rel="stylesheet">
-    <link rel="icon" href="Home_icon_black.png" type="image/png">
+    <link rel="icon" href="/favicon.png" type="image/png">
 
 </head>
 
