@@ -178,6 +178,7 @@
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
+                //fsd
                 url : "{{ url('email') }}",
                 data : {'email' : email},
                 type : 'POST',
