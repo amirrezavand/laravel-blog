@@ -173,13 +173,12 @@
         event.preventDefault();
         let email=$('#newsLetter [type=email]').eq(0).val();
 
-        if(isEmail(email)||true){
+        if(isEmail(email)){
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
-                //fsd
-                url : "https://astracoder.com/email",
+                url : "{{ route('email.store') }}",
                 data : {'email' : email},
                 type : 'POST',
                 dataType : 'json',
