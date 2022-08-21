@@ -1,12 +1,12 @@
 <!-- ============================ Footer Start ================================== -->
-<footer class="dark-footer skin-dark-footer">
+<footer class="light-footer">
     <div>
         <div class="container">
             <div class="row">
 
                 <div class="col-lg-3 col-md-3">
                     <div class="footer-widget">
-                        <img src="/front/img/logo-light.png" class="img-footer" alt="" />
+                        <img src="/front/img/logo.png" class="img-footer" alt="" />
                         <div class="footer-add">
                             <p>تهران، خیابان انقلاب</p>
                             <p class="text-right" dir="ltr">+98 9100968228</p>

@@ -2,17 +2,16 @@
 
 @section('content')
     <!-- ============================ Hero Banner  Start================================== -->
-    <div class="image-cover hero_banner hero-inner-2" style="background:#152974 url(/front/img/e.jpg) no-repeat;" data-overlay="0">
+    <div class="image-cover hero_banner hero-inner-2 shadow" style="background:url(/front/img/banner-2.jpg) no-repeat;" data-overlay="7">
         <div class="container">
             <!-- Type -->
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-8 col-sm-12">
-                    <h1 class="cl_2 f_2 large_h">تمدید جشنواره تابستان<br><span class="theme-cl">به مدت 30 روز</span></h1>
+                    <h1 class="cl_2 f_2 large_h">سامانه تدریس حرفه ای وب</h1>
                     <p>بهترین پلتفرم یادگیری و دوره های آموزشی حوزه وب که با مناسب ترین قیمت توسط مدرس وبسایت آستراکدر، آموزش داده می شود تا به شما در کسب مهارت های جدید کمک کند.</p>
                     <div class="banner-search shadow_high mt-4">
                         <div class="search_hero_wrapping">
                             <div class="row">
-
                                 <div class="col-lg-10 col-md-10 col-sm-12">
                                     <div class="form-group">
                                         <div class="input-with-icon">
@@ -24,7 +23,7 @@
 
                                 <div class="col-lg-2 col-md-2 col-sm-12 pr-0">
                                     <div class="form-group none">
-                                        <a href="#" class="btn search-btn full-width btn-black">برو</a>
+                                        <a href="#" class="btn search-btn full-width btn-danger">برو</a>
                                     </div>
                                 </div>
 

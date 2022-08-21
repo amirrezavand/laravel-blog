@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('page_title')</title>
 
@@ -15,7 +15,6 @@
     <!-- Custom Color Option -->
     <link href="/front/css/colors.css" rel="stylesheet">
     <link rel="icon" href="/favicon.png" type="image/png">
-
 </head>
 
 <body class="red-skin rtl">
@@ -163,6 +162,56 @@
 <script src="/front/js/counterup.min.js"></script>
 <script src="/front/js/custom.js"></script>
 
+<!-- toast -->
+<link href="/front/js/plugin/jquery.toast.css" rel="stylesheet">
+<script src="/front/js/plugin/jquery.toast.js"></script>
+<script>
+
+</script>
+<script>
+    $('#newsLetter [type=submit]').click(function (event){
+        event.preventDefault();
+        let email=$('#newsLetter [type=email]').eq(0).val();
+
+        if(isEmail(email)||true){
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url : "{{ route('email.store') }}",
+                data : {'email' : email},
+                type : 'POST',
+                dataType : 'json',
+                success : function(result){
+
+                    if(result.status) showToast('ثبت گردید',result.message,'success');
+                    else showToast('خطا',result.message,'error')
+
+                },
+                error : function (error){
+                    showToast('خطا','مشکلی در ثبت ایمیل رخ داده است، لطفا مجدد امتحان کنید.','error')
+                }
+            });
+        }else {
+            showToast('خطا','لطفا ایمیل معتبر وارد نمایید.','error')
+        }
+    })
+
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+    function showToast(title,description,status){
+        $.toast({
+            heading: title,
+            text: description,
+            position: 'top-right',
+            stack: false,
+            icon: status,
+            hideAfter: 1500
+        })
+    }
+</script>
 @yield('script')
 <!-- ============================================================== -->
 <!-- This page plugins -->
