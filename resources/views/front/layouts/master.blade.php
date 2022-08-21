@@ -179,7 +179,7 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
                 //fsd
-                url : "{{ url('email') }}",
+                url : "https://astracoder.com/email",
                 data : {'email' : email},
                 type : 'POST',
                 dataType : 'json',
