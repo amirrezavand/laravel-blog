@@ -6,7 +6,7 @@
                 <div class="text-center">
                     <h2>به جامعه دانشجویان ما بپیوندید!</h2>
                     <p>به جامعه دانشجویان ما بپیوندید و به هزاران ساعت آموزش در حوزه کامپیوتر دسترسی داشته باشید.</p>
-                    <form class="sup-form" id="newsLetter">
+                    <form class="sup-form" id="newsLetter" action="{{ route('email.store') }}">
                         <input type="email" class="form-control sigmup-me" placeholder="ایمیل خود را وارد کنید...">
                         <input type="submit" class="btn btn-theme" value="عضویت">
                     </form>
