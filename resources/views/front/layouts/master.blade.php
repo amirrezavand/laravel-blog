@@ -178,7 +178,7 @@
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
-                url : "{{ route('email.store') }}",
+                url : "{{ url('email') }}",
                 data : {'email' : email},
                 type : 'POST',
                 dataType : 'json',
