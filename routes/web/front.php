@@ -25,7 +25,7 @@ Route::get('/about_us',[AboutUsController::class,'aboutUs'])->name('about_us');
 Route::get('/our_team',[AboutUsController::class,'ourTeam'])->name('our_team');
 
 Route::post('/email',[\App\Http\Controllers\Front\EmailController::class,'store'])->name('email.store');
-
+Route::post('/contact_us',[\App\Http\Controllers\Front\ContactFormController::class,'contactUs'])->name('contact_us.store');
 
 Route::get('/register', [RegisteredUserController::class, 'create'])
     ->middleware('guest')

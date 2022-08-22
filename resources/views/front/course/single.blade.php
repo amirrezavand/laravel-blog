@@ -134,7 +134,7 @@
                     <!-- instructor -->
                     <div class="single_instructor border">
                         <div class="single_instructor_thumb">
-                            <a href="#"><img src="/front/img/user-3.jpg" class="img-fluid" alt=""></a>
+                            <a href="#"><img src="/upload/users/rezavand.jpeg" class="img-fluid" alt=""></a>
                         </div>
                         <div class="single_instructor_caption">
                             <h4><a href="#">{{$course->user->name}}</a></h4>

@@ -41,7 +41,7 @@
                             <div class="articles_grid_caption">
                                 <h4>{{$result->title}}</h4>
                                 <div class="articles_grid_author">
-                                    <div class="articles_grid_author_img"><img src="{{($result->author_avatar)?$result->author_avatar:'/front/img/user-1.jpg'}}" class="img-fluid" alt="" /></div>
+                                    <div class="articles_grid_author_img"><img src="{{($result->author_avatar)?$result->author_avatar:'/upload/users/rezavand.jpeg'}}" class="img-fluid" alt="" /></div>
                                     <h4>{{$result->author_name}}</h4>
                                 </div>
                             </div>

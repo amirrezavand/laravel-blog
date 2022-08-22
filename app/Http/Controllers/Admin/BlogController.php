@@ -81,7 +81,6 @@ class BlogController extends Controller
     public function edit(Blog $blog)
     {
         $contentStatuses=Lookup::where('group_key','content_status')->get();
-
         return view('admin.blog.create-edit',compact('blog','contentStatuses'));
     }
 

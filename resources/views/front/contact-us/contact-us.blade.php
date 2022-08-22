@@ -11,7 +11,7 @@
                         <h1 class="breadcrumb-title">تماس با ما</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">خانه</a></li>
+                                <li class="breadcrumb-item"><a href="/">خانه</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">تماس با ما</li>
                             </ol>
                         </nav>
@@ -38,36 +38,50 @@
                             <h4 class="property_block_title">تکمیل فرم درخواست</h4>
                         </div>
 
-                        <div class="prc_wrap-body">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="form-group">
-                                        <label>نام کامل</label>
-                                        <input type="text" class="form-control simple">
+                        <form action="{{ route('contact_us.store') }}" id="contactUS">
+                            <div class="prc_wrap-body">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="form-group">
+                                            <label>نام کامل</label>
+                                            <input type="text" class="form-control simple" name="name">
+                                            <div class="invalid-feedback">
+                                                نام حداقل سه حرف باشد.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="form-group">
+                                            <label>شماره تماس</label>
+                                            <input type="email" class="form-control simple" name="cell">
+                                            <div class="invalid-feedback">
+                                                شماره تماس مطابق فرمت 09100968228 وارد شود.
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="form-group">
-                                        <label>ایمیل</label>
-                                        <input type="email" class="form-control simple">
+
+                                <div class="form-group">
+                                    <label>عنوان</label>
+                                    <input type="text" class="form-control simple" name="title">
+                                    <div class="invalid-feedback">
+                                        نام حداقل سه حرف باشد.
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group">
-                                <label>عنوان</label>
-                                <input type="text" class="form-control simple">
-                            </div>
+                                <div class="form-group">
+                                    <label>پیام</label>
+                                    <textarea class="form-control simple" name="body"></textarea>
+                                    <div class="invalid-feedback">
+                                        پیام حداقل سه حرف باشد.
+                                    </div>
+                                </div>
 
-                            <div class="form-group">
-                                <label>پیام</label>
-                                <textarea class="form-control simple"></textarea>
+                                <div class="form-group">
+                                    <button class="btn btn-theme" type="submit">ارسال درخواست</button>
+                                </div>
                             </div>
-
-                            <div class="form-group">
-                                <button class="btn btn-theme" type="submit">ارسال درخواست</button>
-                            </div>
-                        </div>
+                        </form>
 
                     </div>
 
@@ -85,7 +99,7 @@
                             <div class="contact-info">
 
                                 <h2>در تماس باشید</h2>
-                                <p>برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
+                                <p class="text-justify">آستراکدر با <span class="theme-cl">پشتیبانی 24/7</span> و پاسخگویی کمتر از <span class="theme-cl">هفت ساعت</span> گامی مهم در راستای پاسخگویی هر چه سریعتر به نیازهای دانشجویان عزیز فراهم نموده است. </p>
 
                                 <div class="cn-info-detail">
                                     <div class="cn-info-icon">
@@ -116,7 +130,6 @@
                                         <a href="tel:+989100968228" dir="ltr">+98 910 096 8228</a>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
