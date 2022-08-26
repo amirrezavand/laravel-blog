@@ -37,6 +37,8 @@
 <script src="/admin/js/bootstrap.bundle.min.js"></script>
 
 <script src="/admin/js/mazer.js"></script>
+
+@yield('script')
 </body>
 
 </html>
