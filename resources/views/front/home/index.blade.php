@@ -199,9 +199,9 @@
                                 </div>
 
                                 <div class="education_block_footer">
-                                    <div class="cources_price">890ت<div class="less_offer">999ت</div></div>
+                                    <div class="cources_price">@if($item->price>0) {{$item->price}}ت  @else رایگان @endif</div>
                                     <div class="cources_info_style3">
-                                        <a href="course-detail.html" class="_cr_detail_arrow"><i class="fa fa-arrow-left"></i></a>
+                                        <a href="/courses/{{$item->id}}" class="_cr_detail_arrow"><i class="fa fa-arrow-left"></i></a>
                                     </div>
                                 </div>
 

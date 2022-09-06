@@ -27,24 +27,27 @@ Route::get('/our_team',[AboutUsController::class,'ourTeam'])->name('our_team');
 Route::post('/email',[\App\Http\Controllers\Front\EmailController::class,'store'])->name('email.store');
 Route::post('/contact_us',[\App\Http\Controllers\Front\ContactFormController::class,'contactUs'])->name('contact_us.store');
 
-Route::get('/register', [RegisteredUserController::class, 'create'])
-    ->middleware('guest')
-    ->name('register');
-Route::post('/register', [RegisteredUserController::class, 'store'])
-    ->middleware('guest');
+
+Route::post('/register',[\App\Http\Controllers\Front\AuthController::class,'register'])->name('auth.register');
+
+//Route::get('/register', [RegisteredUserController::class, 'create'])
+//    ->middleware('guest')
+//    ->name('register');
+//Route::post('/register', [RegisteredUserController::class, 'store'])
+//    ->middleware('guest');
+//
+//
+//Route::post('/login', [AuthenticatedSessionController::class, 'store'])
+//    ->middleware('guest');
+//Route::get('login',function (){
+//    return view('front.auth.login');
+//})->middleware('guest')->name('login');
 
 
-Route::post('/login', [AuthenticatedSessionController::class, 'store'])
-    ->middleware('guest');
-Route::get('login',function (){
-    return view('front.auth.login');
-})->middleware('guest')->name('login');
-
-
-Route::get('logout',function (){
-    auth()->logout();
-    return redirect(route('home'));
-})->middleware('auth')->name('logout');
+//Route::get('logout',function (){
+//    auth()->logout();
+//    return redirect(route('home'));
+//})->middleware('auth')->name('logout');
 
 
 

@@ -32,12 +32,18 @@
                 </ul>
 
                 <ul class="nav-menu nav-menu-social align-to-left">
-                    <li class="login_click light">
-                        <a href="#" data-toggle="modal" data-target="#login">ورود</a>
-                    </li>
-                    <li class="login_click">
-                        <a href="#" data-toggle="modal" data-target="#signup">ثبت نام</a>
-                    </li>
+                    @guest()
+                        <li class="login_click light">
+                            <a href="#" data-toggle="modal" data-target="#login">ورود</a>
+                        </li>
+                        <li class="login_click">
+                            <a href="#" data-toggle="modal" data-target="#signup">ثبت نام</a>
+                        </li>
+                    @else
+                        <li class="login_click">
+                            <a href="#" data-toggle="modal">حساب کاربری</a>
+                        </li>
+                    @endguest
                 </ul>
             </div>
         </nav>

@@ -99,43 +99,46 @@
                 <div class="modal-body">
                     <h4 class="modal-header-title">ثبت نام</h4>
                     <div class="login-form">
-                        <form>
-
+                        <form action="/register" method="post" id="register">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="نام کامل">
+                                <input type="text" class="form-control" placeholder="نام کامل" name="name">
+                                <div class="invalid-feedback">
+                                    نام حداقل سه حرف باشد.
+                                </div>
                             </div>
 
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="پست الکترونیکی">
+                                <input type="email" class="form-control" placeholder="پست الکترونیکی" name="email">
+                                <div class="invalid-feedback">
+                                    ایمیل با فرمت صحیح وارد شود.
+                                </div>
                             </div>
 
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="نام کاربری">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="*******">
+                                <input type="password" class="form-control" placeholder="*******" name="password">
+                                <div class="invalid-feedback">
+                                    رمز عبور حداقل 8 کاراکتر باشد.
+                                </div>
                             </div>
 
 
                             <div class="form-group">
                                 <button type="submit" class="btn btn-md full-width pop-login">ثبت نام</button>
                             </div>
-
                         </form>
                     </div>
 
-                    <div class="modal-divider"><span>یـا</span></div>
-                    <div class="social-login ntr mb-3">
-                        <ul>
-                            <li><a href="#" class="btn connect-fb"><i class="ti-facebook"></i>Facebook</a></li>
-                            <li><a href="#" class="btn connect-google"><i class="ti-google"></i>Google</a></li>
-                        </ul>
-                    </div>
+{{--                    <div class="modal-divider"><span>یـا</span></div>--}}
+{{--                    <div class="social-login ntr mb-3">--}}
+{{--                        <ul>--}}
+{{--                            <li><a href="#" class="btn connect-fb"><i class="ti-facebook"></i>Facebook</a></li>--}}
+{{--                            <li><a href="#" class="btn connect-google"><i class="ti-google"></i>Google</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
 
-                    <div class="text-center">
-                        <p class="mt-3"><i class="ti-user ml-1"></i>آیا حساب کاربری دارید؟ <a href="#" class="link">ورود به حساب کاربری</a></p>
-                    </div>
+{{--                    <div class="text-center">--}}
+{{--                        <p class="mt-3"><i class="ti-user ml-1"></i>آیا حساب کاربری دارید؟ <a href="#" class="link">ورود به حساب کاربری</a></p>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>

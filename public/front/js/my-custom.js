@@ -96,6 +96,68 @@ $(document).ready(function (){
                 showToast('خطا','لطفا اطلاعات را با دقت وارد نمائید.','error')
             }
         })
+
+
+
+
+    if($('#register').length)
+        $('#register [type=submit]').click(function (event){
+            let elementName='#register'
+            event.preventDefault();
+            let isValid=true;
+            let element=$(elementName+' [name=name]').removeClass('is-invalid');
+            if(!isMinLength(element.val(),3)){
+                isValid=false;
+                element.addClass('is-invalid')
+            }
+
+            element=$(elementName+' [name=email]').removeClass('is-invalid');
+            if(!isEmail(element.val())){
+                isValid=false;
+                element.addClass('is-invalid')
+            }
+
+            element=$(elementName+' [name=password]').removeClass('is-invalid');
+            if(!isMinLength(element.val(),8)){
+                isValid=false;
+                element.addClass('is-invalid')
+            }
+
+            if(isValid){
+                showPreloader();
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url : $(elementName).attr('action'),
+                    data : {
+                        'name' : $(elementName+' [name=name]').val(),
+                        'email' : $(elementName+' [name=email]').val(),
+                        'password' : $(elementName+' [name=password]').val(),
+                    },
+                    type : 'POST',
+                    dataType : 'json',
+                    success : function(result){
+
+                        if(result.status) {
+                            showToast('ثبت گردید',result.message,'success');
+                            $(elementName+' [name=name]').val('');
+                            $(elementName+' [name=email]').val('');
+                            $(elementName+' [name=password]').val('');
+                            location.reload();
+                        }
+                        else showToast('خطا',result.message,'error')
+                        hidePreloader();
+                    },
+                    error : function (error){
+                        showToast('خطا','مشکلی در ثبت نام رخ داده است، لطفا مجدد امتحان کنید.','error')
+                        hidePreloader();
+                    }
+                });
+            }else {
+                showToast('خطا','لطفا اطلاعات را با دقت وارد نمائید.','error')
+            }
+        })
 });
 
 
@@ -110,6 +172,7 @@ function isCell(cell) {
     var regex = /^(\+98?)?{?(0?9[0-9]{9,9}}?)$/;
     return regex.test(cell);
 }
+
 
 function isMinLength(str,minLength){
     return str.length>=minLength;
