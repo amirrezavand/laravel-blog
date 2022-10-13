@@ -27,25 +27,12 @@ class UserRequest extends FormRequest
     public function rules()
     {
 
-        if(getRouteAction()=='store')
-        {
-            return [
-                'name' => ['required', 'string', 'max:255'],
-                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-                'password' => ['required', 'string', 'min:8', 'confirmed'],
-                'is_admin' => ['nullable'],
-                'is_staff' => ['nullable'],
-                'is_verify_email' => ['nullable'],
-            ];
-        }
-
         return [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($this->route('user')->id)],
-            'password' => ['nullable', 'string', 'min:8', 'confirmed'],
-            'is_admin' => ['nullable'],
-            'is_staff' => ['nullable'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
             'is_verify_email' => ['nullable'],
         ];
+
     }
 }

@@ -302,7 +302,7 @@
 {{--                            </ul>--}}
 {{--                        </div>--}}
                         <div class="ed_view_link">
-                            <a href="#" class="btn btn-theme enroll-btn">دریافت<i class="ti-angle-left"></i></a>
+                            <a href="/buy/course/{{$course->id}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">خرید دوره<i class="ti-angle-left"></i></a>
                         </div>
 
                     </div>
@@ -318,11 +318,44 @@
                             <li><i class="ti-shine"></i>نوع دوره:<strong>@if($course->price==0||$course->price==null) رایگان @endif</strong></li>
                         </ul>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </section>
     <!-- ============================ Course Detail ================================== -->
+
+
+
+
+    <!-- Log In Modal -->
+    <div class="modal fade show" id="buyModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+            <div class="modal-content" id="registermodal">
+                <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+                <div class="modal-body">
+                    <h4 class="modal-header-title">خرید دوره</h4>
+                    <div class="my-3">
+                        <p style="font-size: 18px;">برای خرید دوره ابتدا وارد حساب کاربری خود شوید</p>
+                    </div>
+                    <div class="social-login ntr mb-3">
+                        <ul>
+                            <li><a href="/login" class="btn connect-fb">ورود</a></li>
+                            <li><a href="/register" class="btn connect-google">ثبت نام</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+@endsection
+
+
+@section('script')
+<script>
+    $('#buyCourse').click(function (event){
+        event.preventDefault();
+        $('#buyModal').modal('show');
+    })
+</script>
 @endsection

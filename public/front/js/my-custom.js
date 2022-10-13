@@ -105,17 +105,17 @@ $(document).ready(function (){
             let elementName='#register'
             event.preventDefault();
             let isValid=true;
-            let element=$(elementName+' [name=name]').removeClass('is-invalid');
+            let element=$(elementName+' [name=first_name]').removeClass('is-invalid');
+            if(!isMinLength(element.val(),3)){
+                isValid=false;
+                element.addClass('is-invalid')
+            }
+            element=$(elementName+' [name=last_name]').removeClass('is-invalid');
             if(!isMinLength(element.val(),3)){
                 isValid=false;
                 element.addClass('is-invalid')
             }
 
-            element=$(elementName+' [name=email]').removeClass('is-invalid');
-            if(!isEmail(element.val())){
-                isValid=false;
-                element.addClass('is-invalid')
-            }
 
             element=$(elementName+' [name=password]').removeClass('is-invalid');
             if(!isMinLength(element.val(),8)){
@@ -131,20 +131,21 @@ $(document).ready(function (){
                     },
                     url : $(elementName).attr('action'),
                     data : {
-                        'name' : $(elementName+' [name=name]').val(),
-                        'email' : $(elementName+' [name=email]').val(),
+                        'first_name' : $(elementName+' [name=first_name]').val(),
+                        'last_name' : $(elementName+' [name=last_name]').val(),
                         'password' : $(elementName+' [name=password]').val(),
+                        'password_confirmation' : $(elementName+' [name=password_confirmation]').val(),
                     },
                     type : 'POST',
                     dataType : 'json',
                     success : function(result){
-
                         if(result.status) {
                             showToast('ثبت گردید',result.message,'success');
-                            $(elementName+' [name=name]').val('');
-                            $(elementName+' [name=email]').val('');
+                            $(elementName+' [name=first_name]').val('');
+                            $(elementName+' [name=last_name]').val('');
                             $(elementName+' [name=password]').val('');
-                            location.reload();
+                            $(elementName+' [name=password_confirmation]').val('');
+                            window.location.href = '/';
                         }
                         else showToast('خطا',result.message,'error')
                         hidePreloader();
@@ -205,3 +206,78 @@ const a2e = s => s.replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
 
 const p2a = s => s.replace(/[۰-۹]/g, d => '٠١٢٣٤٥٦٧٨٩'['۰۱۲۳۴۵۶۷۸۹'.indexOf(d)]);
 const a2p = s => s.replace(/[٠-٩]/g, d => '۰۱۲۳۴۵۶۷۸۹'['٠١٢٣٤٥٦٧٨٩'.indexOf(d)]);
+
+
+
+$('#verifyPhone [type=submit]').click(function (e) {
+    e.preventDefault();
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: $("#verifyPhone form").eq(0).attr('action'),
+        data: {
+            "phone_number": $('#verifyPhone [name=phone_number]').val(),
+            "captcha": $('#verifyPhone [name=captcha]').val(),
+        },
+
+        type: 'POST',
+        dataType: 'json',
+        success: function (result) {
+            if (result.status) {
+                showToast(' موفقیت در درخواست', result.message, 'success');
+                $("#register [name=phone_number]").val($('#verifyPhone [name=phone_number]').val())
+                $('#verifyPhone [name=phone_number]').val('');
+                $('#verifyPhone [name=captcha]').val('');
+                $('#verifyPhone').addClass('d-none');
+                $('#verifyOtp').removeClass('d-none');
+            } else showToast('خطا', result.message, 'error');
+            getCaptcha();
+        },
+        error: function (error) {
+            showToast('خطا', 'مشکلی در ثبت درخواست رخ داده است، لطفا مجدد امتحان کنید.', 'error');
+            getCaptcha();
+        }
+    });
+});
+
+
+$('#verifyOtp [type=submit]').click(function (e) {
+    e.preventDefault();
+
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: $("#verifyOtp form").eq(0).attr('action'),
+        data: {
+            "otp_code": $('#verifyOtp [name=otp_code]').val(),
+        },
+
+        type: 'POST',
+        dataType: 'json',
+        success: function (result) {
+            if (result.status) {
+                showToast(' موفقیت در درخواست', result.message, 'success');
+                $('#verifyOtp [name=otp_code]').val('');
+                $('#verifyOtp').addClass('d-none');
+                $('#register').removeClass('d-none');
+            } else showToast('خطا', result.message, 'error');
+        },
+        error: function (error) {
+            showToast('خطا', 'مشکلی در ثبت درخواست رخ داده است، لطفا مجدد امتحان کنید.', 'error');
+        }
+    });
+});
+
+if($('#logout').length)
+    $('#logout').click(function (event) {
+        event.preventDefault();
+        alert('hi how are you');
+    })
+
+
+function getCaptcha() {
+
+    document.querySelector(".captcha-image").src = '/captcha' + "?" + Date.now();
+}

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -37,6 +38,12 @@
 <script src="/admin/js/bootstrap.bundle.min.js"></script>
 
 <script src="/admin/js/mazer.js"></script>
+<script src="/front/js/jquery.min.js"></script>
+<script src="/front/js/popper.min.js"></script>
+<!-- toast -->
+<link href="/front/js/plugin/jquery.toast.css" rel="stylesheet">
+<script src="/front/js/plugin/jquery.toast.js"></script>
+
 
 @yield('script')
 </body>

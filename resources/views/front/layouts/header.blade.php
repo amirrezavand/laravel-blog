@@ -34,14 +34,14 @@
                 <ul class="nav-menu nav-menu-social align-to-left">
                     @guest()
                         <li class="login_click light">
-                            <a href="#" data-toggle="modal" data-target="#login">ورود</a>
+                            <a href="/login">ورود</a>
                         </li>
                         <li class="login_click">
-                            <a href="#" data-toggle="modal" data-target="#signup">ثبت نام</a>
+                            <a href="/register">ثبت نام</a>
                         </li>
                     @else
                         <li class="login_click">
-                            <a href="#" data-toggle="modal">حساب کاربری</a>
+                            <a href="/dashboard/my_course">حساب کاربری</a>
                         </li>
                     @endguest
                 </ul>

@@ -83,4 +83,19 @@ if(!function_exists('isNavItemActive')){
         return in_array(getRouteName(),$relatedRoute)?$className:'';
     }
 }
+
+function sendOTP($receptor,$otpCode){
+    try
+    {
+        $template = "OtpCode";
+        $api = new \Ghasedak\GhasedakApi('08a5595b0e4c23c980ccecafbe7a43e03ee1ebabf6a43ee6e63ac85a33902d85');
+        $api->Verify( $receptor, $template, $otpCode);
+    }
+    catch(\Ghasedak\Exceptions\ApiException $e){
+        echo $e->errorMessage();
+    }
+    catch(\Ghasedak\Exceptions\HttpException $e){
+        echo $e->errorMessage();
+    }
+}
 ?>

@@ -7,6 +7,7 @@ use App\Http\Requests\BlogRequest;
 use App\Http\Requests\CourseRequest;
 use App\Models\Blog;
 use App\Models\Course;
+use App\Models\CourseContent;
 use App\Models\Lookup;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -83,7 +84,7 @@ class CourseController extends Controller
     public function edit(Course $course)
     {
         $contentStatuses=Lookup::where('group_key','content_status')->get();
-
+        $course->contents=CourseContent::where('course_id',$course->id)->orderBy('section','asc')->orderBy('sequence','asc')->get();
         return view('admin.course.create-edit',compact('course','contentStatuses'));
     }
 

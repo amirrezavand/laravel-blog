@@ -176,7 +176,6 @@
                                     </div>
                                     @enderror
                                 </div>
-
                                 <div class="mt-2">
                                     <button class="btn btn-success btn-sm" type="submit">@if(getRouteAction()=='create')
                                             save
@@ -191,9 +190,230 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Course Content</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="border border-primary p-3 my-2" id="courseContentAdd" data-action="/admin/course_content">
+                            <input type="hidden" value="{{$course->id}}" name="course_id">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Title</label>
+                                    <input type="text" class="form-control " placeholder="title" value="" name="title">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Url</label>
+                                    <input type="text" class="form-control " placeholder="url" value="" name="url">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Section</label>
+                                    <input type="number" class="form-control " placeholder="section" value="" name="section">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Sequence</label>
+                                    <input type="number" class="form-control " placeholder="sequence" value="" name="sequence">
+                                </div>
+                                <div class="col-12 form-group">
+                                    <div class="form-check">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="is_main" class="form-check-input" checked="">
+                                            <label>is main</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 form-group">
+                                    <div class="form-check">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="is_free" class="form-check-input" checked="">
+                                            <label>is free</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-success btn-sm" type="submit">
+                                        save
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border border-primary p-3 my-2" id="courseContentEdit">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- form end -->
+
 @endsection
 
+@section('script')
+    <script>
+        $(document).ready(function (){
+            let elementName="#courseContentAdd";
+            if($(elementName).length){
+                $(elementName+' button').click(function (event){
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        url : $(elementName).attr('data-action'),
+                        data : {
+                            'course_id' : $(elementName+' [name=course_id]').val(),
+                            'title' : $(elementName+' [name=title]').val(),
+                            'url' : $(elementName+' [name=url]').val(),
+                            'section' : $(elementName+' [name=section]').val(),
+                            'sequence' : $(elementName+' [name=sequence]').val(),
+                            'is_free' : $(elementName+' [name=is_free]').is(':checked')?1:0,
+                            'is_main' : $(elementName+' [name=is_main]').is(':checked')?1:0,
+                        },
+                        type : 'POST',
+                        dataType : 'json',
+                        success : function(result){
+
+                            if(result.status) {
+                                showToast('ثبت گردید',result.message,'success');
+                                $(elementName+' [name=title]').val('');
+                                $(elementName+' [name=url]').val('');
+                                $(elementName+' [name=section]').val('');
+                                $(elementName+' [name=sequence]').val('');
+                                $(elementName+' [name=is_free]').prop('checked', false);
+                                $(elementName+' [name=is_main]').prop('checked', false);
+                                getAndDisplayCourseContetns();
+                            }
+                            else showToast('خطا',result.message,'error')
+                        },
+                        error : function (error){
+                            showToast('خطا','مشکلی در ثبت داده رخ داده است، لطفا مجدد امتحان کنید.','error')
+                        }
+                    });
+                });
+            }
+        })
+
+        function deleteCourseContent(id){
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url : `/admin/course_content/${id}`,
+                type : 'DELETE',
+                dataType : 'json',
+                success : function(result) {
+                    getAndDisplayCourseContetns();
+                }
+            });
+        }
+
+        function editCourseContent(id){
+             console.log(id)
+            let elementName=`#courseContent${id}`
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url : `/admin/course_content/${id}`,
+                data : {
+                    'title' : $(elementName+' [name=title]').val(),
+                    'url' : $(elementName+' [name=url]').val(),
+                    'section' : $(elementName+' [name=section]').val(),
+                    'sequence' : $(elementName+' [name=sequence]').val(),
+                    'is_free' : $(elementName+' [name=is_free]').is(':checked')?1:0,
+                    'is_main' : $(elementName+' [name=is_main]').is(':checked')?1:0,
+                },
+                type : 'PUT',
+                dataType : 'json',
+                success : function(result){
+
+                    if(result.status) {
+                        showToast('ویرایش گردید',result.message,'success');
+                        getAndDisplayCourseContetns();
+                    }
+                    else showToast('خطا',result.message,'error')
+                },
+                error : function (error){
+                    showToast('خطا','مشکلی در ویرایش داده رخ داده است، لطفا مجدد امتحان کنید.','error')
+                }
+            });
+        }
+
+        function getAndDisplayCourseContetns(){
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url : '/admin/course_content?course_id={{$course->id}}',
+                type : 'GET',
+                dataType : 'json',
+                success : function(result){
+                    $("#courseContentEdit").empty();
+                    for (let i=0;i<result.data.courseContents.length;i++){
+                        $("#courseContentEdit").append(`
+                            <div class="row border-bottom py-2 border-primary" id="courseContent${result.data.courseContents[i].id}">
+                                <div class="col-sm-6">
+                                    <label>Title</label>
+                                    <input type="text" class="form-control " placeholder="title" value="${result.data.courseContents[i].title}" name="title">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Url</label>
+                                    <input type="text" class="form-control " placeholder="url" value="${result.data.courseContents[i].url}" name="url">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Section</label>
+                                    <input type="number" class="form-control " placeholder="section" value="${result.data.courseContents[i].section}" name="section">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Sequence</label>
+                                    <input type="number" class="form-control " placeholder="sequence" value="${result.data.courseContents[i].sequence}" name="sequence">
+                                </div>
+                                <div class="col-12 form-group">
+                                    <div class="form-check">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="is_main" class="form-check-input" ${result.data.courseContents[i].is_main?'checked':''}>
+                                            <label>is main</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 form-group">
+                                    <div class="form-check">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="is_free" class="form-check-input" ${result.data.courseContents[i].is_free?'checked':''}>
+                                            <label>is free</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-info btn-sm" type="submit" onclick="editCourseContent(${result.data.courseContents[i].id})">
+                                        edit
+                                    </button>
+                                    <button class="btn btn-danger btn-sm" type="submit" onclick="deleteCourseContent(${result.data.courseContents[i].id})">
+                                        delete
+                                    </button>
+                                </div>
+                            </div>
+                        `);
+                    }
+                }
+            });
+        }
+        getAndDisplayCourseContetns();
+
+        function showToast(title,description,status){
+            $.toast({
+                heading: title,
+                text: description,
+                position: 'top-right',
+                stack: false,
+                icon: status,
+                hideAfter: 1500
+            });
+        }
+    </script>
+@endsection
 
 
