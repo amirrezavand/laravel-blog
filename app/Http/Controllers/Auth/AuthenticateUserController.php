@@ -7,6 +7,7 @@ use App\Models\Email;
 use App\Models\User;
 use App\Rules\CaptchaValidation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
@@ -98,6 +99,11 @@ class AuthenticateUserController extends Controller
         } else {
             return response()->json(['status' => false, 'message' => 'کد وارده صحیح نمی باشد لطفا مجدد تلاش نمایید.']);
         }
+    }
+
+    public function logout(){
+        Auth::logout();
+        return response()->json(['status' => true]);
     }
 
 }

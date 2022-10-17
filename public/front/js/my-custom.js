@@ -273,7 +273,19 @@ $('#verifyOtp [type=submit]').click(function (e) {
 if($('#logout').length)
     $('#logout').click(function (event) {
         event.preventDefault();
-        alert('hi how are you');
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/logout',
+            type: 'POST',
+            dataType: 'json',
+            success: function (result) {
+                if (result.status) {
+                    location.href='/'
+                }
+            }
+        });
     })
 
 

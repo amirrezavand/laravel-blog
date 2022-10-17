@@ -90,7 +90,7 @@ Route::middleware('guest')->group(function () {
 
 });
 
-Route::post('/logout', [\App\Http\Controllers\Auth\AuthenticateUser::class, 'destroy'])->middleware('auth')->name('logout');
+Route::post('/logout', [\App\Http\Controllers\Auth\AuthenticateUserController::class, 'logout'])->middleware('auth')->name('logout');
 
 
 
