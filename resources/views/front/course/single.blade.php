@@ -52,7 +52,9 @@
                     <!-- Overview -->
                     <div class="edu_wraper border">
                         <h4 class="edu_title">توضیحات</h4>
-                        {{$course->body}}
+                        <div class="text-justify" style="line-height: 2;">
+                            {{$course->body}}
+                        </div>
                     </div>
 
                     <div class="edu_wraper border">
@@ -289,7 +291,7 @@
 
                         <div class="ed_view_price pl-4">
                             <span>قیمت آموزش</span>
-                            <h2 class="theme-cl">@if($course->price==null||$course->price=='0') رایگان @else 149 هزار تومان @endif</h2>
+                            <h2 class="theme-cl">@if($course->price==null||$course->price=='0') رایگان @else {{$course->price}} تومان @endif</h2>
                         </div>
 {{--                        <div class="ed_view_features pl-4">--}}
 {{--                            <span>ویدئوهای نمونه</span>--}}

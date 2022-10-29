@@ -98,4 +98,8 @@ function sendOTP($receptor,$otpCode){
         echo $e->errorMessage();
     }
 }
+
+function saveSeen($model,$id){
+    \App\Models\Seen::create(['object_type'=>$model,'object_id'=>$id,'ip'=>\Illuminate\Support\Facades\Request::ip()]);
+}
 ?>
