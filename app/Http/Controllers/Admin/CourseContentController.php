@@ -43,7 +43,7 @@ class CourseContentController extends Controller
         $validator = Validator::make($request->all(), [
             'course_id'=>'required|numeric',
             'title' => 'required|max:255|min:3',
-            'url' => 'required|max:255|min:3',
+            'url' => 'required|max:255',
             'sequence'=>'required|numeric',
             'section'=>'required|numeric',
             'is_main'=>'required|numeric',
@@ -94,7 +94,7 @@ class CourseContentController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'title' => 'required|max:255|min:3',
-            'url' => 'required|max:255|min:3',
+            'url' => 'required|max:255',
             'sequence'=>'required|numeric',
             'section'=>'required|numeric',
             'is_main'=>'required|numeric',
