@@ -102,3 +102,8 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::get('my_order',[\App\Http\Controllers\Dashboard\DashboardController::class,'myOrders'])->name('my_orders');
     Route::get('buy/course/{id}',[\App\Http\Controllers\Dashboard\BuyController::class,'registerCourseFactorAndSendBank'])->name('buy.course');
 });
+
+
+Route::get('/test',function (){
+dd(\Illuminate\Support\Facades\Hash::make('amirreza'));
+});
