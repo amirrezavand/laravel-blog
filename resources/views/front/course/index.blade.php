@@ -169,7 +169,7 @@
 
                                     <div class="education_block_thumb">
                                         <a href="course-detail.html"><img src="{{$course->img}}" class="img-fluid" alt=""></a>
-                                        <div class="education_ratting"><i class="fa fa-star"></i>4.7 (40)</div>
+{{--                                        <div class="education_ratting"><i class="fa fa-star"></i>4.7 (40)</div>--}}
                                     </div>
 
                                     <div class="education_block_body">
@@ -178,9 +178,10 @@
 
                                     <div class="cources_info_style3">
                                         <ul>
-                                            <li><i class="ti-eye ml-2"></i>10682 بازدید</li>
+                                            <li><i class="ti-eye ml-2"></i>{{\App\Models\Seen::where('object_type','course')->where('object_id',$course->id)->count()}} بازدید</li>
 {{--                                            <li><i class="ti-control-skip-forward ml-2"></i>82 دوره</li>--}}
-                                            <li><i class="ti-time ml-2"></i>9ساعت 45دقیقه</li>
+                                            @php($time=\App\Models\CourseContent::where('course_id',$course->id)->where('is_main','!=',1)->get()->sum('time'))
+                                            <li><i class="ti-time ml-2"></i>@if(floor($time/60)!=0) {{floor($time/60)}}ساعت  @endif{{$time%60}}دقیقه</li>
                                         </ul>
                                     </div>
 

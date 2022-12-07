@@ -141,17 +141,17 @@
                         <div class="single_instructor_caption">
                             <h4><a href="#">{{$course->user->name}}</a></h4>
                             <ul class="instructor_info">
-                                <li><i class="ti-video-camera"></i>5 ویدئو</li>
-                                <li><i class="ti-control-forward"></i>1 دوره</li>
-                                <li><i class="ti-user"></i> آپدیت تیر ماه</li>
+{{--                                <li><i class="ti-video-camera"></i>5 ویدئو</li>--}}
+                                <li><i class="ti-control-forward"></i>{{\App\Models\Course::where('user_id',$course->user->id)->count()}} دوره</li>
+{{--                                <li><i class="ti-user"></i> آپدیت تیر ماه</li>--}}
                             </ul>
                             <p>{{$course->user->about}}</p>
-                            <ul class="social_info">
-                                <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                <li><a href="#"><i class="ti-twitter"></i></a></li>
-                                <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                                <li><a href="#"><i class="ti-instagram"></i></a></li>
-                            </ul>
+{{--                            <ul class="social_info">--}}
+{{--                                <li><a href="#"><i class="ti-facebook"></i></a></li>--}}
+{{--                                <li><a href="#"><i class="ti-twitter"></i></a></li>--}}
+{{--                                <li><a href="#"><i class="ti-linkedin"></i></a></li>--}}
+{{--                                <li><a href="#"><i class="ti-instagram"></i></a></li>--}}
+{{--                            </ul>--}}
                         </div>
                     </div>
 
@@ -314,10 +314,11 @@
                         <ul class="edu_list right">
                             <li><i class="ti-user"></i>شرکت کنندگان:<strong>12 نفر</strong></li>
                             <li><i class="ti-files"></i>جلسات:<strong>{{\App\Models\CourseContent::where('course_id',$course->id)->where('is_main','!=',1)->count()}}</strong></li>
-                            <li><i class="ti-time"></i>مدت دوره:<strong>10 ساعت</strong></li>
+                            @php($time=\App\Models\CourseContent::where('course_id',$course->id)->where('is_main','!=',1)->get()->sum('time'))
+                            <li><i class="ti-time"></i>مدت دوره:<strong>@if(floor($time/60)!=0) {{floor($time/60)}}ساعت  @endif{{$time%60}}دقیقه</strong></li>
                             <li><i class="ti-tag"></i>سطح دوره:<strong>مقدماتی تا پیشرفته</strong></li>
                             <li><i class="ti-flag-alt"></i>زبان:<strong>فارسی</strong></li>
-                            <li><i class="ti-shine"></i>نوع دوره:<strong>@if($course->price==0||$course->price==null) رایگان @endif</strong></li>
+                            <li><i class="ti-shine"></i>نوع دوره:<strong>@if($course->price==0||$course->price==null) رایگان @else ویژه @endif</strong></li>
                         </ul>
                     </div>
                 </div>
