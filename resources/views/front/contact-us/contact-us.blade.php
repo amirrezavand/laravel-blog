@@ -99,7 +99,7 @@
                             <div class="contact-info">
 
                                 <h2>در تماس باشید</h2>
-                                <p class="text-justify">آستراکدر با <span class="theme-cl">پشتیبانی 24/7</span> و پاسخگویی کمتر از <span class="theme-cl">هفت ساعت</span> گامی مهم در راستای پاسخگویی هر چه سریعتر به نیازهای دانشجویان عزیز فراهم نموده است. </p>
+                                <p class="text-justify">کافه جی آی اس با <span class="theme-cl">پشتیبانی 24/7</span> و پاسخگویی کمتر از <span class="theme-cl">هفت ساعت</span> گامی مهم در راستای پاسخگویی هر چه سریعتر به نیازهای دانشجویان عزیز فراهم نموده است. </p>
 
                                 <div class="cn-info-detail">
                                     <div class="cn-info-icon">
@@ -117,7 +117,7 @@
                                     </div>
                                     <div class="cn-info-content">
                                         <h4 class="cn-info-title">پست الکترونیکی</h4>
-                                        codewithastra@gmail.com
+                                        CaffeGIS.Academy@gmail.com
                                     </div>
                                 </div>
 
@@ -127,7 +127,7 @@
                                     </div>
                                     <div class="cn-info-content">
                                         <h4 class="cn-info-title">شماره تماس</h4>
-                                        <a href="tel:+989100968228" dir="ltr">+98 910 096 8228</a>
+                                        <a href="tel:+989196517969" dir="ltr">+98 919 651 7969</a>
                                     </div>
                                 </div>
                             </div>

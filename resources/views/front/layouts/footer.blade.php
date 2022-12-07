@@ -9,8 +9,8 @@
                         <img src="/front/img/logo.png" class="img-footer" alt="" />
                         <div class="footer-add">
                             <p>تهران، خیابان انقلاب</p>
-                            <p class="text-right" dir="ltr">+98 9100968228</p>
-                            <p>codewithastra@gmail.com</p>
+                            <p class="text-right" dir="ltr">+98 919 651 7969</p>
+                            <p>CaffeGIS.Academy@gmail.com</p>
                         </div>
 
                     </div>
@@ -91,14 +91,14 @@
             <div class="row align-items-center">
 
                 <div class="col-lg-6 col-md-6">
-                    <p class="mb-0">© 2022 AstraCoder ارائه شده توسط <a href="/">AstraCoder</a></p>
+                    <p class="mb-0">© 2022 CaffeGIS ارائه شده توسط <a href="/">CaffeGIS</a></p>
                 </div>
 
                 <div class="col-lg-6 col-md-6 text-left">
                     <ul class="footer-bottom-social">
 {{--                        <li><a href="#"><i class="ti-facebook"></i></a></li>--}}
 {{--                        <li><a href="#"><i class="ti-twitter"></i></a></li>--}}
-                        <li><a href="https://instagram.com/astracoder_com"><i class="ti-instagram"></i></a></li>
+                        <li><a href="https://instagram.com/CAFFEGIS"><i class="ti-instagram"></i></a></li>
 {{--                        <li><a href="#"><i class="ti-apa"></i></a></li>--}}
                     </ul>
                 </div>

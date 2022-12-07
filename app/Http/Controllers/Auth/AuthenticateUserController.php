@@ -30,6 +30,8 @@ class AuthenticateUserController extends Controller
             'captcha' => ['required', new CaptchaValidation]
         ]);
 
+        $validData['phone_number']=preg_replace('/^(\\+98|0)/', '', $validData['phone_number']);
+
         $user = User::where('phone_number', $validData['phone_number'])->first();
         if (is_null($user)) {
             return back()->withErrors(['password' => 'اطلاعات وارده اشتباه است']);

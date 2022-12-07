@@ -1,16 +1,20 @@
 <?php
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\BlogController;
 use App\Http\Controllers\Front\ContactUsController;
 use App\Http\Controllers\Front\AboutUsController;
 use App\Http\Controllers\Front\HomeController;
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Http\Request;
 
-Route::get('/test',function (){
-    dd(auth()->user());
+
+Route::get('/test1',function (){
+    dd(Hash::make('amirreza90060',[
+        'memory' => 1024,
+        'time' => 2,
+        'threads' => 2,
+    ]));
 });
 
 Route::get('/',[HomeController::class,'index'])->name('home');
@@ -103,7 +107,3 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::get('buy/course/{id}',[\App\Http\Controllers\Dashboard\BuyController::class,'registerCourseFactorAndSendBank'])->name('buy.course');
 });
 
-
-Route::get('/test',function (){
-dd(\Illuminate\Support\Facades\Hash::make('amirreza'));
-});

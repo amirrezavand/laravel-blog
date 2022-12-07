@@ -18,6 +18,7 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
+
         $users=User::query()->orderBy('id','desc');
 
         $keywords=$request->input('keywords');
@@ -39,6 +40,7 @@ class UserController extends Controller
      */
     public function create()
     {
+
         $user=new User();
         return view('admin.user.create-edit',compact('user'));
     }

@@ -8,32 +8,32 @@
 
                 <div class="col-lg-7 col-md-7">
                     <div class="ed_detail_wrap light">
-                        <ul class="cources_facts_list">
-                            <li class="facts-1">وردپرس</li>
-                            <li class="facts-5">طراحی سایت</li>
-                        </ul>
+{{--                        <ul class="cources_facts_list">--}}
+{{--                            <li class="facts-1">وردپرس</li>--}}
+{{--                            <li class="facts-5">طراحی سایت</li>--}}
+{{--                        </ul>--}}
                         <div class="ed_header_caption">
                             <h2 class="ed_title">{{$course->title}}</h2>
                             <ul>
-                                <li><i class="ti-calendar"></i>10 - 20 هفته</li>
-                                <li><i class="ti-control-forward"></i>102 دوره</li>
-                                <li><i class="ti-user"></i>502 شرکت کننده</li>
+{{--                                <li><i class="ti-calendar"></i>10 - 20 هفته</li>--}}
+                                <li><i class="ti-control-forward"></i>{{\App\Models\CourseContent::where('course_id',$course->id)->where('is_main','!=',1)->count()}} درس</li>
+{{--                                <li><i class="ti-user"></i>502 شرکت کننده</li>--}}
                             </ul>
                         </div>
                         <div class="ed_header_short"><p>{{$course->short_description}}</p></div>
 
-                        <div class="ed_rate_info">
-                            <div class="star_info">
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="review_counter">
-                                <strong class="high">4.7</strong> 3572 امتیاز
-                            </div>
-                        </div>
+{{--                        <div class="ed_rate_info">--}}
+{{--                            <div class="star_info">--}}
+{{--                                <i class="fas fa-star filled"></i>--}}
+{{--                                <i class="fas fa-star filled"></i>--}}
+{{--                                <i class="fas fa-star filled"></i>--}}
+{{--                                <i class="fas fa-star filled"></i>--}}
+{{--                                <i class="fas fa-star"></i>--}}
+{{--                            </div>--}}
+{{--                            <div class="review_counter">--}}
+{{--                                <strong class="high">4.7</strong> 3572 امتیاز--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                     </div>
                 </div>
@@ -313,7 +313,7 @@
                         <h4 class="edu_title">ویژگی های دوره</h4>
                         <ul class="edu_list right">
                             <li><i class="ti-user"></i>شرکت کنندگان:<strong>12 نفر</strong></li>
-                            <li><i class="ti-files"></i>جلسات:<strong>5</strong></li>
+                            <li><i class="ti-files"></i>جلسات:<strong>{{\App\Models\CourseContent::where('course_id',$course->id)->where('is_main','!=',1)->count()}}</strong></li>
                             <li><i class="ti-time"></i>مدت دوره:<strong>10 ساعت</strong></li>
                             <li><i class="ti-tag"></i>سطح دوره:<strong>مقدماتی تا پیشرفته</strong></li>
                             <li><i class="ti-flag-alt"></i>زبان:<strong>فارسی</strong></li>

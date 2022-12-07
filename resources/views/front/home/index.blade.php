@@ -7,8 +7,8 @@
             <!-- Type -->
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-8 col-sm-12">
-                    <h1 class="cl_2 f_2 large_h">سامانه تدریس حرفه ای وب</h1>
-                    <p>بهترین پلتفرم یادگیری و دوره های آموزشی حوزه وب که با مناسب ترین قیمت توسط مدرس وبسایت آستراکدر، آموزش داده می شود تا به شما در کسب مهارت های جدید کمک کند.</p>
+                    <h1 class="cl_2 f_2 large_h">حرفه ای ترین آموزش های GIS</h1>
+                    <p>بهترین پلتفرم یادگیری و دوره های آموزشی حوزه جی آی اس که با مناسب ترین قیمت توسط مدرس وبسایت CaffeGIS، آموزش داده می شود تا به شما در کسب مهارت های جدید کمک کند.</p>
                     <div class="banner-search shadow_high mt-4">
                         <div class="search_hero_wrapping">
                             <div class="row">
@@ -165,37 +165,37 @@
                         <div class="education_block_list_layout style-2">
 
                             <div class="education_block_thumb n-shadow">
-                                <a href="course-detail.html"><img src="{{$item->img}}" class="img-fluid" alt=""></a>
+                                <a href="/courses/{{$item->id}}"><img src="{{$item->img}}" class="img-fluid" alt=""></a>
                             </div>
 
                             <div class="list_layout_ecucation_caption">
 
                                 <div class="education_block_body">
-                                    <h4 class="bl-title"><a href="course-detail.html">{{$item->title}}</a></h4>
+                                    <h4 class="bl-title"><a href="/courses/{{$item->id}}">{{$item->title}}</a></h4>
                                     <div class="_course_admin_ol12">مدرس: <strong>{{$item->teacher_name}}</strong></div>
 
                                     <div class="_course_less_infor">
                                         <ul>
-                                            <li><i class="ti-desktop ml-1"></i>10 قسمت</li>
+                                            <li><i class="ti-desktop ml-1"></i>{{\App\Models\CourseContent::where('course_id',$item->id)->where('is_main','!=',1)->count()}}  قسمت</li>
                                             <li><span class="class online"></span>آفلاین</li>
                                         </ul>
                                     </div>
 
-                                    <div class="course_rate_system_wrap">
-                                        <div class="course_rate_system">
-                                            <div class="course_ratting">
-                                                <i class="fa fa-star filled"></i>
-                                                <i class="fa fa-star filled"></i>
-                                                <i class="fa fa-star filled"></i>
-                                                <i class="fa fa-star filled"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <div class="course_reviews_info">
-                                                <strong class="mid">4.9</strong>
-                                            </div>
-                                        </div>
-                                        <div class="_course_category_01"><span class="cat-7">برنامه نویسی</span></div>
-                                    </div>
+{{--                                    <div class="course_rate_system_wrap">--}}
+{{--                                        <div class="course_rate_system">--}}
+{{--                                            <div class="course_ratting">--}}
+{{--                                                <i class="fa fa-star filled"></i>--}}
+{{--                                                <i class="fa fa-star filled"></i>--}}
+{{--                                                <i class="fa fa-star filled"></i>--}}
+{{--                                                <i class="fa fa-star filled"></i>--}}
+{{--                                                <i class="fa fa-star"></i>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="course_reviews_info">--}}
+{{--                                                <strong class="mid">4.9</strong>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="_course_category_01"><span class="cat-7">برنامه نویسی</span></div>--}}
+{{--                                    </div>--}}
                                 </div>
 
                                 <div class="education_block_footer">
