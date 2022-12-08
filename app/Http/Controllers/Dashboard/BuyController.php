@@ -17,7 +17,7 @@ class BuyController extends Controller
         $factor=Factor::create([
             'user_id'=>auth()->user()->id,
             'title'=>$course->title,
-            'lu_status'=>'no_paid',
+            'lu_status'=>'no_pay',
             'total_price'=>$course->price,
             'is_paid'=>0,
             'paid_date'=>now()
@@ -28,6 +28,7 @@ class BuyController extends Controller
             'price'=>$course->price,
             'lu_object_type'=>'Course'
         ]);
+//        dd($course->price)
         //TO DO Send To Bank
         dd('send to bank');
     }

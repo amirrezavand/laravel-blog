@@ -111,7 +111,6 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
 
 
 Route::get('/test5',function (){
-    dd(env('ZARINPAL_MERCHANT_ID'));
     $response = zarinpal()
         ->merchantId(env('ZARINPAL_MERCHANT_ID')) // تعیین مرچنت کد در حین اجرا - اختیاری
         ->amount(100) // مبلغ تراکنش

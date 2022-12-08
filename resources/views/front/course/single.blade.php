@@ -304,7 +304,7 @@
 {{--                            </ul>--}}
 {{--                        </div>--}}
                         <div class="ed_view_link">
-                            <a href="/buy/course/{{$course->id}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">خرید دوره<i class="ti-angle-left"></i></a>
+                            <a href="{{route('buy.course',['id'=>$course->id])}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">خرید دوره<i class="ti-angle-left"></i></a>
                         </div>
 
                     </div>
