@@ -17,7 +17,7 @@ class BuyController extends Controller
         $factor=Factor::create([
             'user_id'=>auth()->user()->id,
             'title'=>$course->title,
-            'lu_status'=>'no_pay',
+            'lu_status'=>'no_paid',
             'total_price'=>$course->price,
             'is_paid'=>0,
             'paid_date'=>now()

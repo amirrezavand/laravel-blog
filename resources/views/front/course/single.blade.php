@@ -304,7 +304,11 @@
 {{--                            </ul>--}}
 {{--                        </div>--}}
                         <div class="ed_view_link">
-                            <a href="{{route('buy.course',['id'=>$course->id])}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">خرید دوره<i class="ti-angle-left"></i></a>
+                            @if(\App\Models\Factor::where('user_id',auth()->user()->id)->leftJoin('factor_objects','factors.id','factor_objects.factor_id')->where('is_paid',1)->where('object_id',$course->id)->where('lu_object_type','Course')->count()>0)
+                                <a href="#" class="btn btn-theme enroll-btn">ثبت نام شده</a>
+                            @else
+                                <a href="{{route('buy.course',['id'=>$course->id])}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">خرید دوره<i class="ti-angle-left"></i></a>
+                            @endif
                         </div>
 
                     </div>
@@ -312,7 +316,7 @@
                     <div class="edu_wraper border">
                         <h4 class="edu_title">ویژگی های دوره</h4>
                         <ul class="edu_list right">
-                            <li><i class="ti-user"></i>شرکت کنندگان:<strong>12 نفر</strong></li>
+                            <li><i class="ti-user"></i>شرکت کنندگان:<strong>{{\App\Models\Factor::where('user_id',auth()->user()->id)->leftJoin('factor_objects','factors.id','factor_objects.factor_id')->where('is_paid',1)->where('object_id',$course->id)->where('lu_object_type','Course')->count()+15}} نفر</strong></li>
                             <li><i class="ti-files"></i>جلسات:<strong>{{\App\Models\CourseContent::where('course_id',$course->id)->where('is_main','!=',1)->count()}}</strong></li>
                             @php($time=\App\Models\CourseContent::where('course_id',$course->id)->where('is_main','!=',1)->get()->sum('time'))
                             <li><i class="ti-time"></i>مدت دوره:<strong>@if(floor($time/60)!=0) {{floor($time/60)}}ساعت  @endif{{$time%60}}دقیقه</strong></li>

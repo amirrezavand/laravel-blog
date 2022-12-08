@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Course;
 use App\Models\CourseContent;
+use App\Models\Factor;
 use App\Models\Seen;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
