@@ -31,7 +31,7 @@ class BuyController extends Controller
 
 
         $response = zarinpal()
-            ->amount(1000) // مبلغ تراکنش
+            ->amount($factor->total_price) // مبلغ تراکنش
             ->request()
             ->description('خرید دوره ') // توضیحات تراکنش
             ->callbackUrl('https://caffegis.com/dashboard/is_paid') // آدرس برگشت پس از پرداخت
@@ -43,6 +43,10 @@ class BuyController extends Controller
             return $response->error()->message();
         }
 
+        $factor->authority=$response->authority();
+        $factor->save();
+
+
         return $response->redirect();
     }
 
@@ -50,8 +54,11 @@ class BuyController extends Controller
         $authority = request()->query('Authority'); // دریافت کوئری استرینگ ارسال شده توسط زرین پال
         $status = request()->query('Status'); // دریافت کوئری استرینگ ارسال شده توسط زرین پال
 
+
+        $factor=Factor::where('authority',$authority)->first();
+
         $response = zarinpal()
-            ->amount(1000)
+            ->amount($factor->total_price)
             ->verification()
             ->authority($authority)
             ->send();
@@ -68,7 +75,8 @@ class BuyController extends Controller
 
 // پرداخت موفقیت آمیز بود
 // دریافت شماره پیگیری تراکنش و انجام امور مربوط به دیتابیس
-        dd($response->referenceId(),$authority,$status);
+        $factor->reference_id=$response->referenceId(); $factor->lu_status='paid'; $factor->is_paid=1; $factor->save();
+        dd('ok');
     }
 
 
