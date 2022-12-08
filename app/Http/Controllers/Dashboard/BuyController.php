@@ -28,8 +28,48 @@ class BuyController extends Controller
             'price'=>$course->price,
             'lu_object_type'=>'Course'
         ]);
-//        dd($course->price)
-        //TO DO Send To Bank
-        dd('send to bank');
+
+
+        $response = zarinpal()
+            ->amount(1000) // مبلغ تراکنش
+            ->request()
+            ->description('خرید دوره ') // توضیحات تراکنش
+            ->callbackUrl('https://caffegis.com/dashboard/is_paid') // آدرس برگشت پس از پرداخت
+            ->mobile('09100968228') // شماره موبایل مشتری - اختیاری
+            ->email('ar.rezavand@gmail.com') // ایمیل مشتری - اختیاری
+            ->send();
+
+        if (!$response->success()) {
+            return $response->error()->message();
+        }
+
+        return $response->redirect();
     }
+
+    public static function checkIsPaid(){
+        $authority = request()->query('Authority'); // دریافت کوئری استرینگ ارسال شده توسط زرین پال
+        $status = request()->query('Status'); // دریافت کوئری استرینگ ارسال شده توسط زرین پال
+
+        $response = zarinpal()
+            ->amount(1000)
+            ->verification()
+            ->authority($authority)
+            ->send();
+
+        if (!$response->success()) {
+            return $response->error()->message();
+        }
+
+// دریافت هش شماره کارتی که مشتری برای پرداخت استفاده کرده است
+// $response->cardHash();
+
+// دریافت شماره کارتی که مشتری برای پرداخت استفاده کرده است (بصورت ماسک شده)
+// $response->cardPan();
+
+// پرداخت موفقیت آمیز بود
+// دریافت شماره پیگیری تراکنش و انجام امور مربوط به دیتابیس
+        dd($response->referenceId(),$authority,$status);
+    }
+
+
 }

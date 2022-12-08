@@ -105,25 +105,12 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::get('my_course',[\App\Http\Controllers\Dashboard\DashboardController::class,'myCourses'])->name('my_courses');
     Route::get('my_order',[\App\Http\Controllers\Dashboard\DashboardController::class,'myOrders'])->name('my_orders');
     Route::get('buy/course/{id}',[\App\Http\Controllers\Dashboard\BuyController::class,'registerCourseFactorAndSendBank'])->name('buy.course');
+    Route::get('is_paid',[\App\Http\Controllers\Dashboard\BuyController::class,'checkIsPaid'])->name('buy.check_paid');
 });
 
 
 
 
 Route::get('/test5',function (){
-    $response = zarinpal()
-        ->merchantId(env('ZARINPAL_MERCHANT_ID')) // تعیین مرچنت کد در حین اجرا - اختیاری
-        ->amount(100) // مبلغ تراکنش
-        ->request()
-        ->description('transaction info') // توضیحات تراکنش
-        ->callbackUrl('https://caffegis.com/paid') // آدرس برگشت پس از پرداخت
-        ->mobile('09100968228') // شماره موبایل مشتری - اختیاری
-        ->email('ar.rezavand@gmail.com') // ایمیل مشتری - اختیاری
-        ->send();
 
-    if (!$response->success()) {
-        return $response->error()->message();
-    }
-
-    return $response->redirect();
 });
