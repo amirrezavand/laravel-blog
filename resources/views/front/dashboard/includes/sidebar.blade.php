@@ -31,7 +31,7 @@
 {{--                <li><a href="my-profile.html"><i class="ti-heart"></i>اکانت من</a></li>--}}
 {{--                <li><a href="add-listing.html"><i class="ti-plus"></i>افزودن دوره جدید</a></li>--}}
 {{--                <li><a href="saved-courses.html"><i class="ti-heart"></i>دوره های ذخیره شده</a></li>--}}
-                <li class="active"><a href="my-order.html"><i class="ti-shopping-cart"></i>سفارشات من</a></li>
+                <li class="active"><a href="/dashboard/my_order"><i class="ti-shopping-cart"></i>سفارشات من</a></li>
 {{--                <li><a href="settings.html"><i class="ti-settings"></i>تنظیمات</a></li>--}}
 {{--                <li><a href="reviews.html"><i class="ti-comment-alt"></i>لیست نظرات</a></li>--}}
                 <li><a id="logout" style="cursor: pointer;"><i class="ti-power-off" ></i>خروج</a></li>

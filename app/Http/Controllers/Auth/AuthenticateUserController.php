@@ -72,11 +72,11 @@ class AuthenticateUserController extends Controller
 
 
         //TODO otp code must change
-        $otpCode = 666666;
+        $otpCode = rand(111111,999999);
         $request->session()->put('phone_verify', false);
         $request->session()->put('phone_number', $validData['phone_number']);
         $request->session()->put('otp_code', $otpCode);
-        //TODO sendOtp($validData['phone_number'],$otpCode);
+        sendOtp($validData['phone_number'],$otpCode);
 
         return response()->json(['status' => true, 'message' => 'کد ورود ارسال گردید.']);
     }

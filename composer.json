@@ -14,6 +14,7 @@
         "laravel/sanctum": "^2.11",
         "laravel/socialite": "^5.3",
         "laravel/tinker": "^2.5",
+        "morilog/jalali": "3.*",
         "pishran/zarinpal": "^4.3",
         "uxweb/sweet-alert": "^2.0"
     },

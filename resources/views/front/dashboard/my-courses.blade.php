@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 
-@section('page_title' , 'طرح های جدید')
+@section('page_title' , 'دوره های من')
 
 @section('content')
 

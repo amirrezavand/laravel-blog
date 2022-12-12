@@ -28,8 +28,8 @@
     <section class="pt-0">
         <div class="container">
 
-            <div class="row @if($is_verify_phone) d-none @endif" id="verifyPhone">
-                <div class="col-md-12">
+            <div class="row @if($is_verify_phone) d-none @endif justify-content-center" id="verifyPhone">
+                <div class="col-md-8 col-xl-6">
                     <div class="cart_totals checkout light_form mb-4">
                             <a href="/" class="log-logo_head"><img
                                     src="/front/img/logo.png"
@@ -43,7 +43,7 @@
                         <form action="{{route('verify_phone')}}" method="post" autocomplete="off">
                             @csrf
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-12">
                                     <div class="form-group">
                                         <label for="phoneNumber">تلفن همراه</label>
                                         <input type="text" class="form-control" id="phoneNumber" name="phone_number"
@@ -54,7 +54,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-md-6 col-xs-6 text-center position-relative">
+                                <div class="col-12 text-center position-relative">
                                     <div class="form-group text-right">
                                         <!-- <label>Captcha Code</label> -->
                                         <div style="position: absolute;top: 36px;right: 25px;">
@@ -79,7 +79,7 @@
             </div>
 
             <div class="row justify-content-center d-none" id="verifyOtp">
-                <div class="col-md-6">
+                <div class="col-md-8 col-xl-6">
                     <div class="cart_totals checkout light_form mb-4">
                         <a href="{{route('home')}}" class="log-logo_head"><img src="/front/img/logo.png"
                                                                                class="img-fluid" width="80"

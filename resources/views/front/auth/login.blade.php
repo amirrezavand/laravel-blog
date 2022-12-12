@@ -32,7 +32,7 @@
                 <div class="col-lg-11 col-md-11">
 
                     <div class="row no-gutters justify-content-center position-relative log_rads">
-                        <div class="col-md-6 position-static p-4 border">
+                        <div class="col-md-8 position-static p-4 border">
                             <div class="log_wraps">
                                 <a href="/" class="log-logo_head"><img
                                         src="/front/img/logo.png"
