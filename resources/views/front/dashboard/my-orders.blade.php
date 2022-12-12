@@ -42,6 +42,7 @@
                                             <thead class="thead-dark">
                                             <tr>
                                                 <th scope="col">کد</th>
+                                                <th scope="col">عنوان</th>
                                                 <th scope="col">تاریخ</th>
                                                 <th scope="col">وضعیت</th>
                                                 <th scope="col">جمع کل</th>
@@ -52,9 +53,10 @@
                                                 @foreach($factors as $factor)
                                                     <tr>
                                                         <th scope="row">#{{$factor->reference_id}}</th>
-                                                        <td>4شهریور 1399</td>
+                                                        <th scope="row">{{$factor->title}}</th>
+                                                        <td>{{\Morilog\Jalali\Jalalian::forge($factor->updated_at)->format('%d %B Y')}}</td>
                                                         <td><span class="payment_status complete">تکمیل</span></td>
-                                                        <td>119000 ت</td>
+                                                        <td>{{$factor->total_price}} ت</td>
                                                         {{--                                                <td>--}}
                                                         {{--                                                    <div class="dash_action_link">--}}
                                                         {{--                                                        <a href="#" class="view">مشاهده</a>--}}
