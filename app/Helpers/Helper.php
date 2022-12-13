@@ -47,6 +47,12 @@ if(!function_exists('getHeader')){
                 'child'=>[]
             ],
             [
+                'title'=>'سوالات متداول',
+                'route_name'=>'faq',
+                'view'=>'all',
+                'child'=>[]
+            ],
+            [
                 'title'=>'تماس با ما',
                 'route_name'=>'contact_us',
                 'view'=>'all',

@@ -19,6 +19,8 @@ Route::get('/test1',function (){
 
 Route::get('/',[HomeController::class,'index'])->name('home');
 
+Route::get('/faq',[\App\Http\Controllers\Front\FaqController::class,'faq'])->name('faq');
+
 Route::get('/courses',[\App\Http\Controllers\Front\CourseController::class,'index'])->name('course');
 Route::get('/courses/{id}',[\App\Http\Controllers\Front\CourseController::class,'single'])->name('course.single');
 
