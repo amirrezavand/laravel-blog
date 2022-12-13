@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class CourseContent extends Model
 {
     use HasFactory;
-    protected $fillable =['course_id','is_main','section','sequence','title','url','is_free'];
+    protected $fillable =['course_id','is_main','section','sequence','title','url','is_free','time'];
 }

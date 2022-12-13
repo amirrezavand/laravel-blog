@@ -216,6 +216,10 @@
                                     <label>Sequence</label>
                                     <input type="number" class="form-control " placeholder="sequence" value="" name="sequence">
                                 </div>
+                                <div class="col-sm-6">
+                                    <label>time( minute)</label>
+                                    <input type="number" class="form-control " placeholder="time( minute)" value="" name="time">
+                                </div>
                                 <div class="col-12 form-group">
                                     <div class="form-check">
                                         <div class="checkbox">
@@ -269,6 +273,7 @@
                             'url' : $(elementName+' [name=url]').val(),
                             'section' : $(elementName+' [name=section]').val(),
                             'sequence' : $(elementName+' [name=sequence]').val(),
+                            'time' : $(elementName+' [name=time]').val(),
                             'is_free' : $(elementName+' [name=is_free]').is(':checked')?1:0,
                             'is_main' : $(elementName+' [name=is_main]').is(':checked')?1:0,
                         },
@@ -282,6 +287,7 @@
                                 $(elementName+' [name=url]').val('');
                                 $(elementName+' [name=section]').val('');
                                 $(elementName+' [name=sequence]').val('');
+                                $(elementName+' [name=time]').val('');
                                 $(elementName+' [name=is_free]').prop('checked', false);
                                 $(elementName+' [name=is_main]').prop('checked', false);
                                 getAndDisplayCourseContetns();
@@ -323,6 +329,7 @@
                     'url' : $(elementName+' [name=url]').val(),
                     'section' : $(elementName+' [name=section]').val(),
                     'sequence' : $(elementName+' [name=sequence]').val(),
+                    'time' : $(elementName+' [name=time]').val(),
                     'is_free' : $(elementName+' [name=is_free]').is(':checked')?1:0,
                     'is_main' : $(elementName+' [name=is_main]').is(':checked')?1:0,
                 },
@@ -370,6 +377,10 @@
                                 <div class="col-sm-6">
                                     <label>Sequence</label>
                                     <input type="number" class="form-control " placeholder="sequence" value="${result.data.courseContents[i].sequence}" name="sequence">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>time( minute)</label>
+                                    <input type="number" class="form-control " placeholder="time( minute)" value="${result.data.courseContents[i].time}" name="time">
                                 </div>
                                 <div class="col-12 form-group">
                                     <div class="form-check">
