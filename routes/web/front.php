@@ -111,8 +111,11 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
 });
 
 
-
-
 Route::get('/test5',function (){
-
+dd('hi');
 });
+
+
+
+
+

@@ -23,7 +23,6 @@
         </div>
     </section>
     <!-- ============================ Page Title End ================================== -->
-
     <!-- ========================== SignUp Elements ============================= -->
     <section class="log-space">
         <div class="container">
@@ -34,46 +33,25 @@
 
                         <div class="col-md-8 position-static p-4 border">
                             <div class="log_wraps">
-                                <a href="/" class="log-logo_head"><img
-                                        src="/front/img/logo.png"
-                                        class="img-fluid" width="80"
-                                        alt=""
-                                        style="width: 200px;"/></a>
+                                <a href="{{route('home')}}" class="log-logo_head"><img src="/front/img/logo.png"
+                                                                                class="img-fluid" width="200"
+                                                                                alt=""/></a>
                                 <div class="log__heads">
                                     <h4 class="mt-0 logs_title">بازیابی <span class="theme-cl">رمز عبور</span></h4>
                                 </div>
-                                <form action="{{route('forgot.password')}}" method="POST" autocomplete="off"
-                                      id="forgot_password">
+                                <form action="{{route('forgot.password.token')}}" method="POST" autocomplete="off"
+                                      id="forgot_password_token">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="phone_number">شماره تلفن*</label>
-                                        <input type="text" class="form-control" name="phone_number" id="phone_number"
-                                               value="{{old('phone_number')}}">
-                                        @error('phone_number')
-                                        <span class="text-danger d-block mt-1">{{$message}}</span>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group text-right" style="position: relative;">
-                                        <!-- <label>Captcha Code</label> -->
-                                        <div style="position: absolute;top: 40px;right: 25px;">
-                                            <img src="/captcha" class="captcha-image">
-                                            <i class="fa fa-undo"
-                                               style="position: absolute;left: 31px;top: 13px; cursor:pointer;"
-                                               onclick="getCaptcha();"></i>
-                                        </div>
-                                        <label for="phoneNumber">کد کپچا</label>
-                                        <input
-                                            tabindex="-1"
-                                            type="text"
-                                            name="captcha"
-                                            class="form-control text-left" style="padding-left: 45px;direction: ltr;"/>
-                                        @error('captcha')
+                                        <label>لطفا کد فرستاده شده را وارد کنید</label>
+                                        <input type="text" class="form-control" name="token" id="token" value="{{old('token')}}">
+                                        @error('token')
                                         <span class="text-danger d-block mt-1">{{$message}}</span>
                                         @enderror
                                     </div>
 
                                     <div class="form-group">
-                                        <a onclick="event.preventDefault();document.getElementById('forgot_password').submit()"
+                                        <a onclick="event.preventDefault();document.getElementById('forgot_password_token').submit()"
                                            class="btn btn_apply w-100">بازیابی رمز</a>
                                     </div>
                                 </form>

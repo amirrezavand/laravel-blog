@@ -64,4 +64,10 @@ class User extends Authenticatable
     public function courses(){
         return $this->hasMany(Course::class);
     }
+
+
+    public function otpCode()
+    {
+        return $this->hasMany(OtpCode::class);
+    }
 }

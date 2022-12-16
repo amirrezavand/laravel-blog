@@ -20,13 +20,13 @@ class ForgotPasswordController extends Controller
 
     public function store(Request $request)
     {
+        $request->merge(['phone_number'=>preg_replace('/^(\\+98|0)/', '', $request->input('phone_number'))]);
         $validData = $request->validate([
-            'national_code' => ['required', 'exists:users,national_code'],
             'phone_number' => ['required', 'regex:/(\\+98|0)?9\\d{9}$/', 'exists:users,phone_number'],
             'captcha' => ['required', new CaptchaValidation]
         ]);
 
-        $user = User::where('national_code', $validData['national_code'])->where('phone_number', $validData['phone_number'])->first();
+        $user = User::where('phone_number', $validData['phone_number'])->first();
 
         if (!$user) $user = User::create($validData);
 
@@ -35,7 +35,6 @@ class ForgotPasswordController extends Controller
         sendOtp($user->phone_number, $otp);
 
         $request->session()->flash('user', $user);
-
         return redirect()->route('forgot.password.token');
     }
 }
