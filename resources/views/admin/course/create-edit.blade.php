@@ -317,7 +317,6 @@
         }
 
         function editCourseContent(id){
-             console.log(id)
             let elementName=`#courseContent${id}`
             $.ajax({
                 headers: {
@@ -361,8 +360,6 @@
                     $("#courseContentEdit").empty();
 
                     for (let i=0;i<result.data.courseContents.length;i++){
-                        console.log(result.data.courseContents[i]);
-                        console.log(result.data.courseContents[i].is_main?'checked':'0');
                         $("#courseContentEdit").append(`
                             <div class="row border-bottom py-2 border-primary" id="courseContent${result.data.courseContents[i].id}">
                                 <div class="col-sm-6">
