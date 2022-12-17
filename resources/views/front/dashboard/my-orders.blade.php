@@ -56,7 +56,7 @@
                                                         <th scope="row">{{$factor->title}}</th>
                                                         <td>{{\Morilog\Jalali\Jalalian::forge($factor->updated_at)->format('%d %B Y')}}</td>
                                                         <td><span class="payment_status complete">تکمیل</span></td>
-                                                        <td>{{$factor->total_price}} ت</td>
+                                                        <td>@if($factor->total_price!=0) {{$factor->total_price}} تومان @else رایگان @endif</td>
                                                         {{--                                                <td>--}}
                                                         {{--                                                    <div class="dash_action_link">--}}
                                                         {{--                                                        <a href="#" class="view">مشاهده</a>--}}

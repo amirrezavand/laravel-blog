@@ -81,7 +81,7 @@
 {{--                                                        </div>--}}
                                                     </div>
                                                     <div class="dc_head_right">
-                                                        <h4 class="dc_price_rate theme-cl">{{$course->price}} تومان</h4>
+                                                        <h4 class="dc_price_rate theme-cl">@if($course->price!=0) {{$course->price}} تومان @else رایگان @endif</h4>
                                                     </div>
                                                 </div>
                                                 <div class="dashboard_single_course_des">

@@ -14,40 +14,59 @@ class BuyController extends Controller
         $course=Course::where('id',$id)->first();
         //dd($course);
         //'title','lu_status','total_price','is_paid','paid_date'
-        $factor=Factor::create([
-            'user_id'=>auth()->user()->id,
-            'title'=>$course->title,
-            'lu_status'=>'no_paid',
-            'total_price'=>$course->price,
-            'is_paid'=>0,
-            'paid_date'=>now()
-        ]);
-        FactorObject::create([
-            'factor_id'=>$factor->id,
-            'object_id'=>$course->id,
-            'price'=>$course->price,
-            'lu_object_type'=>'Course'
-        ]);
+        if($course->price>0) {
+            $factor = Factor::create([
+                'user_id' => auth()->user()->id,
+                'title' => $course->title,
+                'lu_status' => 'no_paid',
+                'total_price' => $course->price,
+                'is_paid' => 0,
+                'paid_date' => now()
+            ]);
+            FactorObject::create([
+                'factor_id' => $factor->id,
+                'object_id' => $course->id,
+                'price' => $course->price,
+                'lu_object_type' => 'Course'
+            ]);
 
 
-        $response = zarinpal()
-            ->amount($factor->total_price) // مبلغ تراکنش
-            ->request()
-            ->description('خرید دوره ') // توضیحات تراکنش
-            ->callbackUrl('https://caffegis.com/dashboard/is_paid') // آدرس برگشت پس از پرداخت
-            ->mobile('09100968228') // شماره موبایل مشتری - اختیاری
-            ->email('ar.rezavand@gmail.com') // ایمیل مشتری - اختیاری
-            ->send();
+            $response = zarinpal()
+                ->amount($factor->total_price) // مبلغ تراکنش
+                ->request()
+                ->description('خرید دوره ') // توضیحات تراکنش
+                ->callbackUrl('https://caffegis.com/dashboard/is_paid') // آدرس برگشت پس از پرداخت
+                ->mobile('09100968228') // شماره موبایل مشتری - اختیاری
+                ->email('ar.rezavand@gmail.com') // ایمیل مشتری - اختیاری
+                ->send();
 
-        if (!$response->success()) {
-            return $response->error()->message();
+            if (!$response->success()) {
+                return $response->error()->message();
+            }
+
+            $factor->authority = $response->authority();
+            $factor->save();
+
+
+            return $response->redirect();
+        }else {
+            $factor = Factor::create([
+                'user_id' => auth()->user()->id,
+                'title' => $course->title,
+                'lu_status' => 'paid',
+                'total_price' => $course->price,
+                'is_paid' => 1,
+                'paid_date' => now(),
+                'reference_id'=>'free'
+            ]);
+            FactorObject::create([
+                'factor_id' => $factor->id,
+                'object_id' => $course->id,
+                'price' => $course->price,
+                'lu_object_type' => 'Course'
+            ]);
+            return redirect(route('my_courses'));
         }
-
-        $factor->authority=$response->authority();
-        $factor->save();
-
-
-        return $response->redirect();
     }
 
     public static function checkIsPaid(){
