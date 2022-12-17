@@ -38,6 +38,9 @@
                         <li class="submenu-item ">
                             <a href="/admin/course">Course</a>
                         </li>
+                        <li class="submenu-item ">
+                            <a href="/admin/contact_form">Contact Form</a>
+                        </li>
                     </ul>
                 </li>
 

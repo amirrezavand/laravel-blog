@@ -5,7 +5,7 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Admin\CourseContentController;
-
+use \App\Http\Controllers\Admin\ContactFormController;
 
 Route::middleware('auth')->group(function () {
     Route::resource('blog', BlogController::class)->except(['show']);
@@ -17,6 +17,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('course_content', CourseContentController::class)->except(['show']);
 
     Route::resource('user', UserController::class)->except(['show']);
+
+    Route::resource('contact_form',ContactFormController::class);
 });
 
 
