@@ -388,7 +388,7 @@
                                 <div class="col-12 form-group">
                                     <div class="form-check">
                                         <div class="checkbox">
-                                            <input type="checkbox" name="is_main" class="form-check-input" ${result.data.courseContents[i].is_main?'checked':''}>
+                                            <input type="checkbox" name="is_main" class="form-check-input" ${result.data.courseContents[i].is_main=='1'?'checked':''}>
                                             <label>is main</label>
                                         </div>
                                     </div>
@@ -396,7 +396,7 @@
                                 <div class="col-12 form-group">
                                     <div class="form-check">
                                         <div class="checkbox">
-                                            <input type="checkbox" name="is_free" class="form-check-input" ${result.data.courseContents[i].is_free?'checked':''}>
+                                            <input type="checkbox" name="is_free" class="form-check-input" ${result.data.courseContents[i].is_free=='1'?'checked':''}>
                                             <label>is free</label>
                                         </div>
                                     </div>
