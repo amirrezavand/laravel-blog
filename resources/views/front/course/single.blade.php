@@ -72,9 +72,12 @@
                                         <div class="card-body pl-3 pr-3">
                                             <ul class="lectures_lists">
                                                 @foreach($course->contents->where('section',$section)->where('is_main','0') as $content )
-                                                    <li @if($content->is_free==0) class="unview" @endif><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: 01</div>{{$content->title}}</li>
+                                                    <li @if($content->is_free==0) class="unview" @endif @guest() id="firstLoginForDownloadCourse" @endguest
+                                                        @auth()
+                                                            @if($content->is_free==1) onclick="location.href='/courses/download/{{$content->id}}'" @endif
+                                                        @endauth
+                                                        ><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: {{$content->sequence}}</div>{{$content->title}}</li>
                                                 @endforeach
-
                                             </ul>
                                         </div>
                                     </div>
@@ -338,10 +341,30 @@
     </section>
     <!-- ============================ Course Detail ================================== -->
 
+    <!-- download Modal -->
+    <div class="modal fade show" id="firstLoginForDownloadModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+            <div class="modal-content" id="registermodal">
+                <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+                <div class="modal-body">
+                    <h4 class="modal-header-title">دانلود دوره</h4>
+                    <div class="my-3">
+                        <p style="font-size: 18px;">برای دانلود دوره ابتدا وارد حساب کاربری خود شوید</p>
+                    </div>
+                    <div class="social-login ntr mb-3">
+                        <ul>
+                            <li><a href="/login" class="btn connect-fb">ورود</a></li>
+                            <li><a href="/register" class="btn connect-google">ثبت نام</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
 
 
-
-    <!-- Log In Modal -->
+    <!-- buy In Modal -->
     <div class="modal fade show" id="buyModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
             <div class="modal-content" id="registermodal">
@@ -371,5 +394,14 @@
         event.preventDefault();
         $('#buyModal').modal('show');
     })
+
+    $('#firstLoginForDownloadCourse').click(function (event){
+        event.preventDefault();
+        $('#firstLoginForDownloadModal').modal('show');
+    })
+
+
+
+
 </script>
 @endsection

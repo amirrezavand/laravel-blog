@@ -23,6 +23,31 @@ Route::get('/faq',[\App\Http\Controllers\Front\FaqController::class,'faq'])->nam
 
 Route::get('/courses',[\App\Http\Controllers\Front\CourseController::class,'index'])->name('course');
 Route::get('/courses/{id}',[\App\Http\Controllers\Front\CourseController::class,'single'])->name('course.single');
+Route::get('courses/download/{id}',function ($id){
+    $file=\App\Models\CourseContent::findOrFail($id);
+    $courseId=$file->course_id;
+
+    if(auth()->check()==false){
+        return 'برای دانلود دوره ابتدا باید وارد وبسایت گردید.';
+    }else {
+        if($file->is_free==1)
+        {
+            return "<a href='{$file->url}'>برای دانلود کلیک کنید</a>";
+        }else{
+
+            if(\App\Models\Factor::where('user_id',auth()->user()->id)->leftJoin('factor_objects','factors.id','factor_objects.factor_id')->where('is_paid',1)->where('object_id',$courseId)->where('lu_object_type','Course')->count()>0){
+                return "<a href='{$file->url}'>برای دانلود کلیک کنید</a>";
+            } else
+            {
+                return 'برای دانلود دوره ابتدا باید دوره را خریداری نمائید.';
+            }
+        }
+    }
+
+});
+
+
+
 
 
 Route::get('/blogs',[BlogController::class,'index'])->name('blog');
