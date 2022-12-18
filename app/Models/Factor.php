@@ -9,4 +9,8 @@ class Factor extends Model
 {
     use HasFactory;
     protected $fillable=['user_id','title','lu_status','total_price','is_paid','paid_date','reference_id'];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

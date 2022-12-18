@@ -41,6 +41,9 @@
                         <li class="submenu-item ">
                             <a href="/admin/contact_form">Contact Form</a>
                         </li>
+                        <li class="submenu-item ">
+                            <a href="/admin/factor">Factor</a>
+                        </li>
                     </ul>
                 </li>
 
