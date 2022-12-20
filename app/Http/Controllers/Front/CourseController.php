@@ -10,10 +10,15 @@ use App\Models\Factor;
 use App\Models\Seen;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
+
 
 class CourseController extends Controller
 {
+    use SEOToolsTrait;
     public function index(){
+        $this->seo()->setTitle('دوره ها');
+        $this->seo()->setDescription('آموزش نرم افزار GIS و Google Earth ( گوگل ارث) و سایر نرم افزارهای نقشه برداری را توسط برترین مدرسین ایران ...');
         $courses=Course::leftJoin('users','users.id','=','courses.user_id')->select(DB::raw('courses.*'),DB::raw('users.name as teacher_name'),DB::raw('users.avatar as teacher_avatar'))->orderby('id','desc')->paginate(6);
         saveSeen('course',0);
 //        dd(Seen::where('object_type','course')->where('object_id',$courses->pluck('id'))->get());
