@@ -49,7 +49,7 @@ Route::post('/contact_us',[\App\Http\Controllers\Front\ContactFormController::cl
 Route::post('/register',[\App\Http\Controllers\Front\AuthController::class,'register'])->name('auth.register');
 
 
-
+Route::get('/sitemap.xml',[\App\Http\Controllers\Front\SitemapXmlController::class,'index']);
 
 Route::get('signup',function (){
     return view('front.auth.signup');
