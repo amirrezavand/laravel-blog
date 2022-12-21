@@ -8,7 +8,7 @@ use \App\Http\Controllers\Admin\CourseContentController;
 use \App\Http\Controllers\Admin\ContactFormController;
 use \App\Http\Controllers\Admin\FactorController;
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth','admin'])->group(function () {
     Route::resource('blog', BlogController::class)->except(['show']);
     Route::get('delete_img/{blog}',[BlogController::class,'deleteImg'])->name('blog.delete_img');
 
