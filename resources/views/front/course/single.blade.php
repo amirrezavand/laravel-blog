@@ -72,9 +72,17 @@
                                         <div class="card-body pl-3 pr-3">
                                             <ul class="lectures_lists">
                                                 @foreach($course->contents->where('section',$section)->where('is_main','0') as $content )
-                                                    <li @if($content->is_free==0) class="unview" @endif @guest() id="firstLoginForDownloadCourse" @endguest
+                                                    <li @if($content->is_free==0) class="unview" @endif
+                                                        @guest() data-action="firstLoginForDownloadCourse" @endguest
                                                         @auth()
                                                             @if($content->is_free==1) onclick="location.href='/courses/download/{{$content->id}}'" @endif
+                                                            @if($content->is_free!=1)
+                                                                @if(\App\Models\Factor::where('user_id',auth()->user()->id)->leftJoin('factor_objects','factors.id','factor_objects.factor_id')->where('is_paid',1)->where('object_id',$course->id)->where('lu_object_type','Course')->count()>0)
+                                                                    onclick="location.href='/courses/download/{{$content->id}}'"
+                                                                @else
+                                                                    data-action="firstBuyForDownloadCourse"
+                                                                @endif
+                                                            @endif
                                                         @endauth
                                                         ><div class="lectures_lists_title"><i class="ti-control-play"></i>دوره: {{$content->sequence}}</div>{{$content->title}}</li>
                                                 @endforeach
@@ -340,6 +348,21 @@
         </div>
     </section>
     <!-- ============================ Course Detail ================================== -->
+    <!-- first buy for download Modal -->
+    <div class="modal fade show" id="firstBuyForDownloadModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+            <div class="modal-content" id="registermodal">
+                <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+                <div class="modal-body">
+                    <h4 class="modal-header-title">دانلود دوره</h4>
+                    <div class="my-3">
+                        <p style="font-size: 18px;">برای دانلود دوره ابتدا در دوره ثبت نام نمائید.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
 
     <!-- download Modal -->
     <div class="modal fade show" id="firstLoginForDownloadModal" tabindex="-1">
@@ -393,12 +416,17 @@
     $('#buyCourse').click(function (event){
         event.preventDefault();
         $('#buyModal').modal('show');
-    })
+    });
 
-    $('#firstLoginForDownloadCourse').click(function (event){
+    $('[data-action=firstLoginForDownloadCourse]').click(function (event){
         event.preventDefault();
         $('#firstLoginForDownloadModal').modal('show');
-    })
+    });
+
+    $('[data-action=firstBuyForDownloadCourse]').click(function (event){
+       event.preventDefault();
+       $('#firstBuyForDownloadModal').modal('show');
+    });
 
 
 
