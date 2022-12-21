@@ -95,7 +95,7 @@ class BuyController extends Controller
 // پرداخت موفقیت آمیز بود
 // دریافت شماره پیگیری تراکنش و انجام امور مربوط به دیتابیس
         $factor->reference_id=$response->referenceId(); $factor->lu_status='paid'; $factor->is_paid=1; $factor->save();
-        dd('ok');
+        return redirect(route('my_courses'));
     }
 
 
