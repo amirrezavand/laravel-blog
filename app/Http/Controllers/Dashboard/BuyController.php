@@ -19,7 +19,7 @@ class BuyController extends Controller
         $course=Course::where('id',$id)->first();
         //dd($course);
         //'title','lu_status','total_price','is_paid','paid_date'
-        if($course->price>0) {
+        if($course->price>0 && $coefficient!=0) {
             $factor = Factor::create([
                 'user_id' => auth()->user()->id,
                 'title' => $course->title,
