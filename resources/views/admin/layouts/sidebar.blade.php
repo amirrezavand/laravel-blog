@@ -25,10 +25,9 @@
                 <li
                     class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
-                        <i class="bi bi-stack"></i>
-                        <span>Components</span>
+                        <span>Modules</span>
                     </a>
-                    <ul class="submenu ">
+                    <ul class="submenu active">
                         <li class="submenu-item ">
                             <a href="/admin/user">User</a>
                         </li>
@@ -43,6 +42,9 @@
                         </li>
                         <li class="submenu-item ">
                             <a href="/admin/factor">Factor</a>
+                        </li>
+                        <li class="submenu-item">
+                            <a href="/admin/discount_code">Discount Code</a>
                         </li>
                     </ul>
                 </li>
