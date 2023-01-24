@@ -24,7 +24,7 @@ class BuyController extends Controller
                 'user_id' => auth()->user()->id,
                 'title' => $course->title,
                 'lu_status' => 'no_paid',
-                'total_price' => floor($course->price * $coefficient / 1000)*1000,
+                'total_price' => floor($course->price * $coefficient / 100)*100,
                 'is_paid' => 0,
                 'paid_date' => now()
             ]);
