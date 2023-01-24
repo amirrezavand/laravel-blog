@@ -24,7 +24,7 @@ class BuyController extends Controller
                 'user_id' => auth()->user()->id,
                 'title' => $course->title,
                 'lu_status' => 'no_paid',
-                'total_price' => $course->price * $coefficient,
+                'total_price' => floor($course->price * $coefficient / 1000)*1000,
                 'is_paid' => 0,
                 'paid_date' => now()
             ]);
@@ -41,8 +41,8 @@ class BuyController extends Controller
                 ->request()
                 ->description('خرید دوره ') // توضیحات تراکنش
                 ->callbackUrl('https://caffegis.com/dashboard/is_paid') // آدرس برگشت پس از پرداخت
-                ->mobile('09100968228') // شماره موبایل مشتری - اختیاری
-                ->email('ar.rezavand@gmail.com') // ایمیل مشتری - اختیاری
+//                ->mobile('09100968228') // شماره موبایل مشتری - اختیاری
+//                ->email('ar.rezavand@gmail.com') // ایمیل مشتری - اختیاری
                 ->send();
 
             if (!$response->success()) {
@@ -59,7 +59,7 @@ class BuyController extends Controller
                 'user_id' => auth()->user()->id,
                 'title' => $course->title,
                 'lu_status' => 'paid',
-                'total_price' => $course->price * $coefficient,
+                'total_price' => $course->price ,
                 'is_paid' => 1,
                 'paid_date' => now(),
                 'reference_id'=>'free'
