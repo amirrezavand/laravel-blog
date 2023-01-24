@@ -10,7 +10,12 @@ use Illuminate\Http\Request;
 
 class BuyController extends Controller
 {
-    public function registerCourseFactorAndSendBank($id){
+    public function registerCourseFactorAndSendBank(Request $request,$id){
+        $coefficient=1;
+        $discountCode=\App\Models\DiscountCode::where('code',$request->input('code'))->get();
+        if($discountCode->count()>0) $coefficient=($coefficient-($discountCode[0]->amount)/100);
+
+
         $course=Course::where('id',$id)->first();
         //dd($course);
         //'title','lu_status','total_price','is_paid','paid_date'
@@ -19,14 +24,14 @@ class BuyController extends Controller
                 'user_id' => auth()->user()->id,
                 'title' => $course->title,
                 'lu_status' => 'no_paid',
-                'total_price' => $course->price,
+                'total_price' => $course->price * $coefficient,
                 'is_paid' => 0,
                 'paid_date' => now()
             ]);
             FactorObject::create([
                 'factor_id' => $factor->id,
                 'object_id' => $course->id,
-                'price' => $course->price,
+                'price' => $course->price ,
                 'lu_object_type' => 'Course'
             ]);
 
@@ -54,7 +59,7 @@ class BuyController extends Controller
                 'user_id' => auth()->user()->id,
                 'title' => $course->title,
                 'lu_status' => 'paid',
-                'total_price' => $course->price,
+                'total_price' => $course->price * $coefficient,
                 'is_paid' => 1,
                 'paid_date' => now(),
                 'reference_id'=>'free'

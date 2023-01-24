@@ -159,6 +159,51 @@ $(document).ready(function (){
                 showToast('خطا','لطفا اطلاعات را با دقت وارد نمائید.','error')
             }
         })
+
+
+    if($('#discountCode').length)
+        $('#discountCode [type=submit]').click(function (event){
+            event.preventDefault();
+
+            let codeElement=$('#discountCode [name=code]')[0];
+            let url=$('#discountCode').attr('action');
+
+
+            if(codeElement.value.length>3){
+               showPreloader();
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url : url,
+                    data : {'code' : p2e(a2e(codeElement.value)) },
+                    type : 'POST',
+                    dataType : 'json',
+                    success : function(result){
+                        if(result.status) {
+                            showToast('موفقیت',result.message,'success');
+
+                            if(result.data.type=="percent") {
+                                $('#discountPrice').html(Number($('#priceBeforeDiscount').html())*Number(result.data.amount)/100);
+                                $('#priceAfterDiscount').html(Number($('#priceBeforeDiscount').html())*(100-Number(result.data.amount))/100);
+                                $('#verifiedCode').val(p2e(a2e(codeElement.value)));
+                            }
+
+                            hidePreloader();
+                        }
+                        else showToast('خطا',result.message,'error')
+                        hidePreloader();
+                    },
+                    error : function (error){
+                        showToast('خطا','مشکلی در صحت سنجی کد تخفیف رخ داده است، لطفا مجدد امتحان کنید.','error')
+                        hidePreloader();
+                    }
+                });
+            }else {
+                showToast('خطا','لطفا کد تخفیف معتبر وارد نمایید.','error')
+            }
+        });
+
 });
 
 

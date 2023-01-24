@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Admin\CourseContentController;
 use \App\Http\Controllers\Admin\ContactFormController;
+use \App\Http\Controllers\Admin\DiscountCodeController;
 use \App\Http\Controllers\Admin\FactorController;
 
 Route::middleware(['auth','admin'])->group(function () {
@@ -18,6 +19,7 @@ Route::middleware(['auth','admin'])->group(function () {
     Route::resource('course_content', CourseContentController::class)->except(['show']);
 
     Route::resource('user', UserController::class)->except(['show']);
+    Route::resource('discount_code', DiscountCodeController::class)->except(['show']);
 
     Route::resource('contact_form',ContactFormController::class);
 

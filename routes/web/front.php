@@ -117,7 +117,7 @@ Route::post('/logout', [\App\Http\Controllers\Auth\AuthenticateUserController::c
 Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::get('my_course',[\App\Http\Controllers\Dashboard\DashboardController::class,'myCourses'])->name('my_courses');
     Route::get('my_order',[\App\Http\Controllers\Dashboard\DashboardController::class,'myOrders'])->name('my_orders');
-    Route::get('buy/course/{id}',[\App\Http\Controllers\Dashboard\BuyController::class,'registerCourseFactorAndSendBank'])->name('buy.course');
+    Route::post('buy/course/{id}',[\App\Http\Controllers\Dashboard\BuyController::class,'registerCourseFactorAndSendBank'])->name('buy.course');
     Route::get('is_paid',[\App\Http\Controllers\Dashboard\BuyController::class,'checkIsPaid'])->name('buy.check_paid');
 });
 
@@ -127,6 +127,18 @@ dd('hi');
 });
 
 
+Route::get('cart/{id}',function ($id){
+    $course=\App\Models\Course::findOrFail($id);
 
+   return view('front.cart.index',compact('course'));
+});
+
+Route::post('/check_discount_code',function (Request $request){
+    $discountCode=\App\Models\DiscountCode::where('code',$request->input('code'))->get();
+
+    if($discountCode->count()==0) return json_encode(['status'=>false,'message'=>'کد تخفیف وارد شده معتبر نمیباشد.',]);
+    else return json_encode(['status'=>true,'message'=>'کد تخفیف وارد شده معتبر میباشد.',
+        'data'=>['type'=>$discountCode[0]->lu_discount_type,'amount'=>$discountCode[0]->amount]]);
+});
 
 
