@@ -44,6 +44,9 @@
 <link href="/front/js/plugin/jquery.toast.css" rel="stylesheet">
 <script src="/front/js/plugin/jquery.toast.js"></script>
 
+<!-- select2 JQuery -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 @yield('script')
 </body>

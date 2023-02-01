@@ -15,13 +15,15 @@
                 <ul class="nav-menu">
                     @foreach(getHeader() as $item)
                         @if($item['view']=='all' || (auth()->check()==true?$item['view']=='auth':$item['view']=='guest'))
-                            <li class="{{isNavItemActive($item['route_name'],array_column($item['child'], 'route_name'),'active')}}">
+                            <li class="
+{{--                            {{isNavItemActive($item['route_name'],array_column($item['child'], 'route_name'),'active')}}--}}
+                            ">
                                 <a href="{{$item['route_name']?route($item['route_name']):''}}">{{$item['title']}}<span class="submenu-indicator"></span></a>
                                 @if($item['child'])
                                     <ul class="nav-dropdown nav-submenu">
                                         @foreach($item['child'] as $itemChild)
                                             @if($itemChild['view']=='all' || (auth()->check()==true?$itemChild['view']=='auth':$itemChild['view']=='guest'))
-                                                <li><a href="{{$itemChild['route_name']?route($itemChild['route_name']):''}}">{{$itemChild['title']}}</a></li>
+                                                <li><a href="{{$itemChild['route_name']?route($itemChild['route_name'],$itemChild['route_variable']):''}}">{{$itemChild['title']}}</a></li>
                                             @endif
                                         @endforeach
                                     </ul>

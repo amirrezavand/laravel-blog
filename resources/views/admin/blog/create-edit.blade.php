@@ -179,6 +179,19 @@
                                     @enderror
                                 </div>
 
+                                <div class="col-sm-6">
+                                    <label for="">Tag</label>
+                                    <select class="form-control select2" multiple="multiple" name="tag[]">
+                                        @foreach($tags as $tag)
+                                            <option @if(in_array($tag->title,old('tag',$blog->tags()->get()->pluck('title')->toArray())??[])) selected @endif>{{$tag->title}}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('tag')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
+                                </div>
                                 <div class="mt-2">
                                     <button class="btn btn-success btn-sm" type="submit">@if(getRouteAction()=='create')
                                             save
@@ -270,6 +283,16 @@
             mentions_item_type: 'profile',
             directionality : 'rtl'
         });
+
+    </script>
+
+
+    <script>
+
+        $(".select2").select2({
+            tags: true,
+            tokenSeparators: [',', ' ']
+        })
 
     </script>
 @endsection

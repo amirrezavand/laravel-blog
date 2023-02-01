@@ -1,6 +1,12 @@
 @extends('front.layouts.master')
 
 @section('content')
+    <style>
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
     <div class="blog-page">
         <!-- ============================ Page Title Start================================== -->
         <section class="page-title">

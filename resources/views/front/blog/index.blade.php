@@ -10,15 +10,22 @@
                 <div class="col-lg-12 col-md-12">
 
                     <div class="breadcrumbs-wrap">
-                        <h1 class="breadcrumb-title">لیست بلاگ</h1>
+                        @if($title=='بلاگ')
+                            <h1 class="breadcrumb-title">لیست بلاگ</h1>
+                        @else
+                            <h1 class="breadcrumb-title">{{$title}}</h1>
+                        @endif
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">خانه</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">لیست بلاگ</li>
+                                <li class="breadcrumb-item"><a href="/">خانه</a></li>
+                                @if($title=='بلاگ')
+                                    <li class="breadcrumb-item active" aria-current="page">لیست بلاگ</li>
+                                @else
+                                    <li class="breadcrumb-item active" aria-current="page">{{$title}}</li>
+                                @endif
                             </ol>
                         </nav>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -54,12 +61,12 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
 
-                    <!-- Pagination -->
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                            <button type="button" class="btn btn-loader"><i class="ti-reload ml-3"></i>فهرست کامل</button>
-                        </div>
-                    </div>
+{{--                    <!-- Pagination -->--}}
+{{--                    <div class="row">--}}
+{{--                        <div class="col-lg-12 col-md-12 col-sm-12 text-center">--}}
+{{--                            <button type="button" class="btn btn-loader"><i class="ti-reload ml-3"></i>فهرست کامل</button>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
                 </div>
             </div>
@@ -68,5 +75,4 @@
         </div>
     </section>
     <!-- ========================== Articles Section =============================== -->
-
 @endsection

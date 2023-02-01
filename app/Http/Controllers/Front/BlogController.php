@@ -11,12 +11,73 @@ use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
 class BlogController extends Controller
 {
     use SEOToolsTrait;
-    public function index(){
-        $this->seo()->setTitle('بلاگ');
-        $this->seo()->setDescription('آخرین و بروزترین مقالات در حوزه GIS، نقشه برداری و زمین شناسی را از اینجا بیابید.');
-        $results=Blog::leftJoin('users','users.id','=','blogs.user_id')->select(DB::raw('blogs.*'),DB::raw('users.name as author_name'),DB::raw('users.avatar as author_avatar'))->orderby('id','desc')->paginate(6);
+    public function index(Request $request){
+        $tag='';
+        $title='بلاگ';
+        $description='آخرین و بروزترین مقالات در حوزه GIS، نقشه برداری و زمین شناسی را از اینجا بیابید.';
+        if(in_array('arcgis_pro',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[]) ){
+            $tag='arcgis_pro';
+            $title='دوره رایگان ArcGIS Pro';
+            $description='';
+        }
+        else if(in_array('arcgis',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])) {
+            $tag='arcgis';
+            $title='دوره رایگان ArcGIS';
+            $description='';
+        }
+        else if(in_array('qgis',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])){
+            $tag='qgis';
+            $title='دوره رایگان QGIS';
+            $description='';
+        }
+        else if(in_array('global_mapper',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])) {
+            $tag='global_mapper';
+            $title='آموزش گلوبال مپر';
+            $description='';
+        }
+        else if(in_array('surfer',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])) {
+            $tag='surfer';
+            $title='آموزش نرم افزار Surfer';
+            $description='';
+        }
+        else if(in_array('civil_3d',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])){
+            $tag='civil_3d';
+            $title='آموزش رایگان Civil 3D';
+            $description='';
+        }
+        else if(in_array('autocad',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])){
+            $tag='autocad';
+            $title='آموزش نرم افزار AutoCAD';
+            $description='';
+        }
+
+
+
+
+
+        $this->seo()->setTitle($title);
+        $this->seo()->setDescription($description);
         saveSeen('blog',0);
-        return view('front.blog.index',compact('results'));
+
+        if($title=='بلاگ'){
+            $results=Blog::leftJoin('users','users.id','=','blogs.user_id')->select(DB::raw('blogs.*'),DB::raw('users.name as author_name'),DB::raw('users.avatar as author_avatar'))->orderby('id','desc')->paginate(6);
+            return view('front.blog.index',compact('results','title'));
+        }
+
+
+        $results=Blog::leftJoin('users','users.id','=','blogs.user_id')->whereHas('tags', function($q) use ($tag) {
+            $q->where('title', '=', $tag);
+        })->select(DB::raw('blogs.*'),DB::raw('users.name as author_name'),DB::raw('users.avatar as author_avatar'))->orderby('id','desc')->paginate(6);
+
+        return view('front.blog.index',compact('results','title'));
+
+
+
+
+
+
+
+
     }
 
     public function single($id){

@@ -47,6 +47,62 @@ if(!function_exists('getHeader')){
                 'child'=>[]
             ],
             [
+                'title'=>'آموزش رایگاه GIS',
+                'route_name'=>'',
+                'view'=>'all',
+                'child'=>[
+                    [
+                        'title'=>'دوره رایگان ArcGIS Pro',
+                        'route_name'=>'blog',
+                        'route_variable'=>['tag[0]'=>'arcgis_pro','tag[1]'=>'free'],
+                        'view'=>'all',
+                        'child'=>[]
+                    ],
+                    [
+                        'title'=>'دوره رایگان ArcGIS',
+                        'route_name'=>'blog',
+                        'route_variable'=>['tag[0]'=>'arcgis','tag[1]'=>'free'],
+                        'view'=>'all',
+                        'child'=>[]
+                    ],
+                    [
+                        'title'=>'دوره رایگان QGIS',
+                        'route_name'=>'blog',
+                        'route_variable'=>['tag[0]'=>'qgis','tag[1]'=>'free'],
+                        'view'=>'all',
+                        'child'=>[]
+                    ],
+                    [
+                        'title'=>'آموزش گلوبال مپر',
+                        'route_name'=>'blog',
+                        'route_variable'=>['tag[0]'=>'global_mapper','tag[1]'=>'free'],
+                        'view'=>'all',
+                        'child'=>[]
+                    ],
+                    [
+                        'title'=>'آموزش نرم افزار Surfer',
+                        'route_name'=>'blog',
+                        'route_variable'=>['tag[0]'=>'surfer','tag[1]'=>'free'],
+                        'view'=>'all',
+                        'child'=>[]
+                    ],
+                    [
+                        'title'=>'آموزش رایگان Civil 3D',
+                        'route_name'=>'blog',
+                        'route_variable'=>['tag[0]'=>'civil_3d','tag[1]'=>'free'],
+                        'view'=>'all',
+                        'child'=>[]
+                    ],
+                    [
+                        'title'=>'آموزش نرم افزار AutoCAD',
+                        'route_name'=>'blog',
+                        'route_variable'=>['tag[0]'=>'autocad','tag[1]'=>'free'],
+                        'view'=>'all',
+                        'child'=>[]
+                    ]
+                ]
+            ],
+            [
                 'title'=>'سوالات متداول',
                 'route_name'=>'faq',
                 'view'=>'all',

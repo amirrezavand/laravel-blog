@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\BlogRequest;
 use App\Models\Blog;
 use App\Models\Lookup;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -20,6 +21,7 @@ class BlogController extends Controller
      */
     public function index(Request $request)
     {
+
         $blogs=Blog::query()->with('user')->orderBy('id','desc');
 
         $keywords=$request->input('keywords');
@@ -44,7 +46,9 @@ class BlogController extends Controller
         $blog=new Blog();
         $contentStatuses=Lookup::where('group_key','content_status')->get();
 
-        return view('admin.blog.create-edit',compact('blog','contentStatuses'));
+        $tags=Tag::all();
+
+        return view('admin.blog.create-edit',compact('blog','contentStatuses','tags'));
     }
 
     /**
@@ -68,7 +72,17 @@ class BlogController extends Controller
         }
         //end upload image
 
-        auth()->user()->blogs()->create((array) $validateData);
+        $blog=auth()->user()->blogs()->create((array) $validateData);
+
+        $tagId=[];
+
+        foreach ($validateData->tag as $item){
+            $tag=Tag::firstOrCreate(['title'=>$item]);
+            array_push($tagId,$tag->id);
+        }
+
+        $blog->tags()->sync($tagId);
+
         return redirect(route('admin.blog.index'));
     }
 
@@ -81,7 +95,10 @@ class BlogController extends Controller
     public function edit(Blog $blog)
     {
         $contentStatuses=Lookup::where('group_key','content_status')->get();
-        return view('admin.blog.create-edit',compact('blog','contentStatuses'));
+
+        $tags=Tag::all();
+
+        return view('admin.blog.create-edit',compact('blog','contentStatuses','tags'));
     }
 
     /**
@@ -107,6 +124,18 @@ class BlogController extends Controller
         //end upload image
 
         $blog->update((array) $validateData);
+
+
+        $tagId=[];
+
+        foreach ($validateData->tag as $item){
+            $tag=Tag::firstOrCreate(['title'=>$item]);
+            array_push($tagId,$tag->id);
+        }
+
+        $blog->tags()->sync($tagId);
+
+
         return redirect(route('admin.blog.index'));
     }
 

@@ -168,9 +168,12 @@
 <link href="/front/js/plugin/jquery.toast.css" rel="stylesheet">
 <script src="/front/js/plugin/jquery.toast.js"></script>
 
+
+
 <!-- custom -->
 <script src="/front/js/custom.js"></script>
 <script src="/front/js/my-custom.js"></script>
+
 
 @yield('script')
 <!-- ============================================================== -->
