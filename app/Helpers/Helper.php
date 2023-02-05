@@ -47,7 +47,7 @@ if(!function_exists('getHeader')){
                 'child'=>[]
             ],
             [
-                'title'=>'آموزش رایگاه GIS',
+                'title'=>'آموزش های رایگان',
                 'route_name'=>'',
                 'view'=>'all',
                 'child'=>[
