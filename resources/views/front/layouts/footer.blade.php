@@ -17,13 +17,10 @@
                 </div>
                 <div class="col-lg-2 col-md-3">
                     <div class="footer-widget">
-                        <h4 class="widget-title">لینک مفید</h4>
+                        <h4 class="widget-title">لینک های مفید</h4>
                         <ul class="footer-menu">
-                            <li><a href="/about_us">درباره ما</a></li>
-{{--                            <li><a href="faq.html">سوالات متداول</a></li>--}}
-{{--                            <li><a href="checkout.html">تسویه حساب</a></li>--}}
-{{--                            <li><a href="contact.html">تماس با ما</a></li>--}}
-                            <li><a href="/blog">وبلاگ</a></li>
+                            <li><a href="/blogs">بلاگ</a></li>
+                            <li><a href="/courses">دوره ها</a></li>
                         </ul>
                     </div>
                 </div>
@@ -43,13 +40,11 @@
 
                 <div class="col-lg-2 col-md-3">
                     <div class="footer-widget">
-                        <h4 class="widget-title">راهنما و پشتیبانی</h4>
+                        <h4 class="widget-title">راهنمایی و پشتیبانی</h4>
                         <ul class="footer-menu">
-{{--                            <li><a href="#">اسناد</a></li>--}}
-{{--                            <li><a href="#">چت آنلاین</a></li>--}}
-{{--                            <li><a href="#">ارسال ایمیل</a></li>--}}
-{{--                            <li><a href="#">قوانین و شرایط</a></li>--}}
                             <li><a href="{{route('faq')}}">سوالات متداول</a></li>
+                            <li><a href="/contact_us">تماس با ما</a></li>
+                            <li><a href="/about_us">درباره ما</a></li>
                         </ul>
                     </div>
                 </div>

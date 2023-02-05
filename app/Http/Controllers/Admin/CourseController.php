@@ -9,6 +9,7 @@ use App\Models\Blog;
 use App\Models\Course;
 use App\Models\CourseContent;
 use App\Models\Lookup;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -45,8 +46,8 @@ class CourseController extends Controller
     {
         $course=new Course();
         $contentStatuses=Lookup::where('group_key','content_status')->get();
-
-        return view('admin.course.create-edit',compact('course','contentStatuses'));
+        $tags=Tag::all();
+        return view('admin.course.create-edit',compact('course','contentStatuses','tags'));
     }
 
     /**
@@ -71,7 +72,16 @@ class CourseController extends Controller
         }
         //end upload image
 
-        auth()->user()->courses()->create((array) $validateData);
+        $course = auth()->user()->courses()->create((array) $validateData);
+        $tagId=[];
+
+        foreach ($validateData->tag??[] as $item){
+            $tag=Tag::firstOrCreate(['title'=>$item]);
+            array_push($tagId,$tag->id);
+        }
+
+        $course->tags()->sync($tagId);
+
         return redirect(route('admin.course.index'));
     }
 
@@ -85,7 +95,10 @@ class CourseController extends Controller
     {
         $contentStatuses=Lookup::where('group_key','content_status')->get();
         $course->contents=CourseContent::where('course_id',$course->id)->orderBy('section','asc')->orderBy('sequence','asc')->get();
-        return view('admin.course.create-edit',compact('course','contentStatuses'));
+
+        $tags=Tag::all();
+
+        return view('admin.course.create-edit',compact('course','contentStatuses','tags'));
     }
 
     /**
@@ -111,6 +124,20 @@ class CourseController extends Controller
         //end upload image
 
         $course->update((array) $validateData);
+
+        $tagId=[];
+
+        foreach ($validateData->tag??[] as $item){
+            $tag=Tag::firstOrCreate(['title'=>$item]);
+            array_push($tagId,$tag->id);
+        }
+
+        $course->tags()->sync($tagId);
+
+
+
+
+
         return redirect(route('admin.course.index'));
     }
 

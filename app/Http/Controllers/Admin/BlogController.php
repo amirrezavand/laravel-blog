@@ -76,7 +76,7 @@ class BlogController extends Controller
 
         $tagId=[];
 
-        foreach ($validateData->tag as $item){
+        foreach ($validateData->tag??[] as $item){
             $tag=Tag::firstOrCreate(['title'=>$item]);
             array_push($tagId,$tag->id);
         }
@@ -128,7 +128,7 @@ class BlogController extends Controller
 
         $tagId=[];
 
-        foreach ($validateData->tag as $item){
+        foreach ($validateData->tag??[] as $item){
             $tag=Tag::firstOrCreate(['title'=>$item]);
             array_push($tagId,$tag->id);
         }

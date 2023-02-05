@@ -27,12 +27,13 @@ class BlogRequest extends FormRequest
             'title' => 'required' ,
             'lu_content_status' => 'required',
             'slug' => 'nullable|max:100' ,
-            'body' => 'nullable' ,
+            'body' => 'nullable',
             'short_description'=> 'nullable' ,
             'img' => 'nullable' ,
             'study_time' => 'nullable' ,
             'seo_keywords' => 'nullable' ,
-            'seo_description' => 'nullable|max:500'
+            'seo_description' => 'nullable|max:500',
+            'tag' => 'nullable'
         ];
     }
 }
