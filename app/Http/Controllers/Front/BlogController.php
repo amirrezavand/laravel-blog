@@ -18,42 +18,38 @@ class BlogController extends Controller
         if(in_array('arcgis_pro',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[]) ){
             $tag='arcgis_pro';
             $title='دوره رایگان ArcGIS Pro';
-            $description='';
+            $description='در آموزش رایگان آرک جی آی اس پرو سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
         else if(in_array('arcgis',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])) {
             $tag='arcgis';
             $title='دوره رایگان ArcGIS';
-            $description='';
+            $description='در آموزش رایگان آرک جی آی اس سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
         else if(in_array('qgis',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])){
             $tag='qgis';
             $title='دوره رایگان QGIS';
-            $description='';
+            $description='در آموزش رایگان کیو جی آی اس سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
         else if(in_array('global_mapper',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])) {
             $tag='global_mapper';
             $title='آموزش گلوبال مپر';
-            $description='';
+            $description='در آموزش گلوبال مپر سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
         else if(in_array('surfer',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])) {
             $tag='surfer';
             $title='آموزش نرم افزار Surfer';
-            $description='';
+            $description='در آموزش رایگان Surfer سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
         else if(in_array('civil_3d',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])){
             $tag='civil_3d';
             $title='آموزش رایگان Civil 3D';
-            $description='';
+            $description='در آموزش رایگان Civil 3D سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
         else if(in_array('autocad',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])){
             $tag='autocad';
             $title='آموزش نرم افزار AutoCAD';
-            $description='';
+            $description='در آموزش رایگان AutoCAD سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
-
-
-
-
 
         $this->seo()->setTitle($title);
         $this->seo()->setDescription($description);
@@ -70,14 +66,6 @@ class BlogController extends Controller
         })->select(DB::raw('blogs.*'),DB::raw('users.name as author_name'),DB::raw('users.avatar as author_avatar'))->orderby('id','desc')->paginate(6);
 
         return view('front.blog.index',compact('results','title'));
-
-
-
-
-
-
-
-
     }
 
     public function single($id){
