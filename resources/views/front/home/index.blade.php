@@ -115,12 +115,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="edu_cat_2 cat-1">
                         <div class="edu_cat_icons">
-                            <a class="pic-main" href="{{route('course')}}"><img src="/front/img/cat1.png" class="img-fluid" alt="" /></a>
+                            <a class="pic-main" href="{{route('course',['tag'=>'software'])}}"><img src="/front/img/cat1.png" class="img-fluid" alt="" /></a>
                         </div>
                         <div class="edu_cat_data">
-                            <h4 class="title"><a href="{{route('course')}}">مهندسی نرم افزار</a></h4>
+                            <h4 class="title"><a href="{{route('course',['tag'=>'software'])}}">مهندسی نرم افزار</a></h4>
                             <ul class="meta">
-                                <li class="video"><i class="ti-video-clapper"></i>1 دوره آموزشی</li>
+                                <li class="video"><i class="ti-video-clapper"></i>{{\App\Models\Course::leftJoin('users','users.id','=','courses.user_id')->whereHas('tags', function($q) {
+                $q->where('title', '=', 'software');
+            })->count()}} دوره آموزشی دوره آموزشی</li>
                             </ul>
                         </div>
                     </div>
@@ -134,11 +136,14 @@
                         <div class="edu_cat_data">
                             <h4 class="title"><a href="{{route('course',['tag'=>'google_earth'])}}">آموزش گوگل ارث</a></h4>
                             <ul class="meta">
-                                <li class="video"><i class="ti-video-clapper"></i>1 دوره آموزشی</li>
+                                <li class="video"><i class="ti-video-clapper"></i>{{\App\Models\Course::leftJoin('users','users.id','=','courses.user_id')->whereHas('tags', function($q) {
+                $q->where('title', '=', 'google_earth');
+            })->count()}} دوره آموزشی</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
 
                 <div class="col-lg-4 col-md-6">
                     <div class="edu_cat_2 cat-4">
@@ -148,7 +153,9 @@
                         <div class="edu_cat_data">
                             <h4 class="title"><a href="{{route('course',['tag'=>'arcgis'])}}">آموزش ArcGIS Desktop</a></h4>
                             <ul class="meta">
-                                <li class="video"><i class="ti-video-clapper"></i>1 دوره آموزشی</li>
+                                <li class="video"><i class="ti-video-clapper"></i>{{\App\Models\Course::leftJoin('users','users.id','=','courses.user_id')->whereHas('tags', function($q) {
+                $q->where('title', '=', 'arcgis');
+            })->count()}} دوره آموزشی</li>
                             </ul>
                         </div>
                     </div>
