@@ -122,7 +122,7 @@
                             <ul class="meta">
                                 <li class="video"><i class="ti-video-clapper"></i>{{\App\Models\Course::leftJoin('users','users.id','=','courses.user_id')->whereHas('tags', function($q) {
                 $q->where('title', '=', 'software');
-            })->count()}} دوره آموزشی دوره آموزشی</li>
+            })->count()}}دوره آموزشی</li>
                             </ul>
                         </div>
                     </div>
