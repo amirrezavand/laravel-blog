@@ -115,7 +115,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="edu_cat_2 cat-1">
                         <div class="edu_cat_icons">
-                            <a class="pic-main" href="{{route('course')}}"><img src="/front/img/content.png" class="img-fluid" alt="" /></a>
+                            <a class="pic-main" href="{{route('course')}}"><img src="/front/img/cat1.png" class="img-fluid" alt="" /></a>
                         </div>
                         <div class="edu_cat_data">
                             <h4 class="title"><a href="{{route('course')}}">مهندسی نرم افزار</a></h4>
@@ -129,16 +129,34 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="edu_cat_2 cat-4">
                         <div class="edu_cat_icons">
-                            <a class="pic-main" href="{{route('course')}}"><img src="/front/img/python.png" class="img-fluid" alt="" /></a>
+                            <a class="pic-main" href="{{route('course',['tag'=>'google_earth'])}}"><img src="/front/img/cat2.png" class="img-fluid" alt="" /></a>
                         </div>
                         <div class="edu_cat_data">
-                            <h4 class="title"><a href="{{route('course')}}">برنامه نویسی وب</a></h4>
+                            <h4 class="title"><a href="{{route('course',['tag'=>'google_earth'])}}">آموزش گوگل ارث</a></h4>
                             <ul class="meta">
                                 <li class="video"><i class="ti-video-clapper"></i>1 دوره آموزشی</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="edu_cat_2 cat-4">
+                        <div class="edu_cat_icons">
+                            <a class="pic-main" href="{{route('course',['tag'=>'arcgis'])}}"><img src="/front/img/cat3.png" class="img-fluid" alt="" /></a>
+                        </div>
+                        <div class="edu_cat_data">
+                            <h4 class="title"><a href="{{route('course',['tag'=>'arcgis'])}}">آموزش ArcGIS Desktop</a></h4>
+                            <ul class="meta">
+                                <li class="video"><i class="ti-video-clapper"></i>1 دوره آموزشی</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
 
         </div>
