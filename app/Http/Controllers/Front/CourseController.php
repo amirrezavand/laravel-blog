@@ -21,7 +21,6 @@ class CourseController extends Controller
         if(is_null($tag)){
             $courses=Course::leftJoin('users','users.id','=','courses.user_id')->select(DB::raw('courses.*'),DB::raw('users.name as teacher_name'),DB::raw('users.avatar as teacher_avatar'))->orderby('id','desc')->paginate(12);
         }else {
-
             $courses=Course::leftJoin('users','users.id','=','courses.user_id')->whereHas('tags', function($q) use ($tag) {
                 $q->where('title', '=', $tag);
             })->select(DB::raw('courses.*'),DB::raw('users.name as teacher_name'),DB::raw('users.avatar as teacher_avatar'))->orderby('id','desc')->paginate(12);
@@ -32,7 +31,6 @@ class CourseController extends Controller
     }
 
     public function single($id){
-
         $course=Course::with('user')->where('id',$id)->firstOrFail();
         $this->seo()->setTitle($course->title);
         $this->seo()->setDescription($course->seo_descriptoin);
