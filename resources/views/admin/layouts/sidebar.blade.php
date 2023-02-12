@@ -46,6 +46,12 @@
                         <li class="submenu-item">
                             <a href="/admin/discount_code">Discount Code</a>
                         </li>
+                        <li class="submenu-item">
+                            <a href="/admin/question">Question</a>
+                        </li>
+                        <li class="submenu-item">
+                            <a href="/admin/resume">Resume</a>
+                        </li>
                     </ul>
                 </li>
 

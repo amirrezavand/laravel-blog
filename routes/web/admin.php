@@ -4,10 +4,13 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
+
 use \App\Http\Controllers\Admin\CourseContentController;
 use \App\Http\Controllers\Admin\ContactFormController;
 use \App\Http\Controllers\Admin\DiscountCodeController;
 use \App\Http\Controllers\Admin\FactorController;
+use \App\Http\Controllers\Admin\QuestionController;
+use \App\Http\Controllers\Admin\ResumeController;
 
 Route::middleware(['auth','admin'])->group(function () {
     Route::resource('blog', BlogController::class)->except(['show']);
@@ -21,10 +24,12 @@ Route::middleware(['auth','admin'])->group(function () {
     Route::resource('user', UserController::class)->except(['show']);
     Route::resource('discount_code', DiscountCodeController::class)->except(['show']);
 
-    Route::resource('contact_form',ContactFormController::class);
+    Route::resource('contact_form',ContactFormController::class)->except(['show']);
 
 
-    Route::resource('factor',FactorController::class);
+    Route::resource('factor',FactorController::class)->except(['show']);
+    Route::resource('question',QuestionController::class)->except(['show']);
+    Route::resource('resume',ResumeController::class)->except(['show']);
 });
 
 

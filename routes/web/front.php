@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
+
+
+
 use App\Http\Controllers\Front\BlogController;
 use App\Http\Controllers\Front\ContactUsController;
 use App\Http\Controllers\Front\AboutUsController;

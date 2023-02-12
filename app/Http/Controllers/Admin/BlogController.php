@@ -21,7 +21,6 @@ class BlogController extends Controller
      */
     public function index(Request $request)
     {
-
         $blogs=Blog::query()->with('user')->orderBy('id','desc');
 
         $keywords=$request->input('keywords');

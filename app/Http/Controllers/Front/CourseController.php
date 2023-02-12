@@ -19,12 +19,12 @@ class CourseController extends Controller
         $tag=$request->input('tag');
 
         if(is_null($tag)){
-            $courses=Course::leftJoin('users','users.id','=','courses.user_id')->select(DB::raw('courses.*'),DB::raw('users.name as teacher_name'),DB::raw('users.avatar as teacher_avatar'))->orderby('id','desc')->paginate(6);
+            $courses=Course::leftJoin('users','users.id','=','courses.user_id')->select(DB::raw('courses.*'),DB::raw('users.name as teacher_name'),DB::raw('users.avatar as teacher_avatar'))->orderby('id','desc')->paginate(12);
         }else {
 
             $courses=Course::leftJoin('users','users.id','=','courses.user_id')->whereHas('tags', function($q) use ($tag) {
                 $q->where('title', '=', $tag);
-            })->select(DB::raw('courses.*'),DB::raw('users.name as teacher_name'),DB::raw('users.avatar as teacher_avatar'))->orderby('id','desc')->paginate(6);
+            })->select(DB::raw('courses.*'),DB::raw('users.name as teacher_name'),DB::raw('users.avatar as teacher_avatar'))->orderby('id','desc')->paginate(12);
         }
 
         saveSeen('course',0);
