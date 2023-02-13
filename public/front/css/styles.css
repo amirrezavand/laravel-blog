@@ -9714,9 +9714,6 @@ p.description{
 }
 
 @media (min-width: 1200px) {
-.single_instructor {
-    display: block;
-}
 .hero_banner {
     min-height: 620px;
     height:92vh;
@@ -9778,7 +9775,9 @@ ul.head_jobs_social li a {
 .viewer_detail_thumb {
     margin-bottom: 1rem;
 }
-
+.single_instructor {
+    display: block;
+}
 .single_instructor_caption {
     flex: auto;
     padding-right: 0;
