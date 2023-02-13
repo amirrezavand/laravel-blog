@@ -64,15 +64,15 @@
                                     <div class="accordion" id="parent1">
                                         @foreach($course->questions as $item)
                                             <div class="card my-2">
-                                                <div class="card-header" id="heading{{$loop->index}}">
+                                                <div class="card-header" id="heading{{$loop->index}}f">
                                                     <h2 class="mb-0">
-                                                        <button class="btn btn-link text-justify" type="button" data-toggle="collapse" data-target="#collapse{{$loop->index}}" aria-expanded="true" aria-controls="collapse{{$loop->index}}">
+                                                        <button class="btn btn-link text-justify" type="button" data-toggle="collapse" data-target="#collapse{{$loop->index}}f" aria-expanded="true" aria-controls="collapse{{$loop->index}}f">
                                                             {!! $item->question!!}
                                                         </button>
                                                     </h2>
                                                 </div>
 
-                                                <div id="collapse{{$loop->index}}" class="collapse @if($loop->index==0) show @endif" aria-labelledby="heading{{$loop->index}}" data-parent="#parent1">
+                                                <div id="collapse{{$loop->index}}f" class="collapse @if($loop->index==0) show @endif" aria-labelledby="heading{{$loop->index}}f" data-parent="#parent1">
                                                     <div class="card-body">
                                                         <p class="ac-para text-justify">
                                                             {!! $item->answer !!}
