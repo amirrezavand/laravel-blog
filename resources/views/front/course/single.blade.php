@@ -183,7 +183,7 @@
                             <h4><a href="#">{{$course->user->name}}</a></h4>
                             <ul class="instructor_info">
 {{--                                <li><i class="ti-video-camera"></i>5 ویدئو</li>--}}
-                                <li><i class="ti-control-forward"></i>{{\App\Models\Course::where('user_id',$course->user->id)->count()}} دوره</li>
+                                <li class="mb-3"><i class="ti-control-forward"></i>{{\App\Models\Course::where('user_id',$course->user->id)->count()}} دوره</li>
                                 @if($resume)
                                     <li>{!! $resume->description !!}</li>
                                 @endif
