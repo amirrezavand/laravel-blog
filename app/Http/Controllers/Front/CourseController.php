@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\CourseContent;
+use App\Models\Resume;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
@@ -37,6 +38,9 @@ class CourseController extends Controller
         saveSeen('course',$id);
         $course->contents=CourseContent::where('course_id',$id)->orderBy('section','asc')->orderBy('sequence','asc')->get();
 
-        return view('front.course.single',compact('course'));
+
+        $resume=Resume::where('user_id',$course->user_id)->first();
+
+        return view('front.course.single',compact('course','resume'));
     }
 }

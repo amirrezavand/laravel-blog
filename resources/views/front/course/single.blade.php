@@ -184,6 +184,9 @@
                             <ul class="instructor_info">
 {{--                                <li><i class="ti-video-camera"></i>5 ویدئو</li>--}}
                                 <li><i class="ti-control-forward"></i>{{\App\Models\Course::where('user_id',$course->user->id)->count()}} دوره</li>
+                                @if($resume)
+                                    <li>{{$resume->description}}</li>
+                                @endif
 {{--                                <li><i class="ti-user"></i> آپدیت تیر ماه</li>--}}
                             </ul>
                             <p>{{$course->user->about}}</p>

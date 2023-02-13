@@ -138,9 +138,6 @@ class CourseController extends Controller
         $course->questions()->sync($validateData->question??[]);
 
 
-
-
-
         return redirect(route('admin.course.index'));
     }
 
