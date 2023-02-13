@@ -97,7 +97,51 @@ $(document).ready(function (){
             }
         })
 
+    if($('#comment').length)
+        $('#comment [type=submit]').click(function (event){
+            event.preventDefault();
+            let isValid=true;
 
+            element=$('#comment [name=body]').removeClass('is-invalid');
+            if(!isMinLength(element.val(),3)){
+                isValid=false;
+                element.addClass('is-invalid')
+            }
+
+            if(isValid){
+                showPreloader();
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url : $('#comment').attr('action'),
+                    data : {
+                        'object_id' : $('#comment [name=object_id]').val(),
+                        'model' : $('#comment [name=model]').val(),
+                        'body' : $('#comment [name=body]').val()
+                    },
+                    type : 'POST',
+                    dataType : 'json',
+                    success : function(result){
+
+                        if(result.status) {
+                            showToast('ثبت گردید',result.message,'success');
+                            $('#comment [name=object_id]').val('');
+                            $('#comment [name=model]').val('');
+                            $('#comment [name=body]').val('');
+                        }
+                        else showToast('خطا',result.message,'error')
+                        hidePreloader();
+                    },
+                    error : function (error){
+                        showToast('خطا','مشکلی در ثبت درخواست رخ داده است، لطفا مجدد امتحان کنید.','error')
+                        hidePreloader();
+                    }
+                });
+            }else {
+                showToast('خطا','لطفا اطلاعات را با دقت وارد نمائید.','error')
+            }
+        })
 
 
     if($('#register').length)

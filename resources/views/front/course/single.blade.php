@@ -202,32 +202,34 @@
                     <!-- Reviews -->
                     <div class="list-single-main-item fl-wrap border">
                         <div class="list-single-main-item-title fl-wrap">
-                            @if(false)
-                                <h3>تاکنون <span> 3 </span> دیدگاه ثبت شده است!</h3>
+                            @if($comments->count()>0)
+                                <h3>تاکنون <span> {{$comments->count()}} </span> دیدگاه ثبت شده است!</h3>
                             @else
                                 <h3>تا کنون دیدگاهی ثبت نشده است. </h3>
                             @endif
                         </div>
-{{--                        <div class="reviews-comments-wrap">--}}
-{{--                            <!-- reviews-comments-item -->--}}
-{{--                            <div class="reviews-comments-item">--}}
-{{--                                <div class="review-comments-avatar">--}}
-{{--                                    <img src="/front/img/user-1.jpg" class="img-fluid" alt="">--}}
-{{--                                </div>--}}
-{{--                                <div class="reviews-comments-item-text">--}}
-{{--                                    <h4><a href="#">محمد خاکپور</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>10 بهمن 1399</span></h4>--}}
+                        <div class="reviews-comments-wrap">
+                            <!-- reviews-comments-item -->
+                            @foreach($comments as $item)
+                                <div class="reviews-comments-item">
+                                    <div class="review-comments-avatar">
+                                        <img src="/front/img/avatar.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="reviews-comments-item-text">
+                                        <h4><a href="#">{{$item->name}}</a><span class="reviews-comments-item-date"><i class="ti-calendar theme-cl"></i>{{\Morilog\Jalali\Jalalian::forge($item->created_at)->format('%B %d، %Y')}}</span></h4>
 
-{{--                                    <div class="listing-rating high" data-starrating2="5"><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><span class="review-count">4.9</span> </div>--}}
-{{--                                    <div class="clearfix"></div>--}}
-{{--                                    <p>"ظاهرا آموزش کاملی بنظر میاد و میخوام بخرم ولی کاش بجای ساخت فروشگاه، پلاگین نویسی برا ووکامرس رو هم توضیح میدادین، البته میتونین تکمیل کنین این دوره رو و آپدیت کنین"</p>--}}
-{{--                                    <div class="pull-left reviews-reaction">--}}
-{{--                                        <a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>--}}
-{{--                                        <a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>--}}
-{{--                                        <a href="#" class="comment-love active"><i class="ti-heart"></i> 07</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <!--reviews-comments-item end-->--}}
+                                        {{--                                    <div class="listing-rating high" data-starrating2="5"><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><span class="review-count">4.9</span> </div>--}}
+                                        <div class="clearfix"></div>
+                                        <p>{{$item->body}}</p>
+                                        {{--                                    <div class="pull-left reviews-reaction">--}}
+                                        {{--                                        <a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>--}}
+                                        {{--                                        <a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>--}}
+                                        {{--                                        <a href="#" class="comment-love active"><i class="ti-heart"></i> 07</a>--}}
+                                        {{--                                    </div>--}}
+                                    </div>
+                                </div>
+                            @endforeach
+                            <!--reviews-comments-item end-->
 
 {{--                            <!-- reviews-comments-item -->--}}
 {{--                            <div class="reviews-comments-item">--}}
@@ -269,45 +271,56 @@
 {{--                            </div>--}}
 {{--                            <!--reviews-comments-item end-->--}}
 
-{{--                        </div>--}}
+                        </div>
                     </div>
 
                     <!-- Submit Reviews -->
                     <div class="edu_wraper border">
                         <h4 class="edu_title">ارسال نظر شما</h4>
                         <div class="review-form-box form-submit">
-                            <form>
-                                <div class="row">
+                            @auth()
+                                <form action="{{ route('comment.store') }}" id="comment">
+                                    <div class="row">
+                                        {{--                                        <div class="col-lg-6 col-md-6 col-sm-12">--}}
+                                        {{--                                            <div class="form-group">--}}
+                                        {{--                                                <label>نام</label>--}}
+                                        {{--                                                <input class="form-control" type="text" placeholder="نام شما">--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                        </div>--}}
 
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
-                                        <div class="form-group">
-                                            <label>نام</label>
-                                            <input class="form-control" type="text" placeholder="نام شما">
+                                        {{--                                        <div class="col-lg-6 col-md-6 col-sm-12">--}}
+                                        {{--                                            <div class="form-group">--}}
+                                        {{--                                                <label>ایمیل</label>--}}
+                                        {{--                                                <input class="form-control" type="email" placeholder="ایمیل شما">--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                        </div>--}}
+                                        @csrf()
+                                        <input type="hidden" value="{{$course->id}}" name="object_id">
+                                        <input type="hidden" value="Course" name="model">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <div class="form-group">
+                                                <label>متن دیدگاه</label>
+                                                <textarea class="form-control ht-140" placeholder="دیدگاه خود را وارد نمایید" name="body"></textarea>
+                                                <div class="invalid-feedback">
+                                                    پیام حداقل سه حرف باشد.
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
-                                        <div class="form-group">
-                                            <label>ایمیل</label>
-                                            <input class="form-control" type="email" placeholder="ایمیل شما">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-theme">ثبت دیدگاه</button>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-lg-12 col-md-12 col-sm-12">
-                                        <div class="form-group">
-                                            <label>متن دیدگاه</label>
-                                            <textarea class="form-control ht-140" placeholder="دیدگاه خود را وارد نمایید"></textarea>
-                                        </div>
                                     </div>
+                                </form>
+                            @endauth
 
-                                    <div class="col-lg-12 col-md-12 col-sm-12">
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-theme">ثبت دیدگاه</button>
-                                        </div>
-                                    </div>
+                            @guest()
+                                <p class="h6">برای ثبت نظر <a class="theme-cl" href="/login">وارد</a> شوید.</p>
+                            @endguest
 
-                                </div>
-                            </form>
                         </div>
                     </div>
 

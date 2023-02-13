@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comment;
 use App\Models\Course;
 use App\Models\CourseContent;
 use App\Models\Resume;
@@ -41,6 +42,9 @@ class CourseController extends Controller
 
         $resume=Resume::where('user_id',$course->user_id)->first();
 
-        return view('front.course.single',compact('course','resume'));
+        $comments=Comment::where('model','Course')->where('object_id',$course->id)->where('is_verified',1)->
+        leftJoin('users','users.id','comments.user_id')->select(DB::raw('comments.*'),'users.name')->get();
+
+        return view('front.course.single',compact('course','resume','comments'));
     }
 }

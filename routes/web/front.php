@@ -47,7 +47,7 @@ Route::get('/our_team',[AboutUsController::class,'ourTeam'])->name('our_team');
 
 Route::post('/email',[\App\Http\Controllers\Front\EmailController::class,'store'])->name('email.store');
 Route::post('/contact_us',[\App\Http\Controllers\Front\ContactFormController::class,'contactUs'])->name('contact_us.store');
-
+Route::post('/comment',[\App\Http\Controllers\Front\CommentController::class,'comment'])->name('comment.store');
 
 Route::post('/register',[\App\Http\Controllers\Front\AuthController::class,'register'])->name('auth.register');
 
