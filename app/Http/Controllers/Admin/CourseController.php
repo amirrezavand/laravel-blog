@@ -135,7 +135,7 @@ class CourseController extends Controller
 
         $course->tags()->sync($tagId);
 
-        $course->questions()->sync($validateData->question);
+        $course->questions()->sync($validateData->question??[]);
 
 
 
