@@ -72,7 +72,7 @@
                                                     </h2>
                                                 </div>
 
-                                                <div id="collapse{{$loop->index}}" class="collapse show" aria-labelledby="heading{{$loop->index}}" data-parent="#parent1">
+                                                <div id="collapse{{$loop->index}}" class="collapse @if($loop->index==0) show @endif" aria-labelledby="heading{{$loop->index}}" data-parent="#parent1">
                                                     <div class="card-body">
                                                         <p class="ac-para text-justify">
                                                             {!! $item->answer !!}
