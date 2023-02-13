@@ -9,6 +9,7 @@ use App\Models\Blog;
 use App\Models\Course;
 use App\Models\CourseContent;
 use App\Models\Lookup;
+use App\Models\Question;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -97,8 +98,8 @@ class CourseController extends Controller
         $course->contents=CourseContent::where('course_id',$course->id)->orderBy('section','asc')->orderBy('sequence','asc')->get();
 
         $tags=Tag::all();
-
-        return view('admin.course.create-edit',compact('course','contentStatuses','tags'));
+        $questions=Question::all();
+        return view('admin.course.create-edit',compact('course','contentStatuses','tags','questions'));
     }
 
     /**
@@ -133,6 +134,8 @@ class CourseController extends Controller
         }
 
         $course->tags()->sync($tagId);
+
+        $course->questions()->sync($validateData->question);
 
 
 

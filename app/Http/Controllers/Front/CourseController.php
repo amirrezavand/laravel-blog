@@ -31,11 +31,12 @@ class CourseController extends Controller
     }
 
     public function single($id){
-        $course=Course::with('user')->where('id',$id)->firstOrFail();
+        $course=Course::with(['user','questions'])->where('id',$id)->firstOrFail();
         $this->seo()->setTitle($course->title);
         $this->seo()->setDescription($course->seo_descriptoin);
         saveSeen('course',$id);
         $course->contents=CourseContent::where('course_id',$id)->orderBy('section','asc')->orderBy('sequence','asc')->get();
+
         return view('front.course.single',compact('course'));
     }
 }

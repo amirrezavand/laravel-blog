@@ -51,10 +51,56 @@
 
                     <!-- Overview -->
                     <div class="edu_wraper border">
-                        <h4 class="edu_title">توضیحات</h4>
+                        <p class="h4 mt-4 mb-2 theme-cl">توضیحات</p>
                         <div class="text-justify" style="line-height: 2;">
                             {{$course->body}}
                         </div>
+                        @if($course->questions->count()>0)
+                            <p class="h4 mt-4 mb-2 theme-cl">پرسش و پاسخ های متداول دوره</p>
+                            <div class="tab-content tabs_content_creative" id="myTabContent">
+
+                                <!-- course question -->
+                                <div class="tab-pane fade show active" id="item1" role="tabpanel" aria-labelledby="general-tab">
+                                    <div class="accordion" id="parent1">
+                                        <div class="card my-2">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link text-justify" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        نحوه عضویت در سایت چگونه است؟
+                                                    </button>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#parent1">
+                                                <div class="card-body">
+                                                    <p class="ac-para text-justify">
+                                                        برای عضویت در سایت کافیست شماره موبایل خود را وارد کرده، سپس از طریق پیامک کدی برای شما ارسال میشود و پس از وارد نمودن کد ارسالی و نام و نام خانوادگی و رمز عبور و تکرار رمز در سایت ثبت نام نمایید.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card my-2">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link text-justify" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        برای مشاهده کدام قسمت ها باید عضو سایت شوم؟
+                                                    </button>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#parent1">
+                                                <div class="card-body">
+                                                    <p class="ac-para text-justify">
+                                                        برای مشاهده، خرید و دانلود دوره ها باید عضو سایت شویم.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
                     </div>
 
                     <div class="edu_wraper border">

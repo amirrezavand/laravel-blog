@@ -189,6 +189,19 @@
                                     </div>
                                     @enderror
                                 </div>
+                                <div class="col-sm-6">
+                                    <label for="">Question</label>
+                                    <select class="form-control select2" multiple="multiple" name="question[]">
+                                        @foreach($questions as $item)
+                                            <option @if(in_array($item->id,old('question',$course->questions()->get()->pluck('id')->toArray())??[])) selected @endif>{{$item->id}}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('tag')
+                                    <div class="invalid-feedback">
+                                        {{$message}}
+                                    </div>
+                                    @enderror
+                                </div>
                                 <div class="mt-2">
                                     <button class="btn btn-success btn-sm" type="submit">@if(getRouteAction()=='create')
                                             save
