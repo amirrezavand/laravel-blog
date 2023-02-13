@@ -62,41 +62,25 @@
                                 <!-- course question -->
                                 <div class="tab-pane fade show active" id="item1" role="tabpanel" aria-labelledby="general-tab">
                                     <div class="accordion" id="parent1">
-                                        <div class="card my-2">
-                                            <div class="card-header" id="headingOne">
-                                                <h2 class="mb-0">
-                                                    <button class="btn btn-link text-justify" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                        نحوه عضویت در سایت چگونه است؟
-                                                    </button>
-                                                </h2>
-                                            </div>
+                                        @foreach($course->questions as $item)
+                                            <div class="card my-2">
+                                                <div class="card-header" id="heading{{$loop->index}}">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-link text-justify" type="button" data-toggle="collapse" data-target="#collapse{{$loop->index}}" aria-expanded="true" aria-controls="collapse{{$loop->index}}">
+                                                            {!! $item->question!!}
+                                                        </button>
+                                                    </h2>
+                                                </div>
 
-                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#parent1">
-                                                <div class="card-body">
-                                                    <p class="ac-para text-justify">
-                                                        برای عضویت در سایت کافیست شماره موبایل خود را وارد کرده، سپس از طریق پیامک کدی برای شما ارسال میشود و پس از وارد نمودن کد ارسالی و نام و نام خانوادگی و رمز عبور و تکرار رمز در سایت ثبت نام نمایید.
-                                                    </p>
+                                                <div id="collapse{{$loop->index}}" class="collapse show" aria-labelledby="heading{{$loop->index}}" data-parent="#parent1">
+                                                    <div class="card-body">
+                                                        <p class="ac-para text-justify">
+                                                            {!! $item->answer !!}
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div class="card my-2">
-                                            <div class="card-header" id="headingTwo">
-                                                <h2 class="mb-0">
-                                                    <button class="btn btn-link text-justify" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                        برای مشاهده کدام قسمت ها باید عضو سایت شوم؟
-                                                    </button>
-                                                </h2>
-                                            </div>
-
-                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#parent1">
-                                                <div class="card-body">
-                                                    <p class="ac-para text-justify">
-                                                        برای مشاهده، خرید و دانلود دوره ها باید عضو سایت شویم.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
