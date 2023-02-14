@@ -393,7 +393,7 @@
                         @endauth
                         @guest()
                             <div class="ed_view_link">
-                                    <a href="#" class="btn btn-theme enroll-btn" id="buyCourse">خرید دوره دانلودی<i class="ti-angle-left"></i></a>
+                                    <a href="#" class="btn btn-theme enroll-btn" id="buyCourse">خرید دوره<i class="ti-angle-left"></i></a>
                             </div>
                         @endguest
                     </div>
