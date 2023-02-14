@@ -350,16 +350,6 @@
                             <span>قیمت آموزش</span>
                             <h2 class="theme-cl">@if($course->price==null||$course->price=='0') رایگان @else {{$course->price}} تومان @endif</h2>
                         </div>
-{{--                        <div class="ed_view_features pl-4">--}}
-{{--                            <span>ویدئوهای نمونه</span>--}}
-{{--                            <ul>--}}
-{{--                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش مقدمه</li>--}}
-{{--                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش دهم</li>--}}
-{{--                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش سی</li>--}}
-{{--                                <li><i class="ti-angle-left"></i>پیاده سازی افزونه وردپرس</li>--}}
-{{--                                <li><i class="ti-angle-left"></i>افزونه نویسی وردپرس بخش نهایی</li>--}}
-{{--                            </ul>--}}
-{{--                        </div>--}}
                         @auth()
                             <div class="ed_view_link">
                                 @if(\App\Models\Factor::where('user_id',auth()->user()->id)->leftJoin('factor_objects','factors.id','factor_objects.factor_id')->where('is_paid',1)->where('object_id',$course->id)->where('lu_object_type','Course')->count()>0)
@@ -374,7 +364,6 @@
                                     <a href="#" class="btn btn-theme enroll-btn" id="buyCourse">خرید دوره<i class="ti-angle-left"></i></a>
                             </div>
                         @endguest
-
                     </div>
 
                     <div class="edu_wraper border">
@@ -389,6 +378,30 @@
                             <li><i class="ti-shine"></i>نوع دوره:<strong>@if($course->price==0||$course->price==null) رایگان @else ویژه @endif</strong></li>
                         </ul>
                     </div>
+
+                    @if($course->online_price!=null)
+                        <div class="ed_view_box border">
+
+                            <div class="ed_view_price pl-4">
+                                <span>شرکت در دوره آنلاین(چهره به چهره)</span>
+                                <h2 class="theme-cl"> {{$course->online_price}} تومان </h2>
+                            </div>
+                            @auth()
+                                <div class="ed_view_link">
+                                    @if(\App\Models\Factor::where('user_id',auth()->user()->id)->leftJoin('factor_objects','factors.id','factor_objects.factor_id')->where('is_paid',1)->where('object_id',$course->id)->where('lu_object_type','')->count()>0)
+                                        <a href="#" class="btn btn-theme enroll-btn">ثبت نام شده</a>
+                                    @else
+                                        <a href="/cart/online/{{$course->id}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">شرکت در دوره<i class="ti-angle-left"></i></a>
+                                    @endif
+                                </div>
+                            @endauth
+                            @guest()
+                                <div class="ed_view_link">
+                                    <a href="#" class="btn btn-theme enroll-btn" id="buyCourse">شرکت در دوره آنلاین<i class="ti-angle-left"></i></a>
+                                </div>
+                            @endguest
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

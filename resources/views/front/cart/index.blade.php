@@ -43,7 +43,11 @@
                                 <tr>
                                     <td><div class="tb_course_thumb"><img src="{{$course->img}}" class="img-fluid" alt="" /></div></td>
                                     <th>{{$course->title}}</th>
-                                    <td><span class="wish_price theme-cl">{{$course->price}}ت</span></td>
+                                    @if($type=='Course')
+                                        <td><span class="wish_price theme-cl">{{$course->price}}ت</span></td>
+                                    @else
+                                        <td><span class="wish_price theme-cl">{{$course->online_price}}ت</span></td>
+                                    @endif
                                 </tr>
                             </tbody>
                         </table>
@@ -67,7 +71,11 @@
                         <h4>صورت حساب</h4>
                         <div class="cart-wrap">
                             <ul class="cart_list">
-                                <li>قیمت<strong><span id="priceBeforeDiscount">{{$course->price}}</span> تومان</strong></li>
+                                @if($type=='Course')
+                                    <li>قیمت<strong><span id="priceBeforeDiscount">{{$course->price}}</span> تومان</strong></li>
+                                @else
+                                    <li>قیمت<strong><span id="priceBeforeDiscount">{{$course->online_price}}</span> تومان</strong></li>
+                                @endif
                                 <li>تخفیف<strong><span id="discountPrice">0</span> تومان</strong></li>
                             </ul>
                             <div class="flex_cart">
@@ -75,10 +83,15 @@
                                     جمع کل
                                 </div>
                                 <div class="flex_cart_2">
-                                    <span id="priceAfterDiscount">{{$course->price}}</span> تومان
+                                    @if($type=='Course')
+                                        <span id="priceAfterDiscount">{{$course->price}}</span> تومان
+                                    @else
+                                        <span id="priceAfterDiscount">{{$course->online_price}}</span> تومان
+                                    @endif
+
                                 </div>
                             </div>
-                            <form action="{{route('buy.course',['id'=>$course->id])}}" method="post">
+                            <form @if($type=='Course') action="{{route('buy.course',['id'=>$course->id])}}" @else action="{{route('buy.online',['id'=>$course->id])}}" @endif method="post">
                                 @csrf()
                                 <input type="hidden" type="text" name="code" id="verifiedCode">
                                 <button type="submit" class="btn checkout_btn">پرداخت</button>

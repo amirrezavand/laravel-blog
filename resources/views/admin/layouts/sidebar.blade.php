@@ -52,6 +52,9 @@
                         <li class="submenu-item">
                             <a href="/admin/resume">Resume</a>
                         </li>
+                        <li class="submenu-item">
+                            <a href="/admin/comment">Comment</a>
+                        </li>
                     </ul>
                 </li>
 

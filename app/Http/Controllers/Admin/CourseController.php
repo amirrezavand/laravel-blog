@@ -48,7 +48,9 @@ class CourseController extends Controller
         $course=new Course();
         $contentStatuses=Lookup::where('group_key','content_status')->get();
         $tags=Tag::all();
-        return view('admin.course.create-edit',compact('course','contentStatuses','tags'));
+        $questions=Question::all();
+
+        return view('admin.course.create-edit',compact('course','contentStatuses','tags','questions'));
     }
 
     /**
@@ -82,6 +84,8 @@ class CourseController extends Controller
         }
 
         $course->tags()->sync($tagId);
+
+        $course->questions()->sync($validateData->question??[]);
 
         return redirect(route('admin.course.index'));
     }

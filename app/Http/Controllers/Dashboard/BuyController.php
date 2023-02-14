@@ -74,6 +74,71 @@ class BuyController extends Controller
         }
     }
 
+    public function registerOnlineCourseFactorAndSendBank(Request $request,$id){
+        $coefficient=1;
+        $discountCode=\App\Models\DiscountCode::where('code',$request->input('code'))->get();
+        if($discountCode->count()>0) $coefficient=($coefficient-($discountCode[0]->amount)/100);
+
+
+        $course=Course::where('id',$id)->first();
+        //dd($course);
+        //'title','lu_status','total_price','is_paid','paid_date'
+        if($course->online_price>0 && $coefficient!=0) {
+            $factor = Factor::create([
+                'user_id' => auth()->user()->id,
+                'title' => $course->title,
+                'lu_status' => 'no_paid',
+                'total_price' => floor($course->online_price * $coefficient / 100)*100,
+                'is_paid' => 0,
+                'paid_date' => now()
+            ]);
+            FactorObject::create([
+                'factor_id' => $factor->id,
+                'object_id' => $course->id,
+                'price' => $course->online_price ,
+                'lu_object_type' => 'Course'
+            ]);
+
+
+            $response = zarinpal()
+                ->amount($factor->total_price) // مبلغ تراکنش
+                ->request()
+                ->description('خرید دوره ') // توضیحات تراکنش
+                ->callbackUrl('https://caffegis.com/dashboard/is_paid') // آدرس برگشت پس از پرداخت
+//                ->mobile('09100968228') // شماره موبایل مشتری - اختیاری
+//                ->email('ar.rezavand@gmail.com') // ایمیل مشتری - اختیاری
+                ->send();
+
+            if (!$response->success()) {
+                return $response->error()->message();
+            }
+
+            $factor->authority = $response->authority();
+            $factor->save();
+
+
+            return $response->redirect();
+        }else {
+            $factor = Factor::create([
+                'user_id' => auth()->user()->id,
+                'title' => $course->title,
+                'lu_status' => 'paid',
+                'total_price' => $course->online_price ,
+                'is_paid' => 1,
+                'paid_date' => now(),
+                'reference_id'=>'free'
+            ]);
+            FactorObject::create([
+                'factor_id' => $factor->id,
+                'object_id' => $course->id,
+                'price' => $course->online_price,
+                'lu_object_type' => 'Course'
+            ]);
+            return redirect(route('my_courses'));
+        }
+    }
+
+
     public static function checkIsPaid(){
         $authority = request()->query('Authority'); // دریافت کوئری استرینگ ارسال شده توسط زرین پال
         $status = request()->query('Status'); // دریافت کوئری استرینگ ارسال شده توسط زرین پال

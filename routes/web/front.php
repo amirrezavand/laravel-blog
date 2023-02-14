@@ -121,6 +121,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::get('my_course',[\App\Http\Controllers\Dashboard\DashboardController::class,'myCourses'])->name('my_courses');
     Route::get('my_order',[\App\Http\Controllers\Dashboard\DashboardController::class,'myOrders'])->name('my_orders');
     Route::post('buy/course/{id}',[\App\Http\Controllers\Dashboard\BuyController::class,'registerCourseFactorAndSendBank'])->name('buy.course');
+    Route::post('buy/online/{id}',[\App\Http\Controllers\Dashboard\BuyController::class,'registerOnlineCourseFactorAndSendBank'])->name('buy.online');
     Route::get('is_paid',[\App\Http\Controllers\Dashboard\BuyController::class,'checkIsPaid'])->name('buy.check_paid');
 });
 
@@ -132,8 +133,15 @@ dd('hi');
 
 Route::get('cart/{id}',function ($id){
     $course=\App\Models\Course::findOrFail($id);
+    $type='Course';
+   return view('front.cart.index',compact('course','type'));
+});
 
-   return view('front.cart.index',compact('course'));
+
+Route::get('cart/online/{id}',function ($id){
+    $course=\App\Models\Course::findOrFail($id);
+    $type='Online';
+    return view('front.cart.index',compact('course','type'));
 });
 
 Route::post('/check_discount_code',function (Request $request){

@@ -160,7 +160,6 @@
                                     </div>
                                     @enderror
                                 </div>
-
                                 <div class="col-sm-6">
                                     <label for="price">price(toman)</label>
                                     <input type="text"
@@ -170,6 +169,36 @@
                                            value="{{old('price',$course->price)}}"
                                            name="price">
                                     @error('price')
+                                    <div class="invalid-feedback">
+                                        <i class="bx bx-radio-circle"></i>
+                                        {{$message}}
+                                    </div>
+                                    @enderror
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="onlinePrice">online price(toman)</label>
+                                    <input type="text"
+                                           class="form-control form-control-sm @error('online_price') is-invalid @enderror"
+                                           id="onlinePrice"
+                                           placeholder="online price"
+                                           value="{{old('online_price',$course->online_price)}}"
+                                           name="online_price">
+                                    @error('online_price')
+                                    <div class="invalid-feedback">
+                                        <i class="bx bx-radio-circle"></i>
+                                        {{$message}}
+                                    </div>
+                                    @enderror
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="progress">progress(percent)</label>
+                                    <input type="text"
+                                           class="form-control form-control-sm @error('progress') is-invalid @enderror"
+                                           id="progress"
+                                           placeholder="progress"
+                                           value="{{old('progress',$course->progress)}}"
+                                           name="progress">
+                                    @error('progress')
                                     <div class="invalid-feedback">
                                         <i class="bx bx-radio-circle"></i>
                                         {{$message}}

@@ -35,6 +35,8 @@ class CourseRequest extends FormRequest
             'lu_level' => 'nullable|max:20',
             'lu_lang' => 'nullable|max:20',
             'price'=>'nullable',
+            'online_price'=>'nullable',
+            'progress'=>'required',
             'tag'=>'nullable',
             'question'=>'nullable'
         ];

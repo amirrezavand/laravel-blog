@@ -11,6 +11,7 @@ use \App\Http\Controllers\Admin\DiscountCodeController;
 use \App\Http\Controllers\Admin\FactorController;
 use \App\Http\Controllers\Admin\QuestionController;
 use \App\Http\Controllers\Admin\ResumeController;
+use \App\Http\Controllers\Admin\CommentController;
 
 Route::middleware(['auth','admin'])->group(function () {
     Route::resource('blog', BlogController::class)->except(['show']);
@@ -30,6 +31,7 @@ Route::middleware(['auth','admin'])->group(function () {
     Route::resource('factor',FactorController::class)->except(['show']);
     Route::resource('question',QuestionController::class)->except(['show']);
     Route::resource('resume',ResumeController::class)->except(['show']);
+    Route::resource('comment',CommentController::class)->except(['show']);
 });
 
 
