@@ -252,7 +252,7 @@
 
                                         {{--                                    <div class="listing-rating high" data-starrating2="5"><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><span class="review-count">4.9</span> </div>--}}
                                         <div class="clearfix"></div>
-                                        <p>{{$item->body}}</p>
+                                        <p>{!! $item->body !!}</p>
                                         {{--                                    <div class="pull-left reviews-reaction">--}}
                                         {{--                                        <a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>--}}
                                         {{--                                        <a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>--}}
