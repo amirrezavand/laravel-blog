@@ -87,6 +87,38 @@
                         @endif
                     </div>
 
+                    @if($course->online_price!=null)
+                        <div class="edu_wraper border">
+                            <p class="h4 mt-2 mb-2 theme-cl">شرکت در دوره آنلاین</p>
+                            <div class="text-justify" style="line-height: 2;">
+                                <p>با توجه به درخواست دانشجویان عزیز به برگزاری کلاس حضوری توسط CEO کافه جی آی اس مهندس امیر حمیدی بر آن آمدیم که به خواسته آن عزیزان تا جایی که میتوانیم جامع عمل بپوشانیم.</p>
+                                <p>لذا تصمیم به برگزاری کلاس ها به صورت آنلاین گرفتیم.</p>
+                                <p>مدرس دوره های آنلاین امیرحمیدی بنیان گذار وبسایت CaffeGIS است. این دوره ها در پلتفرم ادوبی کانکت برگزار میشود.</p>
+                                <p class="alert alert-info">مژده ویژه : کسانی که در دوره آنلاین شرکت کنند به محتوای دانلودی این دوره دسترسی کامل دارند. </p>
+                                <p class="alert alert-success">بعد از برگزاری کلاس گروه تلگرامی تشکیل می شود که در دانشجویان میتوانند به صورت مستمر با مدرس دوره در ارتباط باشند و مشکلات کار با نرم افزار مربوطه را با ایشان در میان بگذارند و مدرس راهنمایی های لازم در این زمینه را به دانشجو بدهد.</p>
+                                <p>دوره ها به صورت مستمر و ماهانه تشکیل میشوند و در صورت ثبت نام در کمتر از یک ماه طول میکشد که دوره مربوطه تشکیل شود.</p>
+                                <p>ساعات برگزاری کلاس به صورتی است که کارشناس مربوطه با شما تماس می گیرد و بر مبنای زمان های آزاد مدرس و شما عزیزان برنامه را میچیند.</p>
+                                <p>مدت زمان کلاس متناسب با دوره متغیر هست و به صورت معمول دوبرابر زمان دوره دانلودی هست.</p>
+                                <p>امکان قسط بندی هزینه کلاس برای شما عزیزان فراهم شده است، کافی است به شماره پشتیبانی صفحه تماس با ما، تماس حاصل فرمائید.</p>
+                                <p>جهت شرکت در دوره آنلاین بر روی دکمه زیر کلیک کنید.</p>
+                                @auth()
+                                    <div class="ed_view_link">
+                                        @if(\App\Models\Factor::where('user_id',auth()->user()->id)->leftJoin('factor_objects','factors.id','factor_objects.factor_id')->where('is_paid',1)->where('object_id',$course->id)->where('lu_object_type','')->count()>0)
+                                            <a href="#" class="btn btn-theme enroll-btn">ثبت نام شده</a>
+                                        @else
+                                            <a href="/cart/online/{{$course->id}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">شرکت در دوره آنلاین({{$course->online_price}} تومان)</a>
+                                        @endif
+                                    </div>
+                                @endauth
+                                @guest()
+                                    <div class="ed_view_link">
+                                        <a href="#" class="btn btn-theme enroll-btn" id="buyCourse">شرکت در دوره آنلاین({{$course->online_price}} تومان)</a>
+                                    </div>
+                                @endguest
+
+                            </div>
+                        </div>
+                    @endif
                     <div class="edu_wraper border">
                         <h4 class="edu_title">سرفصل های دوره</h4>
                         <div id="accordionExample" class="accordion shadow circullum">
@@ -355,13 +387,13 @@
                                 @if(\App\Models\Factor::where('user_id',auth()->user()->id)->leftJoin('factor_objects','factors.id','factor_objects.factor_id')->where('is_paid',1)->where('object_id',$course->id)->where('lu_object_type','Course')->count()>0)
                                     <a href="#" class="btn btn-theme enroll-btn">ثبت نام شده</a>
                                 @else
-                                    <a href="/cart/{{$course->id}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">خرید دوره<i class="ti-angle-left"></i></a>
+                                    <a href="/cart/{{$course->id}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">خرید دوره دانلودی<i class="ti-angle-left"></i></a>
                                 @endif
                             </div>
                         @endauth
                         @guest()
                             <div class="ed_view_link">
-                                    <a href="#" class="btn btn-theme enroll-btn" id="buyCourse">خرید دوره<i class="ti-angle-left"></i></a>
+                                    <a href="#" class="btn btn-theme enroll-btn" id="buyCourse">خرید دوره دانلودی<i class="ti-angle-left"></i></a>
                             </div>
                         @endguest
                     </div>
@@ -383,29 +415,29 @@
 
                     </div>
 
-                    @if($course->online_price!=null)
-                        <div class="ed_view_box border">
+{{--                    @if($course->online_price!=null)--}}
+{{--                        <div class="ed_view_box border">--}}
 
-                            <div class="ed_view_price pl-4">
-                                <span>شرکت در دوره آنلاین(چهره به چهره)</span>
-                                <h2 class="theme-cl"> {{$course->online_price}} تومان </h2>
-                            </div>
-                            @auth()
-                                <div class="ed_view_link">
-                                    @if(\App\Models\Factor::where('user_id',auth()->user()->id)->leftJoin('factor_objects','factors.id','factor_objects.factor_id')->where('is_paid',1)->where('object_id',$course->id)->where('lu_object_type','')->count()>0)
-                                        <a href="#" class="btn btn-theme enroll-btn">ثبت نام شده</a>
-                                    @else
-                                        <a href="/cart/online/{{$course->id}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">شرکت در دوره<i class="ti-angle-left"></i></a>
-                                    @endif
-                                </div>
-                            @endauth
-                            @guest()
-                                <div class="ed_view_link">
-                                    <a href="#" class="btn btn-theme enroll-btn" id="buyCourse">شرکت در دوره آنلاین<i class="ti-angle-left"></i></a>
-                                </div>
-                            @endguest
-                        </div>
-                    @endif
+{{--                            <div class="ed_view_price pl-4">--}}
+{{--                                <span>شرکت در دوره آنلاین(چهره به چهره)</span>--}}
+{{--                                <h2 class="theme-cl"> {{$course->online_price}} تومان </h2>--}}
+{{--                            </div>--}}
+{{--                            @auth()--}}
+{{--                                <div class="ed_view_link">--}}
+{{--                                    @if(\App\Models\Factor::where('user_id',auth()->user()->id)->leftJoin('factor_objects','factors.id','factor_objects.factor_id')->where('is_paid',1)->where('object_id',$course->id)->where('lu_object_type','')->count()>0)--}}
+{{--                                        <a href="#" class="btn btn-theme enroll-btn">ثبت نام شده</a>--}}
+{{--                                    @else--}}
+{{--                                        <a href="/cart/online/{{$course->id}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">شرکت در دوره<i class="ti-angle-left"></i></a>--}}
+{{--                                    @endif--}}
+{{--                                </div>--}}
+{{--                            @endauth--}}
+{{--                            @guest()--}}
+{{--                                <div class="ed_view_link">--}}
+{{--                                    <a href="#" class="btn btn-theme enroll-btn" id="buyCourse">شرکت در دوره آنلاین<i class="ti-angle-left"></i></a>--}}
+{{--                                </div>--}}
+{{--                            @endguest--}}
+{{--                        </div>--}}
+{{--                    @endif--}}
                 </div>
             </div>
         </div>
