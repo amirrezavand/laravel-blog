@@ -376,7 +376,11 @@
                             <li><i class="ti-tag"></i>سطح دوره:<strong>مقدماتی تا پیشرفته</strong></li>
                             <li><i class="ti-flag-alt"></i>زبان:<strong>فارسی</strong></li>
                             <li><i class="ti-shine"></i>نوع دوره:<strong>@if($course->price==0||$course->price==null) رایگان @else ویژه @endif</strong></li>
+                            <li><i class="ti-pulse"></i>درصد پیشرفت دوره:({{$course->progress}}%)<div class="progress mt-3">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="{{$course->progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$course->progress}}%"></div>
+                                    </div></li>
                         </ul>
+
                     </div>
 
                     @if($course->online_price!=null)
