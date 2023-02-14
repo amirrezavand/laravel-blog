@@ -52,7 +52,12 @@
                     <!-- Overview -->
                     <div class="edu_wraper border">
                         <p class="h4 mt-4 mb-2 theme-cl">توضیحات</p>
-                        <div class="text-justify" style="line-height: 2;">
+                        <div class="text-justify" style="line-height: 2;" id="courseBody">
+                            <style>
+                                #courseBody img {
+                                    width: 100% !important;
+                                }
+                            </style>
                             {!! $course->body !!}
                         </div>
                         @if($course->questions->count()>0)
