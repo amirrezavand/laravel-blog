@@ -56,6 +56,7 @@
                             <style>
                                 #courseBody img {
                                     width: 100% !important;
+                                    height: auto !important;
                                 }
                             </style>
                             {!! $course->body !!}
