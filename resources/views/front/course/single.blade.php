@@ -53,7 +53,7 @@
                     <div class="edu_wraper border">
                         <p class="h4 mt-4 mb-2 theme-cl">توضیحات</p>
                         <div class="text-justify" style="line-height: 2;">
-                            {{$course->body}}
+                            {!! $course->body !!}
                         </div>
                         @if($course->questions->count()>0)
                             <p class="h4 mt-4 mb-2 theme-cl">پرسش و پاسخ های متداول دوره</p>
@@ -252,7 +252,7 @@
 
                                         {{--                                    <div class="listing-rating high" data-starrating2="5"><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><i class="ti-star active"></i><span class="review-count">4.9</span> </div>--}}
                                         <div class="clearfix"></div>
-                                        <p>{!! $item->body !!}</p>
+                                        <p>{{$item->body}}</p>
                                         {{--                                    <div class="pull-left reviews-reaction">--}}
                                         {{--                                        <a href="#" class="comment-like active"><i class="ti-thumb-up"></i> 12</a>--}}
                                         {{--                                        <a href="#" class="comment-dislike active"><i class="ti-thumb-down"></i> 1</a>--}}
