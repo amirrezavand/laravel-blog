@@ -387,7 +387,7 @@
                                 @if(\App\Models\Factor::where('user_id',auth()->user()->id)->leftJoin('factor_objects','factors.id','factor_objects.factor_id')->where('is_paid',1)->where('object_id',$course->id)->where('lu_object_type','Course')->count()>0)
                                     <a href="#" class="btn btn-theme enroll-btn">ثبت نام شده</a>
                                 @else
-                                    <a href="/cart/{{$course->id}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">خرید دوره دانلودی<i class="ti-angle-left"></i></a>
+                                    <a href="/cart/{{$course->id}}" class="btn btn-theme enroll-btn" id="@guest() buyCourse @endguest">خرید دوره<i class="ti-angle-left"></i></a>
                                 @endif
                             </div>
                         @endauth
