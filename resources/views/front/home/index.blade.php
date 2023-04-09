@@ -112,24 +112,24 @@
 
             <div class="row">
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="edu_cat_2 cat-1">
-                        <div class="edu_cat_icons">
-                            <a class="pic-main" href="{{route('course',['tag'=>'software'])}}"><img src="/front/img/cat1.png" class="img-fluid" alt="" /></a>
-                        </div>
-                        <div class="edu_cat_data">
-                            <h4 class="title"><a href="{{route('course',['tag'=>'software'])}}">مهندسی نرم افزار</a></h4>
-                            <ul class="meta">
-                                <li class="video"><i class="ti-video-clapper"></i>{{\App\Models\Course::leftJoin('users','users.id','=','courses.user_id')->whereHas('tags', function($q) {
-                $q->where('title', '=', 'software');
-            })->count()}}دوره آموزشی</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+{{--                <div class="col-lg-4 col-md-6">--}}
+{{--                    <div class="edu_cat_2 cat-1">--}}
+{{--                        <div class="edu_cat_icons">--}}
+{{--                            <a class="pic-main" href="{{route('course',['tag'=>'software'])}}"><img src="/front/img/cat1.png" class="img-fluid" alt="" /></a>--}}
+{{--                        </div>--}}
+{{--                        <div class="edu_cat_data">--}}
+{{--                            <h4 class="title"><a href="{{route('course',['tag'=>'software'])}}">مهندسی نرم افزار</a></h4>--}}
+{{--                            <ul class="meta">--}}
+{{--                                <li class="video"><i class="ti-video-clapper"></i>{{\App\Models\Course::leftJoin('users','users.id','=','courses.user_id')->whereHas('tags', function($q) {--}}
+{{--                $q->where('title', '=', 'software');--}}
+{{--            })->count()}}دوره آموزشی</li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="edu_cat_2 cat-4">
+                <div class="col-md-6">
+                    <div class="edu_cat_2 cat-1">
                         <div class="edu_cat_icons">
                             <a class="pic-main" href="{{route('course',['tag'=>'google_earth'])}}"><img src="/front/img/cat2.png" class="img-fluid" alt="" /></a>
                         </div>
@@ -145,7 +145,7 @@
                 </div>
 
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-md-6">
                     <div class="edu_cat_2 cat-4">
                         <div class="edu_cat_icons">
                             <a class="pic-main" href="{{route('course',['tag'=>'arcgis'])}}"><img src="/front/img/cat3.png" class="img-fluid" alt="" /></a>

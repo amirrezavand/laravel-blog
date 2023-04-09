@@ -31,7 +31,7 @@
                         <ul class="footer-menu">
                             <li><a href="{{route('course',['tag'=>'arcgis'])}}">آموزش ArcGIS</a></li>
                             <li><a href="{{route('course',['tag'=>'google_earth'])}}">آموزش گوگل ارث</a></li>
-                            <li><a href="{{route('course',['tag'=>'software'])}}">مهندسی نرم افزار</a></li>
+{{--                            <li><a href="{{route('course',['tag'=>'software'])}}">مهندسی نرم افزار</a></li>--}}
                         </ul>
                     </div>
                 </div>
