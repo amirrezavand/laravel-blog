@@ -17,27 +17,27 @@ class BlogController extends Controller
         $description='آخرین و بروزترین مقالات در حوزه GIS، نقشه برداری و زمین شناسی را از اینجا بیابید.';
         if(in_array('arcgis_pro',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[]) ){
             $tag='arcgis_pro';
-            $title='دوره رایگان ArcGIS Pro';
+            $title='آموزش رایگان ArcGIS Pro';
             $description='در آموزش رایگان آرک جی آی اس پرو سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
         else if(in_array('arcgis',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])) {
             $tag='arcgis';
-            $title='دوره رایگان ArcGIS';
+            $title='آموزش رایگان ArcGIS';
             $description='در آموزش رایگان آرک جی آی اس سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
         else if(in_array('qgis',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])){
             $tag='qgis';
-            $title='دوره رایگان QGIS';
+            $title='آموزش رایگان QGIS';
             $description='در آموزش رایگان کیو جی آی اس سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
         else if(in_array('global_mapper',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])) {
             $tag='global_mapper';
-            $title='آموزش گلوبال مپر';
+            $title='آموزش رایگان گلوبال مپر';
             $description='در آموزش گلوبال مپر سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
         else if(in_array('surfer',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])) {
             $tag='surfer';
-            $title='آموزش نرم افزار Surfer';
+            $title='آموزش رایگان نرم افزار Surfer';
             $description='در آموزش رایگان Surfer سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
         else if(in_array('civil_3d',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])){
@@ -47,8 +47,13 @@ class BlogController extends Controller
         }
         else if(in_array('autocad',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])){
             $tag='autocad';
-            $title='آموزش نرم افزار AutoCAD';
+            $title='آموزش رایگان AutoCAD';
             $description='در آموزش رایگان AutoCAD سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
+        }
+        else if(in_array('rs',$request->input('tag')??[]) && in_array('free',$request->input('tag')??[])){
+            $tag='rs';
+            $title='آموزش رایگان سنجش از دور';
+            $description='در آموزش رایگان سنجش از دور سعی شده است تا تمامی نکات لازم برای کار با این نرم افزار به صورت کاملا رایگان و کاربردی( با تدریس امیر حمیدی) گفته شود.';
         }
 
         $this->seo()->setTitle($title);

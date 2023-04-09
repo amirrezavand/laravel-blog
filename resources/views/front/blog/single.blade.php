@@ -42,7 +42,7 @@
                             <div class="article_body_wrap">
 
                                 <div class="article_featured_image">
-                                    <img class="img-fluid" src="assets/img/h-5.png" alt="">
+                                    <img class="img-fluid w-100" src="{{$blog->img}}" alt="">
                                 </div>
 
                                 <div class="article_top_info">
@@ -106,12 +106,12 @@
                             <div class="article_posts_thumb">
                                 <span class="img"><img class="img-fluid" src="{{$blog->author_avatar}}" alt=""></span>
                                 <h3 class="pa-name">{{$blog->author_name}}</h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                    <li><a href="https://ir.linkedin.com/in/amir-rezavand-0845341a2"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                                <p class="pa-text">واقعیت در یک چیز خلاصه میشه و اون، چیزی جز کد نیست.</p>
+{{--                                <ul class="social-links">--}}
+{{--                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>--}}
+{{--                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>--}}
+{{--                                    <li><a href="https://ir.linkedin.com/in/amir-rezavand-0845341a2"><i class="fab fa-linkedin-in"></i></a></li>--}}
+{{--                                </ul>--}}
+{{--                                <p class="pa-text">واقعیت در یک چیز خلاصه میشه و اون، چیزی جز کد نیست.</p>--}}
                             </div>
 
                         </div>
