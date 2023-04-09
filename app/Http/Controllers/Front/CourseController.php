@@ -23,7 +23,7 @@ class CourseController extends Controller
         if(is_null($tag)){
             $courses=Course::leftJoin('users','users.id','=','courses.user_id')->select(DB::raw('courses.*'),DB::raw('users.name as teacher_name'),DB::raw('users.avatar as teacher_avatar'))->orderby('id','desc')->paginate(12);
         }else {
-            $courses=Course::leftJoin('users','users.id','=','courses.user_id')->whereHas('tags', function($q) use ($tag) {
+            $courses=Course::leftJoin('users','users.id','=','courses.user_id')->where('courses.lu_content_status','pulish')->whereHas('tags', function($q) use ($tag) {
                 $q->where('title', '=', $tag);
             })->select(DB::raw('courses.*'),DB::raw('users.name as teacher_name'),DB::raw('users.avatar as teacher_avatar'))->orderby('id','desc')->paginate(12);
         }
@@ -34,11 +34,13 @@ class CourseController extends Controller
 
     public function single($id){
         $course=Course::with(['user','questions'])->where('id',$id)->firstOrFail();
+
+        if($course->lu_content_status!='publish') return abort(404);
+
         $this->seo()->setTitle($course->title);
         $this->seo()->setDescription($course->seo_descriptoin);
         saveSeen('course',$id);
         $course->contents=CourseContent::where('course_id',$id)->orderBy('section','asc')->orderBy('sequence','asc')->get();
-
 
         $resume=Resume::where('user_id',$course->user_id)->first();
 
