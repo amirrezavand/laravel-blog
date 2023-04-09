@@ -45,7 +45,7 @@
                                 <a href="{{route('blog.single',['blog'=>$result->id])}}"><img src="{{$result->img}}" class="img-fluid" alt="" /></a>
                             </div>
 
-                            <div class="articles_grid_caption" style="min-height: 125px;display: flex;flex-direction: column;justify-content: space-between;">
+                            <div class="articles_grid_caption" style="min-height: 135px;display: flex;flex-direction: column;justify-content: space-between;">
                                 <h4>{{$result->title}}</h4>
                                 <div class="articles_grid_author">
                                     <div class="articles_grid_author_img"><img src="{{($result->author_avatar)?$result->author_avatar:'/upload/users/rezavand.jpeg'}}" class="img-fluid" alt="" /></div>
