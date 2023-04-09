@@ -39,13 +39,13 @@
             <div class="row">
                 @foreach($results as $result)
                     <!-- Single Article -->
-                    <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="articles_grid_style">
                             <div class="articles_grid_thumb">
                                 <a href="{{route('blog.single',['blog'=>$result->id])}}"><img src="{{$result->img}}" class="img-fluid" alt="" /></a>
                             </div>
 
-                            <div class="articles_grid_caption">
+                            <div class="articles_grid_caption" style="min-height: 125px;display: flex;flex-direction: column;justify-content: space-between;">
                                 <h4>{{$result->title}}</h4>
                                 <div class="articles_grid_author">
                                     <div class="articles_grid_author_img"><img src="{{($result->author_avatar)?$result->author_avatar:'/upload/users/rezavand.jpeg'}}" class="img-fluid" alt="" /></div>
